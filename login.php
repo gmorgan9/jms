@@ -70,7 +70,7 @@ if(mysqli_num_rows($result) > 0){
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-    <title>Job Management System</title>
+    <title>Log In &lsaquo; JMS</title>
     
 
     <style>
