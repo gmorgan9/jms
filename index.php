@@ -5,10 +5,8 @@ require_once "app/database/functions.php";
 require_once "path.php";
 session_start();
 
-if($_SESSION['loggedin'] == 1) {
-    header("Location: /")
-} else {
-    header("Location: login.php")
+if (isLoggedIN()) {
+	header('location: index.php');
 }
 ?>
 <!DOCTYPE html>
