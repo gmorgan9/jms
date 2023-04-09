@@ -13,17 +13,34 @@
     <title>Job Management System</title>
 </head>
 <body>
-    <br><br><br>
-<div class="form-container mx-auto">
 
-   <form action="" method="post">
-      <h3>login now</h3>
-      
-      <input type="text" name="uname" required placeholder="enter your user name">
-      <input type="password" name="password" required placeholder="enter your password">
-      <input type="submit" name="login-btn" value="Login" class="form-btn">
-   </form>
+    <div class="login-form">
+        <h1 class="logo text-center">
+            <img src="assets/images/sm-logo-border.png" width="84px" height="84px" alt="">
+        </h1>
+        <!-- <?php echo $error; ?> -->
+        <form class="form" action="" method="POST">
+            <div class="username">
+                <label for="user_login">Username</label>
+                <input type="text" id="user_login" name="username" class="form-control" autocapitalize="off">
+            </div>
+            <br>
+            <div class="password">
+                <label for="user_pass">Password</label>
+                <input type="password" id="user_pass" name="password" class="form-control" autocapitalize="off">
+            </div>
+            <br>
+            <div class="button text-end">
+                <input type="submit" name="login" class="btn btn-primary" value="Log In">
+            </div>
+        </form>
+        <br>
+        <div class="bottom-links ms-4">
+            <p><a class="link text-muted" style="text-decoration:none; font-size: 12px;" href="">Forgot password?</a></p>
+            <p><a class="link text-muted" style="text-decoration:none; font-size: 12px;" href="https://cacheup.morganserver.com/">← Go to CacheUp</a></p>
+        </div>
+    </div>
 
-</div>
+
 </body>
 </html>
