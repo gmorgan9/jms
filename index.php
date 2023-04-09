@@ -5,9 +5,14 @@ require_once "app/database/functions.php";
 require_once "path.php";
 session_start();
 
-if (isLoggedIN()) {
+if (!isLoggedIN()) {
 	header('location: login.php');
 }
+// if (isset($_GET['logout'])) {
+// 	session_destroy();
+// 	unset($_SESSION['user']);
+// 	header("location: login.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +32,8 @@ if (isLoggedIN()) {
 <body>
 
     Logged in
+
+    <a href="index.php?logout='1'"><button style="cursor:pointer;color: #ff3860;border: 1px solid #ff3860;padding:2px;border-radius: 5px;">Logout</button></a>
 
 
 </body>
