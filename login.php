@@ -14,37 +14,36 @@ if(isLoggedIn() == true){
 
 if(isset($_POST['login'])){
 // $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
-$user_id = mysqli_real_escape_string($conn, $_POST['user_id']);
-$firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
-$lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
-$username = mysqli_real_escape_string($conn, $_POST['username']);
+$userid = mysqli_real_escape_string($conn, $_POST['userid']);
+$fname = mysqli_real_escape_string($conn, $_POST['fname']);
+$lname = mysqli_real_escape_string($conn, $_POST['lname']);
+$uname = mysqli_real_escape_string($conn, $_POST['uname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = md5($_POST['password']);
 $isadmin = $_POST['isadmin'];
 $loggedin = $_POST['loggedin'];
 
-$select = " SELECT * FROM users WHERE username = '$username' && password = '$password' ";
+$select = " SELECT * FROM users WHERE uname = '$uname' && password = '$password' ";
 
 $result = mysqli_query($conn, $select);
 
 if(mysqli_num_rows($result) > 0){
 
    $row = mysqli_fetch_array($result);
-   $sql = "UPDATE users SET loggedin='1' WHERE username='$username'";
+   $sql = "UPDATE users SET loggedin='1' WHERE uname='$uname'";
    if (mysqli_query($conn, $sql)) {
       echo "Record updated successfully";
     } else {
       echo "Error updating record: " . mysqli_error($conn);
     }
-    $_SESSION['firstname']         = $row['firstname'];
-    $_SESSION['user_id']          = $row['user_id'];
-    $_SESSION['loggedin']         = $row['loggedin'];
-    $_SESSION['user_idno']        = $row['idno'];
-    $_SESSION['lastname']         = $row['lastname'];
-    $_SESSION['username']         = $row['username'];
-    $_SESSION['email']            = $row['email'];
-    $_SESSION['pass']             = $row['password'];
-    $_SESSION['cpass']            = $row['cpassword'];
+    $_SESSION['fname']        = $row['fname'];
+    $_SESSION['userid']       = $row['userid'];
+    $_SESSION['loggedin']     = $row['loggedin'];
+    $_SESSION['user_idno']    = $row['idno'];
+    $_SESSION['lastname']     = $row['lname'];
+    $_SESSION['username']     = $row['uname'];
+    $_SESSION['email']        = $row['email'];
+    $_SESSION['pass']         = $row['password'];
     header('location:' . BASE_URL . '/');
   
 }else{
@@ -52,7 +51,7 @@ if(mysqli_num_rows($result) > 0){
    <div class="pt-3"></div>
    <div class="login_error">
    <strong>Error:</strong> 
-   The username <strong>'. $_POST['username'] .'</strong> or password entered is not registered on this site. Please try again.
+   The username <strong>'. $_POST['uname'] .'</strong> or password entered is not registered on this site. Please try again.
    </div>
    ';
 }
@@ -90,7 +89,7 @@ if(mysqli_num_rows($result) > 0){
         <form class="form" action="" method="POST">
             <div class="username">
                 <label for="user_login">Username</label>
-                <input type="text" id="user_login" name="username" class="form-control" autocapitalize="off">
+                <input type="text" id="user_login" name="uname" class="form-control" autocapitalize="off">
             </div>
             <br>
             <div class="password">
