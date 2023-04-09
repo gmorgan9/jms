@@ -6,11 +6,6 @@ require_once "path.php";
 session_start();
 
 
-if (!isLoggedIN()) {
-	header('location: /');
-}
-
-
 
 ?>
 <?php
