@@ -15,6 +15,5 @@ function isLoggedIn()
 // log user out if logout button clicked
 if (isset($_GET['logout'])) {
 	session_destroy();
-	unset($_SESSION['user']);
-	header("location: index.php");
+	header("location: login.php");
 }
