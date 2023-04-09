@@ -6,7 +6,7 @@ require_once "path.php";
 session_start();
 
 if (isLoggedIN()) {
-	header('location: login.php');
+	header('location: /');
 }
 ?>
 <!DOCTYPE html>
