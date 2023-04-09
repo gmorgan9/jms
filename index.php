@@ -6,11 +6,8 @@ require_once "path.php";
 session_start();
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    // User is logged in, redirect to index page
-    header("Location: index.php");
-    exit;
+    header("Location: /");
   } else {
-    // User is not logged in, show login page
     include("login.php");
   }
 
