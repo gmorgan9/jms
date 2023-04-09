@@ -1,3 +1,15 @@
+<?php
+
+require_once "app/database/connection.php";
+require_once "app/database/functions.php";
+require_once "path.php";
+session_start();
+
+if(isLoggedIn() == true){
+    header('location: '. BASE_URL . '/login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
