@@ -3,11 +3,18 @@
 session_start();
 require('connection.php');
 
-// function isLoggedIn()
-// {
-// 	if ($_SESSION['loggedin'] == 1) {
-// 		return true;
-// 	}else{
-// 		return false;
-// 	}
-// 
+function isLoggedIn()
+{
+	if (isset($_SESSION['user'])) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
+// log user out if logout button clicked
+if (isset($_GET['logout'])) {
+	session_destroy();
+	unset($_SESSION['user']);
+	header("location: index.php");
+}
