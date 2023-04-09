@@ -5,14 +5,6 @@ require_once "app/database/functions.php";
 require_once "path.php";
 session_start();
 
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-    // User is logged in, redirect to index page
-    header("Location: index.php");
-    exit;
-  } else {
-    // User is not logged in, show login page
-    include("login.php");
-  }
 
 ?>
 <?php
