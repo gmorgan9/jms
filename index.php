@@ -5,9 +5,7 @@ require_once "app/database/functions.php";
 require_once "path.php";
 session_start();
 
-if (isLoggedIN() == false) {
-	header('location: /');
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
