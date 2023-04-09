@@ -15,13 +15,15 @@ require('connection.php');
 function checkLoginStatus() {
     // Start the session
     session_start();
-  
+    var_dump($_SESSION);
     // Check if the user is logged in
     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       // User is logged in, show index page
+      echo "Reached index page.";
       include("/");
     } else {
       // User is not logged in, show login page
+      echo "Reached login page.";
       include("login.php");
     }
   }
