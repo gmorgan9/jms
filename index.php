@@ -5,7 +5,7 @@ require_once "app/database/functions.php";
 require_once "path.php";
 session_start();
 
-if(isLoggedIn() == true){
+if(isLoggedIn() == false){
     header('location: '. BASE_URL . '/login.php');
 }
 
