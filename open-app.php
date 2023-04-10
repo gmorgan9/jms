@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('America/Denver');
 require_once "app/database/connection.php";
 require_once "app/database/functions.php";
 require_once "path.php";
@@ -126,7 +126,7 @@ if (!isLoggedIN()) {
             </thead>
             <tbody>
                 <?php
-                    date_default_timezone_set('America/Denver');
+                    
                     $sql = "SELECT * FROM applications WHERE status = 'Applied' ORDER BY created_at ASC";
                     $result = mysqli_query($conn, $sql);
                     if($result) {
