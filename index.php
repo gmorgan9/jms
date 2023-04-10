@@ -25,6 +25,7 @@ if (!isLoggedIN()) {
 
     <title>Job Management System</title>
 
+
     <style>
         /* top card overlay */
             .top-card {
