@@ -244,21 +244,27 @@ if (!isLoggedIN()) {
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                                $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
-                                $result = mysqli_query($conn, $sql);
-                                if($result) {
+                            $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
+                            $result = mysqli_query($conn, $sql);
+                            if($result) {
+                                $num_rows = mysqli_num_rows($result);
+                                if($num_rows > 0) {
                                     while ($row = mysqli_fetch_assoc($result)) {
                                         $status         = $row['status'];
                                         $job_title      = $row['job_title'];
                                         $company        = $row['company'];
-                            ?>
-                            <li class="list-group-item">
-                                <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                <p class="float-end"><?php echo $status; ?></p>
-                            </li>
-
-                            <?php 
-                                }
+                                        ?>
+                                        <li class="list-group-item">
+                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                            <p class="float-end"><?php echo $status; ?></p>
+                                        </li>
+                                    <?php 
+                                    }
+                                } else { ?>
+                                    <h3 class="mt-2 text-center text-muted">
+                                        No Entries
+                                    </h3>
+                                <?php }
                             }
                             ?>
                         </ul>
@@ -267,7 +273,7 @@ if (!isLoggedIN()) {
             <!-- end first table -->
 
             <!-- second table -->
-            <div class="card p-0" style="width: 25rem;">
+                <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                     </div>
@@ -311,10 +317,30 @@ if (!isLoggedIN()) {
                     <div class="card-body">
                         <!-- only allow three -->
                         <ul class="list-group">
-                            <li class="list-group-item">
-                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
-                                <p class="float-end">backend</p>
-                            </li>
+                            <?php
+                            $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
+                            $result = mysqli_query($conn, $sql);
+                            if($result) {
+                                $num_rows = mysqli_num_rows($result);
+                                if($num_rows > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $status         = $row['status'];
+                                        $job_title      = $row['job_title'];
+                                        $company        = $row['company'];
+                                        ?>
+                                        <li class="list-group-item">
+                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                            <p class="float-end"><?php echo $status; ?></p>
+                                        </li>
+                                    <?php 
+                                    }
+                                } else { ?>
+                                    <h3 class="mt-2 text-center text-muted">
+                                        No Entries
+                                    </h3>
+                                <?php }
+                            }
+                            ?>
                         </ul>
                     </div>
                 </div>
