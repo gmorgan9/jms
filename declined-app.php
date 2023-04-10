@@ -171,15 +171,12 @@ if($count > 0) {
         </table>
         <?php 
         
-    } else { ?>
-        <h3 class="mt-2 text-center text-muted">
-            No Entries
-        </h3>
-    <?php } else { ?>
+    } } else { ?>
         <h3 class="mt-2 text-center text-muted">
             No Entries
         </h3>
         <?php
+        
     }
         
         ?>
