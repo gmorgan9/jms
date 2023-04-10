@@ -185,6 +185,7 @@ if (!isLoggedIN()) {
                                             <?php } else {} ?>
                                         </div>
                                     </div>
+                                    <br><br>
                                     
                                     <hr>
                                     <div class="ms-3 me-3">
