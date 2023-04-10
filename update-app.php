@@ -223,7 +223,7 @@ if (!isLoggedIN()) {
 
 
     
-        <button type="submit" name="add-full" class="btn btn-primary">Submit</button>
+        <button type="submit" name="update-full" class="btn btn-primary">Submit</button>
         <div class="pb-4"></div>
     </form>
 

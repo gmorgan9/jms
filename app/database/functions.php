@@ -89,7 +89,7 @@ function isLoggedIn()
 // END DELETE
 
 // UPDATE FULL APPLICATION
-	if (isset($_POST['add-full'])) {
+	if (isset($_POST['update-full'])) {
 		$id = $_POST['appid'];
 		$watchlist = isset($_POST['watchlist']) ? 1 : 0;
 		$interview_set = isset($_POST['interview_set']) ? 1 : 0;
