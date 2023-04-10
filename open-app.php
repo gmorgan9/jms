@@ -128,7 +128,7 @@ if (!isLoggedIN()) {
         <tbody>
             <?php
 
-                $limit = 20;
+                $limit = 10;
                 $page = isset($_GET['page']) ? $_GET['page'] : 1;
                 $offset = ($page - 1) * $limit;
 
