@@ -33,7 +33,7 @@ if(isset($_POST['add-quick'])){
     if(mysqli_num_rows($result) > 0){
       $error[] = 'Application already exist!';
     }else{
-      $insert = "INSERT INTO applications (idno, job_title, company, location, app_link, watchlist) VALUES('$idno', '$job_title', '$company', '$location', '$app_link', '$watchlist')";
+      $insert = "INSERT INTO applications (idno, job_title, company, location, app_link, watchlist) VALUES('$idno', NULLIF('$job_title',''), NULLIF('$company',''), NULLIF('$location',''), NULLIF('$app_link',''), '$watchlist')";
       mysqli_query($conn, $insert);
       header('location: /');
     }
