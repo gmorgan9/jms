@@ -83,12 +83,12 @@ if(isset($_POST['add-quick'])){
 		$id = $_GET['appid'];
 
 		$sql = "DELETE FROM applications WHERE appid=$id";
-		$result = mysqli_query($con, $sql);
+		$result = mysqli_query($conn, $sql);
 		if($result) {
 			// echo "Deleted Successfully";
 			// header('location: /'); // returns back to same page
 		} else {
-			die(mysqli_error($con));
+			die(mysqli_error($conn));
 		}
 	}
 // END DELETE
