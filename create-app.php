@@ -59,15 +59,15 @@ if (!isLoggedIN()) {
 
         <div class="row mb-3">
             <div class="col">
-                <label for="job_title" class="form-label">Job Title</label>
-                <input type="text" class="form-control" id="job_title" name="job_title">
+                <!-- <label for="job_title" class="form-label">Job Title</label>
+                <input type="text" class="form-control" id="job_title" name="job_title"> -->
             </div>
         </div>
 
         <div class="row mb-3">
             <div class="col">
-                <!-- <label for="company" class="form-label">Company</label>
-                <input type="text" class="form-control" id="company" name="company"> -->
+                <label for="company" class="form-label">Company</label>
+                <input type="text" class="form-control" id="company" name="company">
             </div>
             <!-- <div class="col">
                 <label for="location" class="form-label">Location</label>
