@@ -183,9 +183,13 @@ if (!isLoggedIN()) {
                                             <?php if($cap['watchlist'] == 1){ ?>
                                                 <i class="bi bi-eye text-muted"></i>
                                             <?php } else {} ?>
+                                            <?php if($cap['interview_set'] == 1){ ?>
+                                                <i class="bi bi-people"></i>
+                                            <?php } else {} ?>
                                         </div>
                                     </div>
-                                    <br><br>
+
+                                    <br>
                                     
                                     <hr>
                                     <div class="ms-3 me-3">
