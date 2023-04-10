@@ -43,39 +43,34 @@ if(isset($_POST['add-quick-job-app'])){
 
 // ADD JOB
 if(isset($_POST['add-full'])){
-    // Check if the required fields are empty
-    if(empty($_POST['job_title']) || empty($_POST['company'])){
-        $error[] = 'Please fill in all required fields!';
+    $idno  = rand(1000000, 9999999);
+    $job_title = isset($_POST['job_title']) ? mysqli_real_escape_string($conn, $_POST['job_title']) : NULL;
+    $company = isset($_POST['company']) ? mysqli_real_escape_string($conn, $_POST['company']) : NULL;
+    $location = isset($_POST['location']) ? mysqli_real_escape_string($conn, $_POST['location']) : NULL;
+    $job_desc = isset($_POST['job_desc']) ? mysqli_real_escape_string($conn, $_POST['job_desc']) : NULL;
+	$pay = isset($_POST['pay']) ? mysqli_real_escape_string($conn, $_POST['pay']) : NULL;
+    $bonus_pay = isset($_POST['bonus_pay']) ? mysqli_real_escape_string($conn, $_POST['bonus_pay']) : NULL;
+    $status = isset($_POST['status']) ? mysqli_real_escape_string($conn, $_POST['status']) : NULL;
+    $watchlist = isset($_POST['watchlist']) ? 1 : 0;
+	$app_link = isset($_POST['app_link']) ? mysqli_real_escape_string($conn, $_POST['app_link']) : NULL;
+	$job_type = isset($_POST['job_type']) ? mysqli_real_escape_string($conn, $_POST['job_type']) : NULL;
+	$contact_name = isset($_POST['contact_name']) ? mysqli_real_escape_string($conn, $_POST['contact_name']) : NULL;
+	$contact_email = isset($_POST['contact_email']) ? mysqli_real_escape_string($conn, $_POST['contact_email']) : NULL;
+	$contact_phone = isset($_POST['contact_phone']) ? mysqli_real_escape_string($conn, $_POST['contact_phone']) : NULL;
+	$interview_set = isset($_POST['interview_set']) ? 1 : 0;
+	$start_date = isset($_POST['start_date']) ? mysqli_real_escape_string($conn, $_POST['start_date']) : NULL;
+	$resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : NULL;
+	$notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : NULL;
+
+    $select1 = " SELECT * FROM applications WHERE idno = '$idno' ";
+    $result1 = mysqli_query($conn, $select1);
+
+    if(mysqli_num_rows($result1) > 0){
+      $error[] = 'Application already exist!';
     }else{
-        $idno  = rand(1000000, 9999999);
-        $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
-        $company = mysqli_real_escape_string($conn, $_POST['company']);
-        $location = mysqli_real_escape_string($conn, $_POST['location']);
-        $job_desc = mysqli_real_escape_string($conn, $_POST['job_desc']);
-        $pay = mysqli_real_escape_string($conn, $_POST['pay']);
-        $bonus_pay = isset($_POST['bonus_pay']) ? mysqli_real_escape_string($conn, $_POST['bonus_pay']) : NULL;
-        $status = mysqli_real_escape_string($conn, $_POST['status']);
-        $watchlist = isset($_POST['watchlist']) ? 1 : 0;
-        $app_link = isset($_POST['app_link']) ? mysqli_real_escape_string($conn, $_POST['app_link']) : NULL;
-        $job_type = isset($_POST['job_type']) ? mysqli_real_escape_string($conn, $_POST['job_type']) : NULL;
-        $contact_name = isset($_POST['contact_name']) ? mysqli_real_escape_string($conn, $_POST['contact_name']) : NULL;
-        $contact_email = isset($_POST['contact_email']) ? mysqli_real_escape_string($conn, $_POST['contact_email']) : NULL;
-        $contact_phone = isset($_POST['contact_phone']) ? mysqli_real_escape_string($conn, $_POST['contact_phone']) : NULL;
-        $interview_set = isset($_POST['interview_set']) ? 1 : 0;
-        $start_date = isset($_POST['start_date']) ? mysqli_real_escape_string($conn, $_POST['start_date']) : NULL;
-        $resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : NULL;
-        $notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : NULL;
-
-        $select1 = " SELECT * FROM applications WHERE idno = '$idno' ";
-        $result1 = mysqli_query($conn, $select1);
-
-        if(mysqli_num_rows($result1) > 0){
-          $error[] = 'Application already exist!';
-        }else{
-	  $insert1 = "INSERT INTO `applications` (`idno`, `job_title`, `company`, `location`, `job_desc`, `pay`, `bonus_pay`, `status`, `watchlist`, `app_link`, `job_type`, `contact_name`, `contact_email`, `contact_phone`, `interview_set`, `start_date`, `resume_used`, `notes`) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
+	  $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
       mysqli_query($conn, $insert1);
       header('location: /');
     }
-}
 };
 // END ADD JOB
