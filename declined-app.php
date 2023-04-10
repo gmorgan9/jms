@@ -117,7 +117,7 @@ if (!isLoggedIN()) {
 
 $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Rejected'";
 $count = mysqli_query($conn, $sql);
-if($count > 0) {
+if($count < 0) {
     ?>
         <table class="table">
             <thead>
