@@ -2,9 +2,8 @@
 <div class="page-header position-fixed">
             <div class="d-flex" style="float:left !important;">
                 <div class="pe-2"></div>
-                <img src="../assets/images/new-logo.png" style="height: 20px !important; width: 20px !important;" alt="">
                 <div class="pe-4"></div>
-                <a class="head-link" style="text-decoration: none; color: white; font-size: 12px;" href="/"><i class="bi bi-house-door-fill"></i>&nbsp;RecipePro</a>
+                <a class="head-link" style="text-decoration: none; color: white; font-size: 12px;" href="/"><i class="bi bi-house-door-fill"></i>&nbsp;Job Management System</a>
                 <div class="pe-5"></div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <!-- <a class="head-link" style="text-decoration: none; margin-top: 3.5px; color: white; font-size: 12px;" href="<?php //echo BASE_URL . '/rp-admin/pending_comments.php' ?>"><i style="font-size: 12px;" class="bi bi-chat-right-fill"></i>&nbsp; -->
