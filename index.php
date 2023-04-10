@@ -78,6 +78,7 @@ if (!isLoggedIN()) {
                 <label for="app_link">Application Link:</label>
                 <input type="text" class="form-control" id="app_link" name="app_link" required>
             </div>
+            <br>
             <div class="form-group">
                 <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
