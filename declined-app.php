@@ -219,7 +219,7 @@ if (!isLoggedIN()) {
                                     <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Application Link</p> 
-                                       <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
+                                       <p><a target="_blank" href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">

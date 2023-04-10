@@ -159,7 +159,7 @@ if (!isLoggedIN()) {
                 </tr>
 
                 <!-- VIEW Modal -->
-                <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -220,7 +220,7 @@ if (!isLoggedIN()) {
                                     <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Application Link</p> 
-                                       <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
+                                       <p><a target="_blank" href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
