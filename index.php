@@ -38,8 +38,8 @@ if (!isLoggedIN()) {
             <h1>JMS</h1>
         <!-- end logo -->
         </div>
-        <div class="links float-end me-2">
-            <a href=""><?php echo $_SESSION['fname']; ?></a>
+        <div class="links float-end me-2 mt-2">
+            <a href="" class="text-decoriation-none text-black"><?php echo $_SESSION['fname']; ?></a>
         </div>
 
 
