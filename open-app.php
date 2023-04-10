@@ -43,7 +43,7 @@ if (!isLoggedIN()) {
 <div class="record_incident float-end me-5">
     <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="recordJobDropdown" data-bs-toggle="dropdown" data-bs-target="#recordJobDropdown" aria-haspopup="true" aria-expanded="false">
-        Record Job
+        Add Application
     </button>
     <div class="dropdown-menu" aria-labelledby="recordJobDropdown">
         <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#quickModal">Quick</a>
