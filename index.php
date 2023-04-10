@@ -133,7 +133,7 @@ if (!isLoggedIN()) {
     <!-- Bottom Row -->
         <div class="row">
             <!-- first table -->
-                <div class="card p-0" style="width: 30rem;">
+                <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i>  
                     </div>
@@ -144,7 +144,7 @@ if (!isLoggedIN()) {
             <!-- end first table -->
 
             <!-- second table -->
-            <div class="card p-0" style="width: 30rem;">
+            <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i>  
                     </div>
@@ -155,7 +155,7 @@ if (!isLoggedIN()) {
             <!-- end second table -->
 
             <!-- third table -->
-            <div class="card p-0" style="width: 30rem;">
+            <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i>  
                     </div>
