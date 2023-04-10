@@ -93,7 +93,7 @@ if (!isLoggedIN()) {
 
         <div class="card" style="width: 18rem;">
             <div class="card-body p-0">
-                <div class="left float-start" style="background-color: lightred; height: 100%; width: 110px; margin-left: -12px;">
+                <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;">
                     <i class="bi bi-clipboard-x d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                 </div>
 
