@@ -32,7 +32,7 @@ if (!isLoggedIN()) {
 </head>
 <body>
 
-<div class="header">
+<!-- <div class="header">
         <h3 class="logo ms-3 me-3">
             Job Management System
             <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
@@ -43,98 +43,50 @@ if (!isLoggedIN()) {
     <a href="record-incident.php"><button class="btn btn-secondary rec">Record Job</button></a>
 </div>
 
-<?php  if (isset($_SESSION['fname'])) : ?>
-    	<h1 style="margin-left: 150px;" class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>
-    <?php endif ?>
+<?php // if (isset($_SESSION['fname'])) : ?>
+    	<h1 style="margin-left: 150px;" class="text-center">Welcome <strong><?php //echo $_SESSION['fname']; ?></strong></h1>
+    <?php //endif ?>
     <br>
+ -->
 
-    <div class="container">
-    
-    <div class="col d-flex justify-content-center">
-<div class="row row_one">
-<div class="card" style="width: 18rem;">
-    <div class="card-body d-flex flex-column align-items-center">
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-envelope-open fa-8x"></i> <br>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="/open-incidents.php" class="btn stretched-link">Open Incidents</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card" style="width: 18rem;">
-    <div class="card-body d-flex flex-column align-items-center">
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-envelope-circle-check fa-8x"></i> <br>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="/closed-incidents.php" class="btn stretched-link">Closed Incidents</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card" style="width: 18rem;">
-    <div class="card-body d-flex flex-column align-items-center">
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-envelopes-bulk fa-8x"></i> <br>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="/all-incidents.php" class="btn stretched-link">All Incidents</a>
-            </div>
-        </div>
-    </div>
-</div>
-  </div>
-  </div>
-  <br>
-<!-- Row 2 -->
-<div class="col d-flex justify-content-center">
+
+
+
+
+ <!-- main-container -->
+ <div class="container-fluid main">
+
 <div class="row">
-<div class="card" style="width: 18rem;">
-    <div class="card-body d-flex flex-column align-items-center">
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-file-invoice fa-8x"></i> <br>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="priority-report.php" class="btn stretched-link" style="width: 200px;">Incident Priority Report</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card" style="width: 18rem;">
-    <div class="card-body d-flex flex-column align-items-center">
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-file-lines fa-8x"></i> <br>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="other-reports.php" class="btn stretched-link">Other Reports</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="card" style="width: 18rem;">
-    <div class="card-body d-flex flex-column align-items-center">
-        <div class="card-body">
-            <div class="d-flex justify-content-center">
-                <i class="fa-solid fa-note-sticky fa-8x"></i> <br>
-            </div>
-            <div class="d-flex justify-content-center">
-                <a href="incident-notes.php" class="btn stretched-link">Incident Notes</a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+  <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 </div>
 
-        <!-- end container -->
-    </div>
+<div class="row">
+  <div class="col" style="margin:0;padding:0;">
+    <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
+  </div>
+</div>
+
+<div class="mt-5"></div>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-10" style="margin-left: -30px;">
+    <div class="mt-5"></div>
+    <h3 class="text-black">
+      Dashboard
+    </h3>
+    <div class="mt-3"></div>
+
+
+<div class="mb-5"></div>
+</div>
+<!-- END main-container -->
+
+
+
+
+
+
+
 
 </body>
 </html>
