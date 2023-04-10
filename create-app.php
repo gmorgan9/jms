@@ -82,12 +82,12 @@ if (!isLoggedIN()) {
 
         <div class="row mb-3">
             <div class="col">
-                <label for="company" class="form-label">Pay</label>
-                <input type="number" class="form-control" id="company" name="company">
+                <label for="pay" class="form-label">Pay</label>
+                <input type="number" class="form-control" id="pay" name="pay">
             </div>
             <div class="col">
-                <label for="location" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
-                <input type="number" class="form-control" id="location" name="location">
+                <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
+                <input type="number" class="form-control" id="bonus_pay" name="bonus_pay">
             </div>
         </div>
 
