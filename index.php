@@ -143,7 +143,7 @@ if (!isLoggedIN()) {
                                 <p class="float-start">beginning</p>
                                 <p class="float-end">backend</p> 
                                 <br>
-                                <p class="text-muted" style="font-size: 11px; margin-top: -5px !important;">American Airlines</p>
+                                <p class="text-muted" style="font-size: 11px;">American Airlines</p>
                             </li>
                         </ul>
                     </div>
