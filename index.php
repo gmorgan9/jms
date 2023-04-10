@@ -137,8 +137,7 @@ if (!isLoggedIN()) {
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
                     </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
+                    <div class="card-body table-responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -147,11 +146,28 @@ if (!isLoggedIN()) {
                                     <th scope="col">Status</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>John</td>
+                                    <td>Approved</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jane</td>
+                                    <td>Pending</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Mike</td>
+                                    <td>Denied</td>
+                                </tr>
+                            </tbody>
                         </table>
-                        </div>
                     </div>
                 </div>
             <!-- end first table -->
+
 
             <!-- second table -->
             <div class="card p-0" style="width: 25rem;">
