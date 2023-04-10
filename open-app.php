@@ -177,10 +177,10 @@ if (!isLoggedIN()) {
                                                 while ($cap = mysqli_fetch_assoc($new1)) {       
                                         ?> 
                                     <!-- Display the content of the selected entry -->
-                                    <h3>Job Details</h3>
+                                    <h5>Job Details</h5>
                                     <hr>
-                                    <span class="fw-semi-bold">Job Title</span> <p><?php echo $cap['job_title']; ?></p>
-                                    <p>Company: <?php echo $cap['company']; ?></p>
+                                    <span class="fw-bold">Job Title</span> <p><?php echo $cap['job_title']; ?></p>
+                                    <span class="fw-bold">Job Title</span> <p class="text-muted"><?php echo $cap['company']; ?></p>
                                     <p>Location: <?php echo $cap['location']; ?></p>
                                     <!-- ...and so on for the other fields -->
 
