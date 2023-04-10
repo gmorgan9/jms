@@ -33,17 +33,11 @@ if (!isLoggedIN()) {
 </head>
 <body>
 
-    <div class="header">
-        <div class="logo float-start ms-3">
-            <p>JMS</p>
-        <!-- end logo -->
-        </div>
-        <div class="links float-end me-3">
-            <a href="" class="text-decoration-none text-black"><?php echo $_SESSION['fname']; ?></a>
-        </div>
-
-
-    <!-- end header -->
+<div class="header">
+        <h2 class="logo">
+            Incident Record Management System
+            <a href="/logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </h2>
     </div>
 
     <div class="container">
