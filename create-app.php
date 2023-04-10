@@ -121,7 +121,7 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <hr>
+        <!-- <hr> -->
 
         <div class="row mb-3">
             <div class="col">
@@ -141,7 +141,7 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <hr>
+        <!-- <hr> -->
 
         <div class="row mb-3">
             <!-- <div class="col">
