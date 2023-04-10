@@ -75,12 +75,12 @@ if (!isLoggedIN()) {
             </div>
         </div>
     
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="job_desc">Job Description</label>
                 <textarea class="form-control" name="job_desc" rows="5"></textarea>
             </div>
-        </div>
+        </div> -->
 
         <div class="row mb-3">
             <div class="col">
@@ -154,12 +154,12 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="notes">Notes</label>
                 <textarea class="form-control" name="notes" rows="5"></textarea>
             </div>
-        </div>
+        </div> -->
 
         <div class="row mb-3 ps-3">
             <div class="form-check">
