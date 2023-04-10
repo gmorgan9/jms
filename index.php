@@ -16,7 +16,7 @@ if (!isLoggedIN()) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/main.css?v=1.76">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.77">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 
@@ -26,7 +26,24 @@ if (!isLoggedIN()) {
     <title>Job Management System</title>
 
     <style>
-        
+          .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+}
     </style>
     
 </head>
