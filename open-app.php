@@ -196,7 +196,7 @@ if (!isLoggedIN()) {
                                     <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Application Link</p> 
-                                       <a href="<?php echo $cap['location']; ?>" class="float-end">Link Here</p>
+                                       <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
                                     </div>
                                     
                                     <!-- ...and so on for the other fields -->
