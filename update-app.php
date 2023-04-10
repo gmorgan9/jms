@@ -55,7 +55,6 @@ if (!isLoggedIN()) {
 <br><br>
 
     <?php
-        if(isset($_GET['appid'])) {
             $id = $_GET['appid'];
             $sql = "SELECT * FROM applications WHERE appid=$id";
             $result = mysqli_query($conn, $sql);
@@ -221,7 +220,7 @@ if (!isLoggedIN()) {
 
     <?php
 
-                }
+                
             }
         }
 
