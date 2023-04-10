@@ -23,6 +23,16 @@ if (!isLoggedIN()) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <title>Job Management System</title>
+
+    <style>
+        .bg-lightblue {
+    background-color: lightblue;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
     
 </head>
 <body>
@@ -63,7 +73,7 @@ if (!isLoggedIN()) {
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-4" style="background-color: lightblue">
+                    <div class="col-4 bg-lightblue">
                         <i class="bi bi-clipboard-check mt-5" style="font-size: 48px"></i>
                     </div>
                     <div class="col-8">
@@ -74,6 +84,7 @@ if (!isLoggedIN()) {
                 </div>
             </div>
         </div>
+
 
 
         <div class="card" style="width: 18rem;">
