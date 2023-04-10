@@ -97,6 +97,10 @@ if (!isLoggedIN()) {
                 <label for="job_title" class="form-label">Job Title</label>
                 <input type="text" class="form-control" id="job_title" name="job_title" value="<?php echo $job_title; ?>">
             </div>
+            <div class="col">
+                <label for="app_link" class="form-label">Application Link</label>
+                <input type="text" class="form-control" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
+            </div>
         </div>
 
         <div class="row mb-3">
@@ -107,13 +111,6 @@ if (!isLoggedIN()) {
             <div class="col">
                 <label for="location" class="form-label">Location</label>
                 <input type="text" class="form-control" id="location" name="location" value="<?php echo $location; ?>">
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col">
-                <label for="app_link" class="form-label">Application Link</label>
-                <input type="text" class="form-control" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
             </div>
         </div>
 
@@ -161,7 +158,7 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <div class="row d-flex mb-3 ps-3">
+        <div class="row mb-3 ps-3">
             <div class="form-check">
                 <?php if($watchlist == 1) { ?>
                     <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1" checked>
