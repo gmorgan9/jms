@@ -291,9 +291,11 @@ if (!isLoggedIN()) {
                                         </li>
                                     <?php 
                                     }
-                                } else {
-                                    echo "No entries";
-                                }
+                                } else { ?>
+                                    <p class="mt-2 text-center text-muted">
+                                        No Entries
+                                    </p>
+                                <?php }
                             }
                             ?>
                         </ul>
