@@ -55,7 +55,7 @@ if (!isLoggedIN()) {
             transform: translate(-50%, -50%);
             visibility: hidden;
             opacity: 0;
-            transition: opacity 0.2s ease-in-out;
+            transition: opacity 0.3s ease-in-out;
         }
 
     </style>
