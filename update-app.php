@@ -124,9 +124,6 @@ if (!isLoggedIN()) {
                 <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
                 <input type="text" class="form-control" id="bonus_pay" name="bonus_pay" value="<?php echo $bonus_pay; ?>">
             </div>
-        </div>
-
-        <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="status">Status</label>
                 <select class="form-control" name="status">
