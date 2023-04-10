@@ -49,7 +49,7 @@ if (!isLoggedIN()) {
 
 
  <!-- main-container -->
- <div class="container-fluid main" style="background-color: lightgray; max-width: 80%; border-radius: 15px;">
+ <div class="container-fluid main" style="background-color: rgb(240, 240, 240); max-width: 80%; border-radius: 15px;">
 
 <br><br>
 
