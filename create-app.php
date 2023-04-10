@@ -60,7 +60,6 @@ if (!isLoggedIN()) {
                 <label for="job_title" class="form-label">Job Title</label>
                 <input type="text" class="form-control" id="job_title" name="job_title">
             </div>
-            
         </div>
 
         <div class="row mb-3">
@@ -80,38 +79,85 @@ if (!isLoggedIN()) {
                 <textarea class="form-control" name="job_desc" rows="5"></textarea><br><br>
             </div>
         </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="company" class="form-label">Pay</label>
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <div class="col">
+                <label for="location" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
+                <input type="text" class="form-control" id="location" name="location">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label" for="status">Status</label>
+                <select class="form-control" name="status">
+                    <option value="applied">Applied</option>
+                    <option value="interviewed">Interviewed</option>
+                    <option value="offered">Offered</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            </div>
+            <div class="col">
+                <label class="form-label" for="job_type">Job Type</label>
+                <select class="form-control" name="job_type">
+                    <option value="applied">Applied</option>
+                    <option value="interviewed">Interviewed</option>
+                    <option value="offered">Offered</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="app_link" class="form-label">Application Link</label>
+                <input type="text" class="form-control" id="app_link" name="app_link">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="contact_name" class="form-label">Contact Name</label>
+                <input type="text" class="form-control" id="contact_name" name="contact_name">
+            </div>
+            <div class="col">
+                <label for="contact_phone" class="form-label">Contact Phone</label>
+                <input type="text" class="form-control" id="contact_phone" name="contact_phone">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="contact_email" class="form-label">Contact Email</label>
+                <input type="text" class="form-control" id="contact_email" name="contact_email">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="start_date" class="form-label">Start Date</label>
+                <input type="text" class="form-control" id="start_date" name="start_date">
+            </div>
+            <div class="col">
+                <label for="contact_phone" class="form-label">Contact Phone</label>
+                <input type="text" class="form-control" id="contact_phone" name="contact_phone">
+            </div>
+        </div>
+
+
     
-    <label for="pay">Pay:</label>
-    <input type="text" name="pay"><br><br>
-    
-    <label for="bonus_pay">Bonus Pay:</label>
-    <input type="text" name="bonus_pay"><br><br>
-    
-    <label for="status">Status:</label>
-    <select name="status">
-        <option value="applied">Applied</option>
-        <option value="interviewed">Interviewed</option>
-        <option value="offered">Offered</option>
-        <option value="rejected">Rejected</option>
-    </select><br><br>
     
     <label for="watchlist">Add to Watchlist:</label>
     <input type="checkbox" name="watchlist" value="1"><br><br>
     
-    <label for="app_link">Application Link:</label>
-    <input type="text" name="app_link"><br><br>
-    
-    <label for="job_type">Job Type:</label>
-    <input type="text" name="job_type"><br><br>
-    
-    <label for="contact_name">Contact Name:</label>
-    <input type="text" name="contact_name"><br><br>
-    
-    <label for="contact_email">Contact Email:</label>
-    <input type="email" name="contact_email"><br><br>
-    
-    <label for="contact_phone">Contact Phone:</label>
-    <input type="text" name="contact_phone"><br><br>
     
     <label for="interview_set">Interview Scheduled:</label>
     <input type="checkbox" name="interview_set" value="1"><br><br>
