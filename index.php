@@ -28,7 +28,7 @@ if (!isLoggedIN()) {
 <body>
 
 <div class="header">
-        <h3 class="logo">
+        <h3 class="logo ms-3 me-3">
             Job Management System
             <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-black"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
         </h3>
@@ -51,18 +51,6 @@ if (!isLoggedIN()) {
  <!-- main-container -->
  <div class="container-fluid main">
 
-<div class="mt-5"></div>
-<div class="row">
-  <div class="col-2"></div>
-  <div class="col-10" style="margin-left: -30px;">
-    <div class="mt-5"></div>
-    <h3 class="text-black">
-      Dashboard
-    </h3>
-    <div class="mt-3"></div>
-
-
-<div class="mb-5"></div>
 </div>
 <!-- END main-container -->
 
