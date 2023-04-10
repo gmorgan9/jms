@@ -245,7 +245,7 @@ if (!isLoggedIN()) {
                         <ul class="list-group">
                             <?php
                                 $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
-                                $result = mysqli_query($con, $sql);
+                                $result = mysqli_query($conn, $sql);
                                 if($result) {
                                     while ($row = mysqli_fetch_assoc($result)) {
                                         $status         = $row['status'];
