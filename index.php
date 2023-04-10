@@ -243,10 +243,24 @@ if (!isLoggedIN()) {
                     <div class="card-body">
                         <!-- only allow three -->
                         <ul class="list-group">
+                            <?php
+                                $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
+                                $result = mysqli_query($con, $sql);
+                                if($result) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $status         = $row['status'];
+                                        $job_title      = $row['job_title'];
+                                        $company        = $row['company'];
+                            ?>
                             <li class="list-group-item">
-                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
-                                <p class="float-end">backend</p>
+                                <p class="float-start"><?php $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php $company ?></span> </p>
+                                <p class="float-end"><?php $status ?></p>
                             </li>
+
+                            <?php 
+                                }
+                            }
+                            ?>
                         </ul>
                     </div>
                 </div>
