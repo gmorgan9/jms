@@ -127,7 +127,6 @@ if (!isLoggedIN()) {
                     <div class="right float-end mt-2" style="margin-right: 30px !important;">
                         <div class="pt-3"></div>
                         <h5 class="card-text text-center">
-
                         <?php
                             $sql="select count('1') from applications where status='Applied'";
                             $result=mysqli_query($conn,$sql);
@@ -138,8 +137,6 @@ if (!isLoggedIN()) {
                                 echo "$rowtotal[0]";
                             }
                         ?>
-
-
                         </h5>
                         <p class="card-title text-center">Open/Awaiting</p>
                     </div>
@@ -156,7 +153,18 @@ if (!isLoggedIN()) {
 
                     <div class="right float-end mt-2" style="margin-right: 30px !important;">
                         <div class="pt-3"></div>
-                        <h5 class="card-text text-center">10</h5>
+                        <h5 class="card-text text-center">
+                            <?php
+                                $sql="select count('1') from applications where status='Offered'";
+                                $result=mysqli_query($conn,$sql);
+                                $rowtotal=mysqli_fetch_array($result); 
+                                if($rowtotal[0] < 10) {
+                                    echo "0$rowtotal[0]";
+                                } else {
+                                    echo "$rowtotal[0]";
+                                }
+                            ?>
+                        </h5>
                         <p class="card-title text-center">Recevied Offer</p>
                     </div>
                 </div>
@@ -172,7 +180,18 @@ if (!isLoggedIN()) {
 
                     <div class="right float-end mt-2" style="margin-right: 40px !important;">
                         <div class="pt-3"></div>
-                        <h5 class="card-text text-center">12</h5>
+                        <h5 class="card-text text-center">
+                            <?php
+                                $sql="select count('1') from applications where status='Rejected'";
+                                $result=mysqli_query($conn,$sql);
+                                $rowtotal=mysqli_fetch_array($result); 
+                                if($rowtotal[0] < 10) {
+                                    echo "0$rowtotal[0]";
+                                } else {
+                                    echo "$rowtotal[0]";
+                                }
+                            ?>
+                        </h5>
                         <p class="card-title text-center">Declined</p>
                     </div>
                 </div>
@@ -188,7 +207,18 @@ if (!isLoggedIN()) {
 
                     <div class="right float-end mt-2" style="margin-right: 18px !important;">
                         <div class="pt-3"></div>
-                        <h5 class="card-text text-center">22</h5>
+                        <h5 class="card-text text-center">
+                            <?php
+                                $sql="select count('1') from applications";
+                                $result=mysqli_query($conn,$sql);
+                                $rowtotal=mysqli_fetch_array($result); 
+                                if($rowtotal[0] < 10) {
+                                    echo "0$rowtotal[0]";
+                                } else {
+                                    echo "$rowtotal[0]";
+                                }
+                            ?>
+                        </h5>
                         <p class="card-title text-center">Total Applications</p>
                     </div>
                 </div>
