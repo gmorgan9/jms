@@ -61,15 +61,14 @@ if(isset($_POST['add-full-job-app'])){
 	$resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : "NULL";
 	$notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : "NULL";
 
-    $select = " SELECT * FROM applications WHERE idno = '$idno' ";
-    $result = mysqli_query($conn, $select);
+    $select1 = " SELECT * FROM applications WHERE idno = '$idno' ";
+    $result1 = mysqli_query($conn, $select1);
 
-    if(mysqli_num_rows($result) > 0){
+    if(mysqli_num_rows($result1) > 0){
       $error[] = 'Application already exist!';
     }else{
-    //   $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contant_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES('$idno', '$job_title', '$company', '$location', '$job_desc', '$pay', '$bonus_pay', '$status', '$watchlist', '$app_link', '$job_type', '$contact_name', '$contant_email', '$contact_phone', '$interview_set', '$start_date', '$resume_used', '$notes')";
-	  $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
-      mysqli_query($conn, $insert);
+	  $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
+      mysqli_query($conn, $insert1);
       header('location: /');
     }
 };
