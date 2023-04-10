@@ -139,11 +139,10 @@ if (!isLoggedIN()) {
                                 $company        = $row['company'];
                                 $location       = $row['location'];
                                 $created_at     = $row['created_at'];
-                                // $formatted_date = date('M d, Y H:i a', strtotime($created_at));
                                 $created_at = $row['created_at'];
                                 $utc_date_time = new DateTime($created_at, new DateTimeZone('UTC'));
                                 $local_date_time = $utc_date_time->setTimezone(new DateTimeZone('America/Denver'));
-                                $formatted_date = $local_date_time->format('M d, Y h:i A');
+                                $formatted_date = $local_date_time->format('M d, Y');
                 ?>
                 <tr>
                     <th scope="row"><?php echo $id; ?></th>
@@ -154,13 +153,13 @@ if (!isLoggedIN()) {
                     <td><?php echo $status; ?></td>
                 </tr>
                 <?php
-                            }
-                        } else { ?>
-                            <h3 class="mt-2 text-center text-muted">
-                                No Entries
-                            </h3>
-                        <?php }
-                    }
+                        }
+                    } else { ?>
+                        <h3 class="mt-2 text-center text-muted">
+                            No Entries
+                        </h3>
+                    <?php }
+                }
                 ?>
             </tbody>
         </table>
