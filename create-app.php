@@ -82,7 +82,7 @@ if (!isLoggedIN()) {
             </div>
         </div> -->
 
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col">
                 <label for="pay" class="form-label">Pay</label>
                 <input type="text" class="form-control" id="pay" name="pay">
@@ -91,7 +91,7 @@ if (!isLoggedIN()) {
                 <label for="bonus_pay" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
                 <input type="text" class="form-control" id="bonus_pay" name="bonus_pay">
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="row mb-3">
             <div class="col">
