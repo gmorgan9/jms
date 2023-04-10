@@ -68,8 +68,8 @@ if (!isLoggedIN()) {
                     </div>
                     <div class="col-8">
                         <div class="pt-3"></div>
-                        <h5 class="card-text">10</h5>
-                        <p class="card-title">Made Offer</p>
+                        <h5 class="card-text text-center">10</h5>
+                        <p class="card-title text-center">Made Offer</p>
                     </div>
                 </div>
             </div>
