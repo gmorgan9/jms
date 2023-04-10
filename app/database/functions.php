@@ -54,7 +54,7 @@ if(isset($_POST['add-full-job-app'])){
 	$app_link = mysqli_real_escape_string($conn, $_POST['app_link']);
 	$job_type = mysqli_real_escape_string($conn, $_POST['job_type']);
 	$contact_name = mysqli_real_escape_string($conn, $_POST['contact_name']);
-	$contant_email = mysqli_real_escape_string($conn, $_POST['contact_email']);
+	$contact_email = mysqli_real_escape_string($conn, $_POST['contact_email']);
 	$contact_phone = mysqli_real_escape_string($conn, $_POST['contact_phone']);
 	$interview_set = isset($_POST['interview_set']) ? 1 : 0;
 	$start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
