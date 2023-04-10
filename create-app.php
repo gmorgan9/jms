@@ -83,11 +83,11 @@ if (!isLoggedIN()) {
         <div class="row mb-3">
             <div class="col">
                 <label for="company" class="form-label">Pay</label>
-                <input type="text" class="form-control" id="company" name="company">
+                <input type="number" class="form-control" id="company" name="company">
             </div>
             <div class="col">
                 <label for="location" class="form-label">Bonus Pay  <span class="text-muted" style="font-size: 10px;">Optional</span></label>
-                <input type="text" class="form-control" id="location" name="location">
+                <input type="number" class="form-control" id="location" name="location">
             </div>
         </div>
 
@@ -144,7 +144,7 @@ if (!isLoggedIN()) {
         <div class="row mb-3">
             <div class="col">
                 <label for="start_date" class="form-label">Start Date</label>
-                <input type="text" class="form-control" id="start_date" name="start_date">
+                <input type="date" class="form-control" id="start_date" name="start_date">
             </div>
             <div class="col">
                 <label for="resume_used" class="form-label">Resume Used</label>
