@@ -147,7 +147,7 @@ if (!isLoggedIN()) {
                                     <p>backend</p> 
                                 </div>
                                 <br><br>
-                                <p class="text-muted" style="font-size: 11px;">American Airlines</p>
+                                <p class="text-muted" style="margin-top: -25px; font-size: 11px;">American Airlines</p>
                             </li>
                         </ul>
                     </div>
