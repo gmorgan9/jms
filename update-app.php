@@ -151,7 +151,7 @@ if (!isLoggedIN()) {
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="notes">Notes</label>
-                <textarea class="form-control" name="notes" rows="3"><?php echo $notes; ?></textarea>
+                <textarea class="form-control" name="notes" rows="5"><?php echo $notes; ?></textarea>
             </div>
         </div>
 
