@@ -93,7 +93,7 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="status">Status</label>
                 <select class="form-control" name="status">
@@ -112,7 +112,7 @@ if (!isLoggedIN()) {
                     <option value="rejected">Rejected</option>
                 </select>
             </div>
-        </div>
+        </div> -->
 
         <div class="row mb-3">
             <div class="col">
