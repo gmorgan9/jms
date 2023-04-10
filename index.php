@@ -126,7 +126,21 @@ if (!isLoggedIN()) {
 
                     <div class="right float-end mt-2" style="margin-right: 30px !important;">
                         <div class="pt-3"></div>
-                        <h5 class="card-text text-center">04</h5>
+                        <h5 class="card-text text-center">
+
+                        <?php
+                            $sql="select count('1') from applications where status='Applied'";
+                            $result=mysqli_query($con,$sql);
+                            $rowtotal=mysqli_fetch_array($result); 
+                            if($rowtotal[0] < 10) {
+                                echo "0$rowtotal[0]";
+                            } else {
+                                echo "$rowtotal[0]";
+                            }
+                        ?>
+
+
+                        </h5>
                         <p class="card-title text-center">Open/Awaiting</p>
                     </div>
                 </div>
