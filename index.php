@@ -38,7 +38,7 @@ if (!isLoggedIN()) {
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
-    border-radius: 0.375rem;
+    border-radius: 0.325rem;
 }
 
 .card:hover .overlay-text {
