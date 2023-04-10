@@ -113,12 +113,6 @@ if (!isLoggedIN()) {
 <!-- main-container -->
     <div class="container-fluid main">
 
-    <?php
-
-$new = "SELECT COUNT(*) as total FROM applications WHERE status = 'Rejected'";
-$count = mysqli_query($conn, $new);
-if($count > 0) {
-    ?>
         <table class="table">
             <thead>
                 <tr>
@@ -165,21 +159,12 @@ if($count > 0) {
                 </tr>
                 <?php
                         }
-                        
+                    }
+                }
+                    
                 ?>
             </tbody>
         </table>
-        <?php 
-        
-    } } else { ?>
-        <h3 class="mt-2 text-center text-muted">
-            No Entries
-        </h3>
-        <?php
-        
-    }
-        
-        ?>
 
         <br>
         <?php
