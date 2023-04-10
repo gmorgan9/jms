@@ -292,9 +292,9 @@ if (!isLoggedIN()) {
                                     <?php 
                                     }
                                 } else { ?>
-                                    <p class="mt-2 text-center text-muted">
+                                    <h3 class="mt-2 text-center text-muted">
                                         No Entries
-                                    </p>
+                                    </h3>
                                 <?php }
                             }
                             ?>
