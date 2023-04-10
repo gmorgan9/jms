@@ -161,7 +161,7 @@ if (!isLoggedIN()) {
             </div>
         </div> -->
 
-        <div class="row mb-3 ps-3">
+        <!-- <div class="row mb-3 ps-3">
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
                 <label class="form-check-label" for="watchlist">Add to Watchlist</label>
@@ -170,7 +170,7 @@ if (!isLoggedIN()) {
                 <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1">
                 <label class="form-check-label" for="interview_set">Interview Set</label>
             </div>
-        </div>
+        </div> -->
 
 
     
