@@ -8,11 +8,6 @@ session_start();
 if (!isLoggedIN()) {
 	header('location: login.php');
 }
-// if (isset($_GET['logout'])) {
-// 	session_destroy();
-// 	unset($_SESSION['user']);
-// 	header("location: login.php");
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +17,6 @@ if (!isLoggedIN()) {
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css?v=1.71">
-    <link rel="stylesheet" href="assets/css/sidebar.css?v=1.67">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
@@ -56,16 +50,6 @@ if (!isLoggedIN()) {
 
  <!-- main-container -->
  <div class="container-fluid main">
-
-<div class="row">
-  <?php //include(ROOT_PATH . "/app/includes/header.php"); ?>
-</div>
-
-<div class="row">
-  <div class="col" style="margin:0;padding:0;">
-    <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
-  </div>
-</div>
 
 <div class="mt-5"></div>
 <div class="row">
