@@ -101,9 +101,7 @@ if (!isLoggedIN()) {
 
 
 
-<?php if (isset($_SESSION['fname'])) : ?>
-    	<h1 style="margin-left: 175px;" class="text-center">TOOTOOT <strong><?php echo $_SESSION['fname']; ?></strong></h1>
-    <?php endif ?>
+    <h1 style="margin-left: 175px;" class="text-center"><strong>Open Applications</strong></h1>
     <br>
 
 
@@ -112,246 +110,51 @@ if (!isLoggedIN()) {
 
 
 
- <!-- main-container -->
- <div class="container-fluid main">
+<!-- main-container -->
+    <div class="container-fluid main">
 
-    <!-- Top Row -->
-        <div class="row d-flex justify-content-center">
-        <!-- Open/Awaiting -->
-            <a class="text-decoration-none" href="open-app.php">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body p-0">
-                        <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px;">
-                            <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                        </div>
-
-                        <div class="right float-end mt-2" style="margin-right: 30px !important;">
-                            <div class="pt-3"></div>
-                            <h5 class="card-text text-center">
-                            <?php
-                                $sql="select count('1') from applications where status='Applied'";
-                                $result=mysqli_query($conn,$sql);
-                                $rowtotal=mysqli_fetch_array($result); 
-                                if($rowtotal[0] < 10) {
-                                    echo "0$rowtotal[0]";
-                                } else {
-                                    echo "$rowtotal[0]";
-                                }
-                            ?>
-                            </h5>
-                            <p class="card-title text-center">Open/Awaiting</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        <!-- end Open/Awaiting -->
-
-        <!-- Recieved Offer -->
-            <div class="card" style="width: 18rem;">
-                <div class="card-body p-0">
-                    <div class="left float-start" style="background-color: lightblue; height: 100%; width: 110px; margin-left: -12px;">
-                        <i class="bi bi-clipboard-check d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                    </div>
-
-                    <div class="right float-end mt-2" style="margin-right: 30px !important;">
-                        <div class="pt-3"></div>
-                        <h5 class="card-text text-center">
-                            <?php
-                                $sql="select count('1') from applications where status='Offered'";
-                                $result=mysqli_query($conn,$sql);
-                                $rowtotal=mysqli_fetch_array($result); 
-                                if($rowtotal[0] < 10) {
-                                    echo "0$rowtotal[0]";
-                                } else {
-                                    echo "$rowtotal[0]";
-                                }
-                            ?>
-                        </h5>
-                        <p class="card-title text-center">Recevied Offer</p>
-                    </div>
-                </div>
-            </div>
-        <!-- end Received Offer -->
-
-        <!-- Declined -->
-            <div class="card" style="width: 18rem;">
-                <div class="card-body p-0">
-                    <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;">
-                        <i class="bi bi-clipboard-x d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                    </div>
-
-                    <div class="right float-end mt-2" style="margin-right: 40px !important;">
-                        <div class="pt-3"></div>
-                        <h5 class="card-text text-center">
-                            <?php
-                                $sql="select count('1') from applications where status='Rejected'";
-                                $result=mysqli_query($conn,$sql);
-                                $rowtotal=mysqli_fetch_array($result); 
-                                if($rowtotal[0] < 10) {
-                                    echo "0$rowtotal[0]";
-                                } else {
-                                    echo "$rowtotal[0]";
-                                }
-                            ?>
-                        </h5>
-                        <p class="card-title text-center">Declined</p>
-                    </div>
-                </div>
-            </div>
-        <!-- end Declined -->
-
-        <!-- Total -->
-            <div class="card" style="width: 18rem;">
-                <div class="card-body p-0">
-                    <div class="left float-start" style="background-color: lightsalmon; height: 100%; width: 110px; margin-left: -12px;">
-                        <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                    </div>
-
-                    <div class="right float-end mt-2" style="margin-right: 18px !important;">
-                        <div class="pt-3"></div>
-                        <h5 class="card-text text-center">
-                            <?php
-                                $sql="select count('1') from applications";
-                                $result=mysqli_query($conn,$sql);
-                                $rowtotal=mysqli_fetch_array($result); 
-                                if($rowtotal[0] < 10) {
-                                    echo "0$rowtotal[0]";
-                                } else {
-                                    echo "$rowtotal[0]";
-                                }
-                            ?>
-                        </h5>
-                        <p class="card-title text-center">Total Applications</p>
-                    </div>
-                </div>
-            </div>
-        <!-- end Total -->
-        </div>
-    <!-- end Top Row -->
-
-    <br><br>
-
-    <hr>
-
-    <br><br>
-
-    <!-- Bottom Row -->
-        <div class="row d-flex justify-content-center">
-            <!-- first table -->
-                <div class="card p-0" style="width: 25rem;">
-                    <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
-                    </div>
-                    <div class="card-body">
-                        <!-- only allow three -->
-                        <ul class="list-group">
-                            <?php
-                            $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
-                            $result = mysqli_query($conn, $sql);
-                            if($result) {
-                                $num_rows = mysqli_num_rows($result);
-                                if($num_rows > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $status         = $row['status'];
-                                        $job_title      = $row['job_title'];
-                                        $company        = $row['company'];
-                                        ?>
-                                        <li class="list-group-item">
-                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <p class="float-end"><?php echo $status; ?></p>
-                                        </li>
-                                    <?php 
-                                    }
-                                } else { ?>
-                                    <h3 class="mt-2 text-center text-muted">
-                                        No Entries
-                                    </h3>
-                                <?php }
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Job Title</th>
+                <th scope="col">Company</th>
+                <th scope="col">Location</th>
+                <th scope="col">Applied</th>
+                <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $sql = "SELECT * FROM applications WHERE status = 'Applied' ORDER BY created_at ASC";
+                    $result = mysqli_query($conn, $sql);
+                    if($result) {
+                        $num_rows = mysqli_num_rows($result);
+                        if($num_rows > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $status         = $row['status'];
+                                $job_title      = $row['job_title'];
+                                $company        = $row['company'];
+                ?>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <?php
                             }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            <!-- end first table -->
+                        } else { ?>
+                            <h3 class="mt-2 text-center text-muted">
+                                No Entries
+                            </h3>
+                        <?php }
+                    }
+                ?>
+            </tbody>
+        </table>
 
-            <!-- second table -->
-                <div class="card p-0" style="width: 25rem;">
-                    <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
-                    </div>
-                    <div class="card-body">
-                        <!-- only allow three -->
-                        <ul class="list-group">
-                            <?php
-                            $sql = "SELECT * FROM applications WHERE watchlist = 1 LIMIT 3";
-                            $result = mysqli_query($conn, $sql);
-                            if($result) {
-                                $num_rows = mysqli_num_rows($result);
-                                if($num_rows > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $status         = $row['status'];
-                                        $job_title      = $row['job_title'];
-                                        $company        = $row['company'];
-                                        ?>
-                                        <li class="list-group-item">
-                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <p class="float-end"><?php echo $status; ?></p>
-                                        </li>
-                                    <?php 
-                                    }
-                                } else { ?>
-                                    <h3 class="mt-2 text-center text-muted">
-                                        No Entries
-                                    </h3>
-                                <?php }
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            <!-- end second table -->
-
-            <!-- third table -->
-                <div class="card p-0" style="width: 25rem;">
-                    <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
-                    </div>
-                    <div class="card-body">
-                        <!-- only allow three -->
-                        <ul class="list-group">
-                            <?php
-                            $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
-                            $result = mysqli_query($conn, $sql);
-                            if($result) {
-                                $num_rows = mysqli_num_rows($result);
-                                if($num_rows > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        $status         = $row['status'];
-                                        $job_title      = $row['job_title'];
-                                        $company        = $row['company'];
-                                        ?>
-                                        <li class="list-group-item">
-                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <p class="float-end"><?php echo $status; ?></p>
-                                        </li>
-                                    <?php 
-                                    }
-                                } else { ?>
-                                    <h3 class="mt-2 text-center text-muted">
-                                        No Entries
-                                    </h3>
-                                <?php }
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                </div>
-            <!-- end third table -->
-
-        </div>
-    <!-- end Bottom Row -->
-
-</div>
+    </div>
 <!-- END main-container -->
 
 

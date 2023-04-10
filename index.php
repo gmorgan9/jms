@@ -26,38 +26,39 @@ if (!isLoggedIN()) {
     <title>Job Management System</title>
 
     <style>
-        .top-card {
-            position: relative;
-        }
+        /* top card overlay */
+            .top-card {
+                position: relative;
+            }
 
-        .top-card:hover::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(107, 107, 107, 0.75);
-            border-radius: 0.325rem;
-        }
+            .top-card:hover::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(107, 107, 107, 0.75);
+                border-radius: 0.325rem;
+            }
 
-        .top-card:hover .overlay-text {
-            visibility: visible;
-            opacity: 1;
-        }
+            .top-card:hover .overlay-text {
+                visibility: visible;
+                opacity: 1;
+            }
 
-        .overlay-text {
-            color: white;
-            font-weight: bold;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
+            .overlay-text {
+                color: white;
+                font-weight: bold;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+        /* end top card overlay */
     </style>
     
 </head>
@@ -132,7 +133,7 @@ if (!isLoggedIN()) {
 
 
 
-<?php if (isset($_SESSION['fname'])) : ?>
+    <?php if (isset($_SESSION['fname'])) : ?>
     	<h1 style="margin-left: 175px;" class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>
     <?php endif ?>
     <br>
@@ -281,9 +282,7 @@ if (!isLoggedIN()) {
     <!-- end Top Row -->
 
     <br><br>
-
     <hr>
-
     <br><br>
 
     <!-- Bottom Row -->
