@@ -55,7 +55,7 @@ if (!isLoggedIN()) {
 
  
 
-    <form method="POST" action="">
+<form action="" method="POST">
 
         <div class="row mb-3">
             <div class="col">
@@ -176,7 +176,7 @@ if (!isLoggedIN()) {
     
         <button type="submit" name="add-full-job-app" class="btn btn-primary">Submit</button>
         <div class="pb-4"></div>
-    </form>
+        </form>
 
 
 
