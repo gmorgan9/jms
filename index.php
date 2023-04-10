@@ -35,7 +35,7 @@ if (!isLoggedIN()) {
 <div class="header">
         <h3 class="logo ms-3 me-3">
             Job Management System
-            <a class="float-end text-black" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn-link"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
+            <a class="float-end text-black" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
         </h3>
     </div>
 <br>
