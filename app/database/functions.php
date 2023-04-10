@@ -65,7 +65,7 @@ $resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $
 if(isset($_POST['notes'])) {
     $notes = mysqli_real_escape_string($conn, $_POST['notes']);
 } else {
-    $notes = "NULL";
+    $notes = "";
 }
     
 
@@ -76,7 +76,7 @@ if(isset($_POST['notes'])) {
         $error[] = 'Application already exists!';
     } else {
 		$insert1 = "INSERT INTO applications (idno, job_title, notes) 
-        VALUES ('$idno','$job_title','$notes')";
+        VALUES ('$idno','$job_title',NULLIF('$notes',''))";
         // $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) 
         // VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
         mysqli_query($conn, $insert1);
