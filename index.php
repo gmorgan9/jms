@@ -132,16 +132,27 @@ if (!isLoggedIN()) {
 
     <!-- Bottom Row -->
         <div class="row">
-            <!-- first graph -->
-                <div class="card p-0" style="width: 18rem;">
+            <!-- first table -->
+                <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
-                        Featured
+                        <i class="bi bi-grid-3x3-gap-fill"></i>  
                     </div>
                     <div class="card-body">
-                        graph 1
+                        table 1
                     </div>
                 </div>
-            <!-- end first graph -->
+            <!-- end first table -->
+
+            <!-- second table -->
+            <div class="card p-0" style="width: 25rem;">
+                    <div class="card-header">
+                        <i class="bi bi-grid-3x3-gap-fill"></i>  
+                    </div>
+                    <div class="card-body">
+                        table 2
+                    </div>
+                </div>
+            <!-- end second table -->
 
         </div>
     <!-- end Bottom Row -->
