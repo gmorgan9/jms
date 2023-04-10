@@ -68,6 +68,7 @@ if(isset($_POST['add-full-job-app'])){
       $error[] = 'Application already exist!';
     }else{
       $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contant_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES('$idno', '$job_title', '$company', '$location', '$job_desc', '$pay', '$bonus_pay', '$status', '$watchlist', '$app_link', '$job_type', '$contact_name', '$contant_email', '$contact_phone', '$interview_set', '$start_date', '$resume_used', '$notes')";
+	  $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, `notes`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','[value-16]','[value-17]','[value-18]')"
       mysqli_query($conn, $insert);
       header('location: /');
     }
