@@ -34,6 +34,14 @@ if (!isLoggedIN()) {
 <body>
 
     <div class="header">
+        <div class="logo float-start">
+            <h1>JMS</h1>
+        <!-- end logo -->
+        </div>
+        <div class="links">
+
+        </div>
+
 
     <!-- end header -->
     </div>
