@@ -14,5 +14,5 @@ body, html {
 .header {
     background-color: blue;
     height: 150px;
-    width:auto;
+    width: 100%;
 }
