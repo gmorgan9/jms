@@ -76,5 +76,6 @@ if(isset($_POST['add-full'])){
       mysqli_query($conn, $insert1);
       header('location: /');
     }
+}
 };
 // END ADD JOB
