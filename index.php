@@ -274,10 +274,28 @@ if (!isLoggedIN()) {
                     <div class="card-body">
                         <!-- only allow three -->
                         <ul class="list-group">
+                            <?php
+                                $sql = "SELECT * FROM applications WHERE wailist = 1 LIMIT 3";
+                                $result = mysqli_query($conn, $sql);
+                                if($result) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $status         = $row['status'];
+                                        $job_title      = $row['job_title'];
+                                        $company        = $row['company'];
+                            ?>
                             <li class="list-group-item">
-                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
-                                <p class="float-end">backend</p>
+                                <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                <p class="float-end"><?php echo $status; ?></p>
                             </li>
+
+                            <?php 
+                                }
+                            } else {
+                            ?> 
+                            <p>No entries!</p>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                 </div>
