@@ -126,6 +126,7 @@ if (!isLoggedIN()) {
             </thead>
             <tbody>
                 <?php
+                    date_default_timezone_set('America/Denver');
                     $sql = "SELECT * FROM applications WHERE status = 'Applied' ORDER BY created_at ASC";
                     $result = mysqli_query($conn, $sql);
                     if($result) {
@@ -138,6 +139,7 @@ if (!isLoggedIN()) {
                                 $company        = $row['company'];
                                 $location       = $row['location'];
                                 $created_at     = $row['created_at'];
+                                $formatted_date = date('M d, Y,', strtotime($created_at));
                 ?>
                 <tr>
                     <th scope="row"><?php echo $id; ?></th>
