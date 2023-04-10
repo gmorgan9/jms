@@ -105,7 +105,7 @@ if (!isLoggedIN()) {
                     <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                 </div>
 
-                <div class="right float-end mt-3" style="margin-right: 35px !important;">
+                <div class="right float-end mt-3" style="margin-right: 20px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">22</h5>
                     <p class="card-title text-center">Total Applications</p>
