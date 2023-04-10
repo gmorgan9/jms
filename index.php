@@ -354,7 +354,15 @@ if (!isLoggedIN()) {
                                         ?>
                                         <li class="list-group-item">
                                             <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <p class="float-end"><?php echo $status; ?></p>
+                                            <?php if($row['status'] == 'Applied'){ ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Offered') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Rejected') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } ?>
                                         </li>
                                     <?php 
                                     }
@@ -391,7 +399,15 @@ if (!isLoggedIN()) {
                                         ?>
                                         <li class="list-group-item">
                                             <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
-                                            <p class="float-end"><?php echo $status; ?></p>
+                                            <?php if($row['status'] == 'Applied'){ ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Offered') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Rejected') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } ?>
                                         </li>
                                     <?php 
                                     }
