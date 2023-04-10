@@ -26,11 +26,11 @@ if (!isLoggedIN()) {
     <title>Job Management System</title>
 
     <style>
-        .card {
+        .top-card {
             position: relative;
         }
 
-        .card:hover::before {
+        .top-card:hover::before {
             content: "";
             position: absolute;
             top: 0;
@@ -41,7 +41,7 @@ if (!isLoggedIN()) {
             border-radius: 0.325rem;
         }
 
-        .card:hover .overlay-text {
+        .top-card:hover .overlay-text {
             visibility: visible;
             opacity: 1;
         }
@@ -150,7 +150,7 @@ if (!isLoggedIN()) {
         <div class="row d-flex justify-content-center">
         <!-- Open/Awaiting -->
             
-            <div class="card" style="width: 18rem;">
+            <div class="card top-card" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -183,7 +183,7 @@ if (!isLoggedIN()) {
         <!-- end Open/Awaiting -->
 
         <!-- Recieved Offer -->
-            <div class="card" style="width: 18rem;">
+            <div class="card top-card" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightblue; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -215,7 +215,7 @@ if (!isLoggedIN()) {
         <!-- end Received Offer -->
 
         <!-- Declined -->
-            <div class="card" style="width: 18rem;">
+            <div class="card top-card" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -247,7 +247,7 @@ if (!isLoggedIN()) {
         <!-- end Declined -->
 
         <!-- Total -->
-            <div class="card" style="width: 18rem;">
+            <div class="card top-card" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightsalmon; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
