@@ -175,38 +175,38 @@ if (!isLoggedIN()) {
             <div class="modal-body">
 
             <?php
-                        $sql = "SELECT * FROM applications WHERE appid=$id";
-                        $result = mysqli_query($conn, $sql);
-                        if($result) {
-                            $num_rows = mysqli_num_rows($result);
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                $newid              = $row['appid'];
-                                $njob_title      = $row['job_title'];
-                                $ncompany        = $row['company'];
-                                $nlocation       = $row['location'];
-                                $njob_desc       = $row['job_desc'];
-                                $npay            = $row['pay'];
-                                $nbonus_pay      = $row['bonus_pay'];
-                                $nstatus         = $row['status'];
-                                $njob_type       = $row['job_type'];
-                                $napp_link       = $row['app_link'];
-                                $ncontact_name   = $row['contact_name'];
-                                $ncontact_phone  = $row['contact_phone'];
-                                $ncontact_email  = $row['contact_email'];
-                                $nstart_date     = $row['start_date'];
-                                $nresume_used    = $row['resume_used'];
-                                $nnotes          = $row['notes'];
-                                $nwatchlist      = $row['watchlist'];
-                                $ninterview_set  = $row['interview_set'];
+                        $new = "SELECT * FROM applications WHERE appid=$id";
+                        $new1 = mysqli_query($conn, $new);
+                        if($new1) {
+                            $num_rows = mysqli_num_rows($new1);
+                            while ($cap = mysqli_fetch_assoc($new1)) {
+                                // $newid              = $row['appid'];
+                                // $njob_title      = $row['job_title'];
+                                // $ncompany        = $row['company'];
+                                // $nlocation       = $row['location'];
+                                // $njob_desc       = $row['job_desc'];
+                                // $npay            = $row['pay'];
+                                // $nbonus_pay      = $row['bonus_pay'];
+                                // $nstatus         = $row['status'];
+                                // $njob_type       = $row['job_type'];
+                                // $napp_link       = $row['app_link'];
+                                // $ncontact_name   = $row['contact_name'];
+                                // $ncontact_phone  = $row['contact_phone'];
+                                // $ncontact_email  = $row['contact_email'];
+                                // $nstart_date     = $row['start_date'];
+                                // $nresume_used    = $row['resume_used'];
+                                // $nnotes          = $row['notes'];
+                                // $nwatchlist      = $row['watchlist'];
+                                // $ninterview_set  = $row['interview_set'];
 
                             
                     ?>
 
 
                 <!-- Display the content of the selected entry -->
-                <p>Job Title: <?php echo $row['job_title']; ?></p>
-                <p>Company: <?php echo $row['company']; ?></p>
-                <p>Location: <?php echo $row['location']; ?></p>
+                <p>Job Title: <?php echo $cap['job_title']; ?></p>
+                <p>Company: <?php echo $cap['company']; ?></p>
+                <p>Location: <?php echo $cap['location']; ?></p>
                 <!-- ...and so on for the other fields -->
 
                 <?php } } ?>
