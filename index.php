@@ -33,14 +33,16 @@ if (!isLoggedIN()) {
 </head>
 <body>
 
-<div class="container">
     <div class="header">
 
     <!-- end header -->
     </div>
 
-    <!-- end container -->
-</div>
+    <div class="container">
+    
+
+        <!-- end container -->
+    </div>
 
 
 
