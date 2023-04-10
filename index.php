@@ -253,8 +253,8 @@ if (!isLoggedIN()) {
                                         $company        = $row['company'];
                             ?>
                             <li class="list-group-item">
-                                <p class="float-start"><?php $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php $company ?></span> </p>
-                                <p class="float-end"><?php $status ?></p>
+                                <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                <p class="float-end"><?php echo $status; ?></p>
                             </li>
 
                             <?php 
