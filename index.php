@@ -39,7 +39,7 @@ if (!isLoggedIN()) {
         <!-- end logo -->
         </div>
         <div class="links float-end me-2 mt-2">
-            <a href="" class="text-decoriation-none text-black"><?php echo $_SESSION['fname']; ?></a>
+            <a href="" class="text-decoration-none text-black"><?php echo $_SESSION['fname']; ?></a>
         </div>
 
 
