@@ -89,7 +89,7 @@ if (!isLoggedIN()) {
             
         </div>
         <div class="modal-footer">
-            <button type="submit" name="add-quick-job-app" class="btn btn-primary">Submit</button>
+            <button type="submit" name="add-quick" class="btn btn-primary">Submit</button>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
         </form>
