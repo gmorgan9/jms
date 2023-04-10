@@ -46,12 +46,32 @@ if (!isLoggedIN()) {
         Record Job
     </button>
     <div class="dropdown-menu" aria-labelledby="recordJobDropdown">
-        <a class="dropdown-item" href="#">Option 1</a>
-        <a class="dropdown-item" href="#">Option 2</a>
-        <a class="dropdown-item" href="#">Option 3</a>
+        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#quickModal">Quick</a>
+        <a class="dropdown-item" href="create-app.php">In-depth</a>
     </div>
     </div>
 </div>
+
+<!-- Quick Modal -->
+    <div class="modal fade" id="quickModal" tabindex="-1" aria-labelledby="quickModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="quickModalLabel">Quick Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>This is a quick modal.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+    </div>
+<!-- end Quick Modal -->
+
+
 
 
 <?php if (isset($_SESSION['fname'])) : ?>
