@@ -131,9 +131,9 @@ if (!isLoggedIN()) {
     <br><br>
 
     <!-- Bottom Row -->
-        <div class="row d-flex justify-content-center">
+        <div class="row">
             <!-- first table -->
-                <div class="card p-0" style="width: 25rem;">
+                <div class="card p-0" style="width: 30rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i>  
                     </div>
@@ -144,7 +144,7 @@ if (!isLoggedIN()) {
             <!-- end first table -->
 
             <!-- second table -->
-            <div class="card p-0" style="width: 25rem;">
+            <div class="card p-0" style="width: 30rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i>  
                     </div>
@@ -153,6 +153,17 @@ if (!isLoggedIN()) {
                     </div>
                 </div>
             <!-- end second table -->
+
+            <!-- third table -->
+            <div class="card p-0" style="width: 30rem;">
+                    <div class="card-header">
+                        <i class="bi bi-grid-3x3-gap-fill"></i>  
+                    </div>
+                    <div class="card-body">
+                        table 3
+                    </div>
+                </div>
+            <!-- end third table -->
 
         </div>
     <!-- end Bottom Row -->
