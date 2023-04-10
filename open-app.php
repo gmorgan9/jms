@@ -177,7 +177,15 @@ if (!isLoggedIN()) {
                                                 while ($cap = mysqli_fetch_assoc($new1)) {       
                                         ?> 
                                     <!-- Display the content of the selected entry -->
-                                    <h5>Job Details</h5>
+                                    <div>
+                                        <h5 class="float-start">Job Details</h5>
+                                        <div class="float-end">
+                                            <?php if($cap['watchlist'] == 1){ ?>
+                                                <i class="bi bi-eye text-muted"></i>
+                                            <?php } else {} ?>
+                                        </div>
+                                    </div>
+                                    
                                     <hr>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Job Title</p> 
