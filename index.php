@@ -131,7 +131,7 @@ if (!isLoggedIN()) {
     <br><br>
 
     <!-- Bottom Row -->
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <!-- first table -->
                 <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
