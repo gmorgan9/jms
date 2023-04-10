@@ -123,7 +123,7 @@ if (!isLoggedIN()) {
 
         <!-- <hr> -->
 
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col">
                 <label for="contact_name" class="form-label">Contact Name</label>
                 <input type="text" class="form-control" id="contact_name" name="contact_name">
@@ -132,7 +132,7 @@ if (!isLoggedIN()) {
                 <label for="contact_phone" class="form-label">Contact Phone</label>
                 <input type="text" class="form-control" id="contact_phone" name="contact_phone">
             </div>
-        </div>
+        </div> -->
 
         <div class="row mb-3">
             <div class="col">
