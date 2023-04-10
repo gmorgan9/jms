@@ -58,9 +58,16 @@ if (!isLoggedIN()) {
     <div class="row">
 
         <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Open</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card-body p-0">
+                <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px;">
+                    <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                </div>
+
+                <div class="right float-end mt-3" style="margin-right: 35px !important;">
+                    <div class="pt-3"></div>
+                    <h5 class="card-text text-center">04</h5>
+                    <p class="card-title text-center">Open/Awaiting</p>
+                </div>
             </div>
         </div>
 
@@ -73,7 +80,7 @@ if (!isLoggedIN()) {
                 <div class="right float-end mt-3" style="margin-right: 35px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">10</h5>
-                    <p class="card-title text-center">Made Offer</p>
+                    <p class="card-title text-center">Recevied Offer</p>
                 </div>
             </div>
         </div>
