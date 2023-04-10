@@ -48,8 +48,8 @@ if(isset($_POST['add-full'])){
     $company = isset($_POST['company']) ? mysqli_real_escape_string($conn, $_POST['company']) : "";
     $location = isset($_POST['location']) ? mysqli_real_escape_string($conn, $_POST['location']) : "";
     $job_desc = isset($_POST['job_desc']) ? mysqli_real_escape_string($conn, $_POST['job_desc']) : "";
-	$pay = isset($_POST['pay']) ? mysqli_real_escape_string($conn, $_POST['pay']) : 1234;
-    $bonus_pay = isset($_POST['bonus_pay']) ? mysqli_real_escape_string($conn, $_POST['bonus_pay']) : 1234;
+	$pay = isset($_POST['pay']) ? mysqli_real_escape_string($conn, $_POST['pay']) : "";
+    $bonus_pay = isset($_POST['bonus_pay']) ? mysqli_real_escape_string($conn, $_POST['bonus_pay']) : "";
     $status = isset($_POST['status']) ? mysqli_real_escape_string($conn, $_POST['status']) : "";
     $watchlist = isset($_POST['watchlist']) ? 1 : 0;
 	$app_link = isset($_POST['app_link']) ? mysqli_real_escape_string($conn, $_POST['app_link']) : "";
@@ -58,7 +58,7 @@ if(isset($_POST['add-full'])){
 	$contact_email = isset($_POST['contact_email']) ? mysqli_real_escape_string($conn, $_POST['contact_email']) : "";
 	$contact_phone = isset($_POST['contact_phone']) ? mysqli_real_escape_string($conn, $_POST['contact_phone']) : "";
 	$interview_set = isset($_POST['interview_set']) ? 1 : 0;
-	$start_date = isset($_POST['start_date']) ? mysqli_real_escape_string($conn, $_POST['start_date']) : 2023-05-12;
+	$start_date = isset($_POST['start_date']) ? mysqli_real_escape_string($conn, $_POST['start_date']) : "";
 	$resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : "";
 	$notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : "";
 
@@ -68,6 +68,7 @@ if(isset($_POST['add-full'])){
     if(mysqli_num_rows($result1) > 0){
       $error[] = 'Application already exist!';
     }else{
+		var_dump($_POST)
 	  $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
       mysqli_query($conn, $insert1);
       header('location: /');
