@@ -158,38 +158,10 @@ if (!isLoggedIN()) {
                     <td><?php echo $status ? $status : '-'; ?></td>
                     <td style="font-size: 20px;"><a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
                 </tr>
-                <?php
-                        }
-                    }
-                }
-                ?>
-            </tbody>
-        </table>
-        <br>
-        <?php
-            // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($result);
-            $total_pages = ceil($row["total"] / $limit);
-
-                echo '<ul class="pagination justify-content-center">';
-                for ($i = 1; $i <= $total_pages; $i++) {
-                    $active = ($page == $i) ? "active" : "";
-                    echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}'>{$i}</a></li>";
-                }
-                echo '</ul>';
-        ?>
-
-    </div>
-<!-- END main-container -->
 
 
-
-
-<!-- VIEW Modal -->
+                <!-- VIEW Modal -->
 <?php
-            $id = $_GET['viewid'];
             $sql = "SELECT * FROM applications WHERE appid=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
@@ -242,6 +214,40 @@ if (!isLoggedIN()) {
 
     <?php } } ?>
 <!-- end VIEW Modal -->
+
+
+
+
+                <?php
+                        }
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
+        <br>
+        <?php
+            // Pagination links
+            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            $total_pages = ceil($row["total"] / $limit);
+
+                echo '<ul class="pagination justify-content-center">';
+                for ($i = 1; $i <= $total_pages; $i++) {
+                    $active = ($page == $i) ? "active" : "";
+                    echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}'>{$i}</a></li>";
+                }
+                echo '</ul>';
+        ?>
+
+    </div>
+<!-- END main-container -->
+
+
+
+
+
 
 
 
