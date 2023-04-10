@@ -275,7 +275,7 @@ if (!isLoggedIN()) {
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                                $sql = "SELECT * FROM applications WHERE wailist = 1 LIMIT 3";
+                                $sql = "SELECT * FROM applications WHERE watchlist = 1 LIMIT 3";
                                 $result = mysqli_query($conn, $sql);
                                 if($result) {
                                     while ($row = mysqli_fetch_assoc($result)) {
