@@ -26,24 +26,35 @@ if (!isLoggedIN()) {
     <title>Job Management System</title>
 
     <style>
-          .card-overlay {
+        .card {
+    position: relative;
+}
+
+.card:hover::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-    z-index: 1;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
 }
 
-.card:hover .card-overlay {
+.card:hover .overlay-text {
+    visibility: visible;
     opacity: 1;
 }
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
     </style>
     
 </head>
@@ -138,7 +149,7 @@ if (!isLoggedIN()) {
             
             <div class="card" style="width: 18rem;">
                 <a class="text-decoration-none text-black" href="open-app.php">
-                    <div class="card-body p-0 position-relative">
+                    <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px;">
                             <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                         </div>
@@ -146,7 +157,7 @@ if (!isLoggedIN()) {
                         <div class="right float-end mt-2" style="margin-right: 30px !important;">
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
-                            <?php
+                                <?php
                                 $sql="select count('1') from applications where status='Applied'";
                                 $result=mysqli_query($conn,$sql);
                                 $rowtotal=mysqli_fetch_array($result); 
@@ -155,17 +166,17 @@ if (!isLoggedIN()) {
                                 } else {
                                     echo "$rowtotal[0]";
                                 }
-                            ?>
+                                ?>
                             </h5>
                             <p class="card-title text-center">Open/Awaiting</p>
-                        </div>
-
-                        <div class="card-overlay">
-                            <p>View details</p>
+                            <div class="overlay-text">
+                                View Details
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
+
             
         <!-- end Open/Awaiting -->
 
