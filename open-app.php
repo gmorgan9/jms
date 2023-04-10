@@ -179,6 +179,10 @@ if (!isLoggedIN()) {
                                     <!-- Display the content of the selected entry -->
                                     <h5>Job Details</h5>
                                     <hr>
+                                    <div>
+                                       <p class="float-start fw-bold">Job Title</p> 
+                                       <p class="float-end"><?php echo $cap['job_title']; ?></p>
+                                    </div>
                                     <span class="fw-bold">Job Title</span> <p><?php echo $cap['job_title']; ?></p>
                                     <span class="fw-bold">Job Title</span> <p class="text-muted"><?php echo $cap['company']; ?></p>
                                     <p>Location: <?php echo $cap['location']; ?></p>
