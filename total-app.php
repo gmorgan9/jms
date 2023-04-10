@@ -101,7 +101,7 @@ if (!isLoggedIN()) {
 
 
 
-    <h1 style="margin-left: 175px;" class="text-center"><strong>Open Applications</strong></h1>
+    <h1 style="margin-left: 175px;" class="text-center"><strong>All Applications</strong></h1>
     <br>
 
 
@@ -127,12 +127,11 @@ if (!isLoggedIN()) {
             </thead>
             <tbody>
                 <?php
-                    // Pagination variables
                     $limit = 10; // Number of entries per page
                     $page = isset($_GET['page']) ? $_GET['page'] : 1;
                     $offset = ($page - 1) * $limit;
-                    
-                    $sql = "SELECT * FROM applications WHERE status = 'Applied' ORDER BY created_at ASC LIMIT $limit OFFSET $offset";
+
+                    $sql = "SELECT * FROM applications ORDER BY created_at ASC LIMIT $limit OFFSET $offset";
                     $result = mysqli_query($conn, $sql);
                     if($result) {
                         $num_rows = mysqli_num_rows($result);
@@ -156,19 +155,24 @@ if (!isLoggedIN()) {
                     <td><?php echo $location ? $location : '-'; ?></td>
                     <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                     <td><?php echo $status ? $status : '-'; ?></td>
-                    <td style="font-size: 20px;"><a href="view-app.php?viewid=<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
+                    <td style="font-size: 20px;"><a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
                 </tr>
                 <?php
                         }
-                    }
+                    } else { ?>
+                        <h3 class="mt-2 text-center text-muted">
+                            No Entries
+                        </h3>
+                    <?php }
                 }
                 ?>
             </tbody>
         </table>
+
         <br>
         <?php
             // Pagination links
-            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
+            $sql = "SELECT COUNT(*) as total FROM applications";
             $result = mysqli_query($conn, $sql);
             $row = mysqli_fetch_assoc($result);
             $total_pages = ceil($row["total"] / $limit);

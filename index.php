@@ -249,7 +249,7 @@ if (!isLoggedIN()) {
 
         <!-- Total -->
             <div class="card top-card" style="width: 18rem;">
-                <a class="text-decoration-none text-black stretched-link" href="open-app.php">
+                <a class="text-decoration-none text-black stretched-link" href="total-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightsalmon; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
                             <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
