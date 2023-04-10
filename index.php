@@ -108,7 +108,7 @@ if (!isLoggedIN()) {
                 <div class="right float-end mt-3" style="margin-right: 35px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">22</h5>
-                    <p class="card-title text-center">Total</p>
+                    <p class="card-title text-center">Total Applications</p>
                 </div>
             </div>
         </div>
