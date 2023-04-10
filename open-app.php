@@ -156,7 +156,7 @@ if (!isLoggedIN()) {
                     <td><?php echo $location ? $location : '-'; ?></td>
                     <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                     <td><?php echo $status ? $status : '-'; ?></td>
-                    <td style="font-size: 20px;"><a href="view-app.php?viewid=<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
+                    <td style="font-size: 20px;"><a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
                 </tr>
                 <?php
                         }
@@ -183,6 +183,88 @@ if (!isLoggedIN()) {
 
     </div>
 <!-- END main-container -->
+
+
+
+
+<!-- VIEW Modal -->
+<?php
+            $id = $_GET['viewid'];
+            $sql = "SELECT * FROM applications WHERE appid=$id";
+            $result = mysqli_query($conn, $sql);
+            if($result) {
+                $num_rows = mysqli_num_rows($result);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $appid          = $row['appid'];
+                    $job_title      = $row['job_title'];
+                    $comapny        = $row['company'];
+                    $location       = $row['location'];
+                    $job_desc       = $row['job_desc'];
+                    $pay            = $row['pay'];
+                    $bonus_pay      = $row['bonus_pay'];
+                    $status         = $row['status'];
+                    $job_type       = $row['job_type'];
+                    $app_link       = $row['app_link'];
+                    $contact_name   = $row['contact_name'];
+                    $contact_phone  = $row['contact_phone'];
+                    $contact_email  = $row['contact_email'];
+                    $start_date     = $row['start_date'];
+                    $resume_used    = $row['resume_used'];
+                    $notes          = $row['notes'];
+                    $watchlist      = $row['watchlist'];
+                    $interview_set  = $row['interview_set'];
+    ?>
+
+
+<div class="modal fade" id="viewModal<?php echo $appid; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="viewModalLabel"> Creation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="job_title">Job Title:</label>
+                <input type="text" class="form-control" id="job_title" name="job_title" value="<?php echo $job_title; ?>">
+            </div>
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location">
+            </div>
+            <div class="form-group">
+                <label for="app_link">Application Link:</label>
+                <input type="text" class="form-control" id="app_link" name="app_link">
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="modal-footer">
+            <button type="submit" name="add-quick" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+
+    <?php } } ?>
+<!-- end VIEW Modal -->
+
+
 
 
 

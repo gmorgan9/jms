@@ -55,7 +55,7 @@ if (!isLoggedIN()) {
 <br><br>
 
     <?php
-            $id = $_GET['updateid'];
+            $id = $_GET['viewid'];
             $sql = "SELECT * FROM applications WHERE appid=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
