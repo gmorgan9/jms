@@ -70,7 +70,7 @@ if (!isLoggedIN()) {
                     <i class="bi bi-clipboard-check ms-3 me-3 d-block mx-auto my-3" style="font-size: 48px;"></i>
                 </div>
 
-                <div class="right float-end me- mt-2">
+                <div class="right float-end me-5 mt-2">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">10</h5>
                     <p class="card-title text-center">Made Offer</p>
