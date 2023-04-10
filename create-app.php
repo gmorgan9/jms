@@ -49,7 +49,7 @@ if (!isLoggedIN()) {
 
 
  <!-- main-container -->
- <div class="container-fluid main" style="background-color: lightgray; max-width: 80%;">
+ <div class="container-fluid main" style="background-color: lightgray; max-width: 80%; border-radius: 15px;">
 
 <br><br>
 
@@ -159,7 +159,7 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-3 ps-3">
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
                 <label class="form-check-label" for="watchlist">Add to Watchlist</label>
@@ -173,8 +173,10 @@ if (!isLoggedIN()) {
 
     
         <input type="submit" value="Submit">
+        <div class="pb-4"></div>
     </form>
 
+    <br><br>
 
 
 
