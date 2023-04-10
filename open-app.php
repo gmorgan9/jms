@@ -186,12 +186,12 @@ if (!isLoggedIN()) {
                                     <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Company</p> 
-                                       <p class="float-end"><?php echo $cap['company']; ?></p>
+                                       <p><span class="float-end"><?php echo $cap['company']; ?></span></p>
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Location</p> <br>
-                                       <p class="float-end"><?php echo $cap['location']; ?></p>
+                                       <p class="float-start fw-bold">Location</p>
+                                       <p><span class="float-end"><?php echo $cap['location']; ?></span></p>
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
