@@ -187,61 +187,6 @@ if (!isLoggedIN()) {
 
 
 
-<!-- VIEW Modal -->
-<?php
-            $id = $_GET['viewid'];
-            $sql = "SELECT * FROM applications WHERE appid=$id";
-            $result = mysqli_query($conn, $sql);
-            if($result) {
-                $num_rows = mysqli_num_rows($result);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $appid          = $row['appid'];
-                    $job_title      = $row['job_title'];
-                    $comapny        = $row['company'];
-                    $location       = $row['location'];
-                    $job_desc       = $row['job_desc'];
-                    $pay            = $row['pay'];
-                    $bonus_pay      = $row['bonus_pay'];
-                    $status         = $row['status'];
-                    $job_type       = $row['job_type'];
-                    $app_link       = $row['app_link'];
-                    $contact_name   = $row['contact_name'];
-                    $contact_phone  = $row['contact_phone'];
-                    $contact_email  = $row['contact_email'];
-                    $start_date     = $row['start_date'];
-                    $resume_used    = $row['resume_used'];
-                    $notes          = $row['notes'];
-                    $watchlist      = $row['watchlist'];
-                    $interview_set  = $row['interview_set'];
-    ?>
-
-
-
-<div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="viewModalLabel">View Application</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Display the content of the selected entry -->
-                <p>Job Title: <?php echo $job_title; ?></p>
-                <p>Company: <?php echo $company; ?></p>
-                <p>Location: <?php echo $location; ?></p>
-                <p>Job Description: <?php echo $job_desc; ?></p>
-                <!-- ...and so on for the other fields -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <?php } } ?>
-<!-- end VIEW Modal -->
 
 
 
