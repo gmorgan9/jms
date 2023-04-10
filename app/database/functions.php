@@ -59,7 +59,9 @@ if (isset($_POST['add-full'])) {
 	$start_date = empty($_POST['start_date']) ? NULL : mysqli_real_escape_string($conn, $_POST['start_date']);
 	$resume_used = empty($_POST['resume_used']) ? NULL : mysqli_real_escape_string($conn, $_POST['resume_used']);
 	$notes = empty($_POST['notes']) ? NULL : mysqli_real_escape_string($conn, $_POST['notes']);
-
+    $watchlist = isset($_POST['watchlist']) ? 1 : 0;
+    $interview_set = isset($_POST['interview_set']) ? 1 : 0;
+    
 
     $select1 = "SELECT * FROM applications WHERE idno = '$idno'";
     $result1 = mysqli_query($conn, $select1);
