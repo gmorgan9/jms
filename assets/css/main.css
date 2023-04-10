@@ -137,3 +137,12 @@ td a:hover {
     height: 100% !important;
     /* height: -40% !important; */
   }
+
+  .page-header {
+    display: inline !important;
+    width: 100% !important;
+    padding: 5px 8px;
+    height: 40px;
+    color: white;
+    background-color: #1e2327 !important;
+  }
