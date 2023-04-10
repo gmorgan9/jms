@@ -146,11 +146,11 @@ if (!isLoggedIN()) {
                 ?>
                 <tr>
                     <th scope="row"><?php echo $id; ?></th>
-                    <td class="text-center"><?php echo $job_title ? $job_title : '-'; ?></td>
-                    <td class="text-center"><?php echo $company ? $company : '-'; ?></td>
-                    <td class="text-center"><?php echo $location ? $location : '-'; ?></td>
-                    <td class="text-center"><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
-                    <td class="text-center"><?php echo $status ? $status : '-'; ?></td>
+                    <td><?php echo $job_title ? $job_title : '-'; ?></td>
+                    <td><?php echo $company ? $company : '-'; ?></td>
+                    <td><?php echo $location ? $location : '-'; ?></td>
+                    <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
+                    <td><?php echo $status ? $status : '-'; ?></td>
                 </tr>
                 <?php
                         }
