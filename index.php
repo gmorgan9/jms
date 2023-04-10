@@ -134,6 +134,9 @@ if (!isLoggedIN()) {
         <div class="row">
             <!-- first graph -->
                 <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Featured
+                    </div>
                     <div class="card-body">
                         graph 1
                     </div>
