@@ -51,23 +51,27 @@ if (!isLoggedIN()) {
  <!-- main-container -->
  <div class="container-fluid main">
 
+<br><br>
 
+    <form method="POST" action="">
 
- <form method="POST" action="process_form.php">
+        <div class="row mb-3">
+            <label for="job_title" class="col-sm-2 col-form-label">Job Title</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="job_title" name="job_title">
+            </div>
+            <label for="company" class="col-sm-2 col-form-label">Company</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+        </div>
 
-    <div class="row mb-3">
-      <label for="job_title" class="col-sm-2 col-form-label">Job Title</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="job_title" name="job_title">
-      </div>
-    </div>
-
-    <div class="row mb-3">
-      <label for="company" class="col-sm-2 col-form-label">Company</label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="company" name="company">
-      </div>
-    </div>
+        <div class="row mb-3">
+            <label for="company" class="col-sm-2 col-form-label">Company</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+        </div>
 
 
 
