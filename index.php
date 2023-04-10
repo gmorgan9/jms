@@ -64,19 +64,19 @@ if (!isLoggedIN()) {
         <form action="" method="POST">
             <div class="form-group">
                 <label for="job_title">Job Title:</label>
-                <input type="text" class="form-control" id="job_title" name="job_title">
+                <input type="text" class="form-control" id="job_title" name="job_title" required>
             </div>
             <div class="form-group">
                 <label for="company">Company:</label>
-                <input type="text" class="form-control" id="company" name="company">
+                <input type="text" class="form-control" id="company" name="company" required>
             </div>
             <div class="form-group">
                 <label for="location">Location:</label>
-                <input type="text" class="form-control" id="location" name="location">
+                <input type="text" class="form-control" id="location" name="location" required>
             </div>
             <div class="form-group">
                 <label for="app_link">Application Link:</label>
-                <input type="text" class="form-control" id="app_link" name="app_link">
+                <input type="text" class="form-control" id="app_link" name="app_link" required>
             </div>
             <br>
             <div class="form-group">
