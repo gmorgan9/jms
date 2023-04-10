@@ -133,7 +133,7 @@ if (!isLoggedIN()) {
     <!-- Bottom Row -->
         <div class="row">
             <!-- first graph -->
-                <div class="card" style="width: 18rem;">
+                <div class="card p-0" style="width: 18rem;">
                     <div class="card-header">
                         Featured
                     </div>
