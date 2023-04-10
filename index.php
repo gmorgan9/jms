@@ -39,7 +39,17 @@ if (!isLoggedIN()) {
     </div>
 <br>
 <div class="record_incident float-end me-5">
-    <a href="create-app.php"><button class="btn btn-secondary rec">Record Job</button></a>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="recordJobDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Record Job
+  </button>
+  <div class="dropdown-menu" aria-labelledby="recordJobDropdown">
+    <a class="dropdown-item" href="#">Option 1</a>
+    <a class="dropdown-item" href="#">Option 2</a>
+    <a class="dropdown-item" href="#">Option 3</a>
+  </div>
+</div>
+
     <a href="create-app.php"><button class="btn btn-secondary rec">Quick Add</button></a>
 </div>
 
