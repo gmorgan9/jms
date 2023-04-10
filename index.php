@@ -66,7 +66,7 @@ if (!isLoggedIN()) {
 
         <div class="card" style="width: 18rem;">
             <div class="card-body p-0">
-                <div class="left float-start" style="background-color: lightblue; height: 100%; margin-left: -12px;">
+                <div class="left float-start" style="background-color: lightblue; height: 100%; width: 20px; margin-left: -12px;">
                     <i class="bi bi-clipboard-check ms-3 me-3 d-block mx-auto my-3" style="font-size: 48px;"></i>
                 </div>
 
