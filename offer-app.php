@@ -101,7 +101,7 @@ if (!isLoggedIN()) {
 
 
 
-    <h1 style="margin-left: 175px;" class="text-center"><strong>Open Applications</strong></h1>
+    <h1 style="margin-left: 175px;" class="text-center"><strong>Offer Recevied</strong></h1>
     <br>
 
 
