@@ -50,7 +50,93 @@ if (!isLoggedIN()) {
 
  <!-- main-container -->
  <div class="container-fluid main">
-create job
+
+
+
+
+ <div class="d-flex justify-content-center">
+    <!-- form start -->
+<form action="record-incident.php" class="reg-form" method="post">
+<?php include('errors.php'); ?>
+    <!-- <div class="form-header d-flex justify-content-center">
+        <div class="bg-circle">
+            <div class="sm-circle">
+                <div class="d-flex justify-content-center">
+                    <i class="user-header fa-solid fa-user fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </div> -->
+<br>
+<h2 class="text-center">Record Incident</h2>
+<br>
+
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+            <div class="input-group-prepend">
+	            <span class="input-group-text"> <i class="fa-solid fa-hashtag"></i> </span>
+	        </div>
+            <input name="inc_num" class="form-control" placeholder="Incident Number" type="text">
+        </div>
+    </div> 
+    <!-- form-group// -->
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+    	    <div class="input-group-prepend">
+		        <span class="input-group-text"> <i class="fa-solid fa-arrow-up-wide-short"></i> </span>
+		    </div>
+            <input name="priority" class="form-control" placeholder="Priority" type="text">
+        </div>
+    </div> <!-- form-group// -->
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+    	    <div class="input-group-prepend">
+		        <span class="input-group-text"> <i class="fa-solid fa-pen-to-square"></i> </span>
+		    </div>
+            <input name="description" class="form-control" placeholder="Description" type="text">
+        </div>
+    </div> <!-- form-group// -->
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+    	    <div class="input-group-prepend">
+		        <span class="input-group-text"> <i class="fa fa-users fa-xs"></i> </span>
+		    </div>
+            <input name="assign_group" class="form-control" placeholder="Assignment Group" type="text">
+        </div>
+    </div> <!-- form-group// -->
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+    	    <div class="input-group-prepend">
+		        <span class="input-group-text"> <i class="fa fa-book"></i> </span>
+		    </div>
+            <input name="kb_article" class="form-control" placeholder="KB Artcile" type="text">
+        </div>
+    </div> <!-- form-group// -->    
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+    	    <div class="input-group-prepend">
+		        <span class="input-group-text"> <i class="fa fa-calendar-days"></i> </span>
+		    </div>
+            <input name="date" class="form-control" placeholder="Date" type="date">
+        </div>
+    </div> <!-- form-group// -->    
+    <div class="d-flex justify-content-center">
+        <div class="form-group input-group w-75">
+    	    <div class="input-group-prepend">
+		        <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
+		    </div>
+            <input name="time" class="form-control" placeholder="Time" type="time">
+        </div>
+    </div> <!-- form-group// -->   
+    <div class="d-flex justify-content-center">                                
+        <button id="button" type="submit" name="rec_inc" class="btn btn-primary text-center reg-log">Submit Incident</button>  
+    </div>                                                               
+</form>
+</div>
+
+
+
+
 
 </div>
 <!-- END main-container -->
