@@ -19,7 +19,7 @@ if (isset($_GET['logout'])) {
 }
 
 // ADD JOB
-if(isset($_POST['add-quick-job-app'])){
+if(isset($_POST['add-quick'])){
     $idno  = rand(1000000, 9999999);
     $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
     $company = mysqli_real_escape_string($conn, $_POST['company']);
@@ -37,7 +37,7 @@ if(isset($_POST['add-quick-job-app'])){
       mysqli_query($conn, $insert);
       header('location: /');
     }
-};
+}
 // END ADD JOB
 
 
