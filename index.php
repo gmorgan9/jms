@@ -138,8 +138,8 @@ if (!isLoggedIN()) {
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                        <table class="table table-sm">
+                        <div class="table-responsive-sm">
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
