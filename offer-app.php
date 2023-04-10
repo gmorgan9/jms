@@ -159,11 +159,7 @@ if (!isLoggedIN()) {
                 </tr>
                 <?php
                         }
-                    } else { ?>
-                        <h3 class="mt-2 text-center text-muted">
-                            No Entries
-                        </h3>
-                    <?php }
+                    } 
                 }
                 ?>
             </tbody>
