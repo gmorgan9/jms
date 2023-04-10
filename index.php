@@ -142,7 +142,7 @@ if (!isLoggedIN()) {
                             <li class="list-group-item">
                                 <span class="float-start">beginning</span>
                                 <span class="float-end">backend</span> <br>
-                                <span class="text-muted" style="font-size: 11px; margin-top: -15px;">American Airlines</span>
+                                <p class="text-muted" style="font-size: 11px; margin-top: -15px !important;">American Airlines</p>
                             </li>
                         </ul>
                     </div>
