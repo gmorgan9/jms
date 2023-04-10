@@ -12,11 +12,13 @@ function isLoggedIn()
 	}
 }
 
-// log user out if logout button clicked
-if (isset($_GET['logout'])) {
-	session_destroy();
-	header("location: login.php");
-}
+// LOGOUT
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		header("location: login.php");
+	}
+// END LOGOUT
+
 
 // ADD QUICK JOB
 	if(isset($_POST['add-quick'])){
