@@ -85,12 +85,6 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-    
-
-
-
-
-
         <div class="card" style="width: 18rem;">
             <div class="card-body p-0">
                 <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;">
@@ -106,9 +100,16 @@ if (!isLoggedIN()) {
         </div>
 
         <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Total</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="card-body p-0">
+                <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;">
+                    <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                </div>
+
+                <div class="right float-end mt-3" style="margin-right: 35px !important;">
+                    <div class="pt-3"></div>
+                    <h5 class="card-text text-center">22</h5>
+                    <p class="card-title text-center">Total</p>
+                </div>
             </div>
         </div>
 
