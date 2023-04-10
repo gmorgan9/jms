@@ -7,3 +7,4 @@
 <br>
 <div class="record_incident float-end me-5">
     <a href="record-incident.php"><button class="btn btn-secondary rec">Record Job</button></a>
+</div>
