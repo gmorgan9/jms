@@ -206,20 +206,23 @@ if (!isLoggedIN()) {
 
         <div class="row mb-3 ps-3">
             <div class="form-check">
-                <!-- <?php //if($watchlist == 1) { ?>
+                <?php if($watchlist == 1) { ?>
                     <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1" checked>
                     <label class="form-check-label" for="watchlist">Add to Watchlist</label>
-                <?php //} else { ?>
+                <?php } else { ?>
                     <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="0">
                     <label class="form-check-label" for="watchlist">Add to Watchlist</label>
-                <?php //} ?> -->
-                <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="<?php echo $watchlist; ?>">
-                <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                <?php } ?>
 
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="<?php echo $interview_set; ?>">
-                <label class="form-check-label" for="interview_set">Interview Set</label>
+                <?php if($interview_set == 1) { ?>
+                    <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1" checked>
+                    <label class="form-check-label" for="interview_set">Interview Set</label>
+                <?php } else { ?>
+                    <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="0">
+                    <label class="form-check-label" for="interview_set">Interview Set</label>
+                <?php } ?>
             </div>
         </div>
 
