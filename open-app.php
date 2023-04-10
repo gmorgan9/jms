@@ -180,6 +180,7 @@ if (!isLoggedIN()) {
                                     <div>
                                         <h5 class="float-start">Job Details</h5>
                                         <div class="float-end">
+                                            <p><span><?php echo $cap['status']; ?></span></p>
                                             <?php if($cap['watchlist'] == 1){ ?>
                                                 <i class="bi bi-eye text-muted"></i>
                                             <?php } else {} ?>
@@ -213,6 +214,11 @@ if (!isLoggedIN()) {
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Job Type</p> 
+                                       <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Base Pay</p> 
                                        <p><span class="float-end"><?php echo $cap['pay']; ?></span></p>
                                     </div>
@@ -220,11 +226,6 @@ if (!isLoggedIN()) {
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Bonus Pay</p> 
                                        <p><span class="float-end"><?php echo $cap['bonus_pay']; ?></span></p>
-                                    </div>
-                                    <br>
-                                    <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Job Type</p> 
-                                       <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
                                     </div>
                                     <br><br>
                                     <div class="ms-3 me-3">
