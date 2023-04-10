@@ -38,7 +38,7 @@ if(isset($_POST['add-quick-job-app'])){
       mysqli_query($conn, $insert);
       header('location: /');
     }
-};
+}
 // END ADD JOB
 
 
