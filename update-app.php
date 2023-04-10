@@ -161,7 +161,7 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <div class="row mb-3 ps-3">
+        <div class="row d-flex mb-3 ps-3">
             <div class="form-check">
                 <?php if($watchlist == 1) { ?>
                     <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1" checked>
