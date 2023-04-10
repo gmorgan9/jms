@@ -154,25 +154,23 @@ if (!isLoggedIN()) {
 
         <div class="row mb-3">
             <div class="col">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
-                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
-                </div>
-            </div>
-            <div class="col">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1">
-                    <label class="form-check-label" for="interview_set">Interview Set</label>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col">
                 <label class="form-label" for="notes">Notes</label>
                 <textarea class="form-control" name="notes" rows="5"></textarea>
             </div>
         </div>
+
+        <div class="row mb-3">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1">
+                <label class="form-check-label" for="interview_set">Interview Set</label>
+            </div>
+        </div>
+
+
     
         <input type="submit" value="Submit">
     </form>
