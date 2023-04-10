@@ -56,11 +56,11 @@ if (!isLoggedIN()) {
     <form method="POST" action="">
 
         <div class="row mb-3">
-            <label for="job_title" class="col col-form-label">Job Title</label>
+            <label for="job_title" class="form-label">Job Title</label>
             <div class="col">
                 <input type="text" class="form-control" id="job_title" name="job_title">
             </div>
-            <label for="company" class="col col-form-label">Company</label>
+            <label for="company" class="form-label">Company</label>
             <div class="col">
                 <input type="text" class="form-control" id="company" name="company">
             </div>
