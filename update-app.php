@@ -90,12 +90,12 @@ if (!isLoggedIN()) {
 
     <form method="POST" action="">
 
-        <div class="row mb-3">
+        <!-- <div class="row mb-3">
             <div class="col">
                 <label for="appid" class="form-label">App ID</label>
                 <input type="text" class="form-control" id="appid" name="appid" value="<?php echo $appid; ?>">
             </div>
-        </div>
+        </div> -->
 
         <div class="row mb-3">
             <div class="col">
