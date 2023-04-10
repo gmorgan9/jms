@@ -139,14 +139,14 @@ if (!isLoggedIN()) {
                                 $company        = $row['company'];
                                 $location       = $row['location'];
                                 $created_at     = $row['created_at'];
-                                $formatted_date = date('M d, Y,', strtotime($created_at));
+                                $formatted_date = date('M d, Y H:i a', strtotime($created_at));
                 ?>
                 <tr>
                     <th scope="row"><?php echo $id; ?></th>
                     <td><?php echo $job_title; ?></td>
                     <td><?php echo $company; ?></td>
                     <td><?php echo $location; ?></td>
-                    <td><?php echo $created_at; ?></td>
+                    <td><?php echo $formatted_date; ?></td>
                     <td><?php echo $status; ?></td>
                 </tr>
                 <?php
