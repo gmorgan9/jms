@@ -165,7 +165,7 @@ if($count > 0) {
                 </tr>
                 <?php
                         }
-                        }
+                        
                 ?>
             </tbody>
         </table>
@@ -175,7 +175,7 @@ if($count > 0) {
         <h3 class="mt-2 text-center text-muted">
             No Entries
         </h3>
-    <?php }
+    <?php }}
 }
         
         ?>
