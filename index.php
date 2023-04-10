@@ -118,8 +118,9 @@ if (!isLoggedIN()) {
     <!-- Top Row -->
         <div class="row d-flex justify-content-center">
         <!-- Open/Awaiting -->
-            <a class="text-decoration-none" href="open-app.php">
-                <div class="card" style="width: 18rem;">
+            
+            <div class="card" style="width: 18rem;">
+                <a class="text-decoration-none" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px;">
                             <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
@@ -142,8 +143,9 @@ if (!isLoggedIN()) {
                             <p class="card-title text-center">Open/Awaiting</p>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            
         <!-- end Open/Awaiting -->
 
         <!-- Recieved Offer -->
