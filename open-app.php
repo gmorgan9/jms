@@ -183,6 +183,7 @@ if (!isLoggedIN()) {
                                        <p class="float-start fw-bold">Job Title</p> 
                                        <p class="float-end"><?php echo $cap['job_title']; ?></p>
                                     </div>
+                                    <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Company</p> 
                                        <p class="float-end"><?php echo $cap['company']; ?></p>
