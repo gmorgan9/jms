@@ -39,7 +39,7 @@ if (!isLoggedIN()) {
         <!-- end logo -->
         </div>
         <div class="links">
-
+            <a href=""><?php echo $_SESSION['fname']; ?></a>
         </div>
 
 
