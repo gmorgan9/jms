@@ -132,15 +132,20 @@ if (!isLoggedIN()) {
                         $num_rows = mysqli_num_rows($result);
                         if($num_rows > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
+                                $id             = $row['appid'];
                                 $status         = $row['status'];
                                 $job_title      = $row['job_title'];
                                 $company        = $row['company'];
+                                $location       = $row['location'];
+                                $created_at     = $row['created_at'];
                 ?>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row"><?php echo $id; ?></th>
+                    <td><?php echo $job_title; ?></td>
+                    <td><?php echo $company; ?></td>
+                    <td><?php echo $location; ?></td>
+                    <td><?php echo $created_at; ?></td>
+                    <td><?php echo $status; ?></td>
                 </tr>
                 <?php
                             }
