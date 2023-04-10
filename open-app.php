@@ -140,24 +140,17 @@ if (!isLoggedIN()) {
                                 $location       = $row['location'];
                                 $created_at     = $row['created_at'];
                                 // $formatted_date = date('M d, Y H:i a', strtotime($created_at));
-
-                                $date = new DateTime($created_at);
-
-                                // Set the timezone you want to display the date in
-                                $timeZone = new DateTimeZone('America/Denver');
-
-                                // Set the timezone of the DateTime object to the timezone you want to display the date in
-                                $date->setTimezone($timeZone);
-
-                                // Format the date and time
-                                $formattedDate = $date->format('M d, Y H:i a');
+                                $created_at = $row['created_at'];
+                                $utc_date_time = new DateTime($created_at, new DateTimeZone('UTC'));
+                                $local_date_time = $utc_date_time->setTimezone(new DateTimeZone('America/Denver'));
+                                $formatted_date = $local_date_time->format('M d, Y h:i A');
                 ?>
                 <tr>
                     <th scope="row"><?php echo $id; ?></th>
                     <td><?php echo $job_title; ?></td>
                     <td><?php echo $company; ?></td>
                     <td><?php echo $location; ?></td>
-                    <td><?php echo $formattedDate; ?></td>
+                    <td><?php echo $formatted_date; ?></td>
                     <td><?php echo $status; ?></td>
                 </tr>
                 <?php
