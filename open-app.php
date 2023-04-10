@@ -169,7 +169,7 @@ if (!isLoggedIN()) {
                 ?>
             </tbody>
         </table>
-
+<br>
         <?php
     // Pagination links
     $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
