@@ -216,49 +216,28 @@ if (!isLoggedIN()) {
     ?>
 
 
+
 <div class="modal fade" id="viewModal<?php echo $appid; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="viewModalLabel"> Creation</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-        <form action="" method="POST">
-            <div class="form-group">
-                <label for="job_title">Job Title:</label>
-                <input type="text" class="form-control" id="job_title" name="job_title" value="<?php echo $job_title; ?>">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewModalLabel">View Application</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="form-group">
-                <label for="company">Company:</label>
-                <input type="text" class="form-control" id="company" name="company">
+            <div class="modal-body">
+                <!-- Display the content of the selected entry -->
+                <p>Job Title: <?php echo $job_title; ?></p>
+                <p>Company: <?php echo $company; ?></p>
+                <p>Location: <?php echo $location; ?></p>
+                <p>Job Description: <?php echo $job_desc; ?></p>
+                <!-- ...and so on for the other fields -->
             </div>
-            <div class="form-group">
-                <label for="location">Location:</label>
-                <input type="text" class="form-control" id="location" name="location">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
-            <div class="form-group">
-                <label for="app_link">Application Link:</label>
-                <input type="text" class="form-control" id="app_link" name="app_link">
-            </div>
-            <br>
-            <div class="form-group">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
-                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
-                </div>
-            </div>
-            
-            
-        </div>
-        <div class="modal-footer">
-            <button type="submit" name="add-quick" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-        </form>
         </div>
     </div>
-    </div>
+</div>
 
 
     <?php } } ?>
