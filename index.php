@@ -61,7 +61,31 @@ if (!isLoggedIN()) {
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <p>This is a quick modal.</p>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="job_title">Job Title:</label>
+                <input type="text" class="form-control" id="job_title" name="job_title" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <input type="text" class="form-control" id="company" name="company" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="app_link">Application Link:</label>
+                <input type="text" class="form-control" id="app_link" name="app_link" required>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                </div>
+            </div>
+            <button type="submit" name="add-quick-job-app" class="btn btn-primary">Submit</button>
+            </form>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
