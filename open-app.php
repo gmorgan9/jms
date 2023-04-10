@@ -179,13 +179,19 @@ if (!isLoggedIN()) {
                                     <!-- Display the content of the selected entry -->
                                     <h5>Job Details</h5>
                                     <hr>
-                                    <div>
+                                    <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Job Title</p> 
                                        <p class="float-end"><?php echo $cap['job_title']; ?></p>
                                     </div>
-                                    <span class="fw-bold">Job Title</span> <p><?php echo $cap['job_title']; ?></p>
-                                    <span class="fw-bold">Job Title</span> <p class="text-muted"><?php echo $cap['company']; ?></p>
-                                    <p>Location: <?php echo $cap['location']; ?></p>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Company</p> 
+                                       <p class="float-end"><?php echo $cap['company']; ?></p>
+                                    </div>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Location</p> 
+                                       <p class="float-end"><?php echo $cap['location']; ?></p>
+                                    </div>
+                                    
                                     <!-- ...and so on for the other fields -->
 
                                     <?php } } ?>
