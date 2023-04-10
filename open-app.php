@@ -195,7 +195,7 @@ if (!isLoggedIN()) {
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Status</p> 
                                        <?php if($cap['status'] == 'Applied'){ ?>
-                                            <p><span class="float-end"><i class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                            <p><span class="float-end"><i style="font-size: 12px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
                                         <?php } else { ?>
                                             <p><span class="float-end"><?php echo $cap['status']; ?></span></p>
                                         <?php } ?>
