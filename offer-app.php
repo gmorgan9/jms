@@ -155,8 +155,60 @@ if (!isLoggedIN()) {
                     <td><?php echo $location ? $location : '-'; ?></td>
                     <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                     <td><?php echo $status ? $status : '-'; ?></td>
-                    <td style="font-size: 20px;"><a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
+                    <td style="font-size: 20px;"><a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
                 </tr>
+
+                <!-- VIEW Modal -->
+                <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="viewModalLabel">View Application</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                <?php
+                                            $new = "SELECT * FROM applications WHERE appid=$id";
+                                            $new1 = mysqli_query($conn, $new);
+                                            if($new1) {
+                                                while ($cap = mysqli_fetch_assoc($new1)) {       
+                                        ?> 
+                                    <!-- Display the content of the selected entry -->
+                                    <h5>Job Details</h5>
+                                    <hr>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Job Title</p> 
+                                       <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Company</p> 
+                                       <p><span class="float-end"><?php echo $cap['company']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Location</p>
+                                       <p><span class="float-end"><?php echo $cap['location']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Application Link</p> 
+                                       <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
+                                    </div>
+                                    
+
+                                    <?php } } ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- end VIEW Modal -->
+
+
                 <?php
                         }
                     } 
