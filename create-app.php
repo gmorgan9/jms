@@ -69,10 +69,10 @@ if (!isLoggedIN()) {
                 <label for="company" class="form-label">Company</label>
                 <input type="text" class="form-control" id="company" name="company">
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <label for="location" class="form-label">Location</label>
                 <input type="text" class="form-control" id="location" name="location">
-            </div>
+            </div> -->
         </div>
     
         <!-- <div class="row mb-3">
