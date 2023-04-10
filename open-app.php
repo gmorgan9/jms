@@ -139,7 +139,18 @@ if (!isLoggedIN()) {
                                 $company        = $row['company'];
                                 $location       = $row['location'];
                                 $created_at     = $row['created_at'];
-                                $formatted_date = date('M d, Y H:i a', strtotime($created_at));
+                                // $formatted_date = date('M d, Y H:i a', strtotime($created_at));
+
+                                $date = new DateTime($created_at);
+
+                                // Set the timezone you want to display the date in
+                                $timeZone = new DateTimeZone('America/Denver');
+
+                                // Set the timezone of the DateTime object to the timezone you want to display the date in
+                                $date->setTimezone($timeZone);
+
+                                // Format the date and time
+                                $formattedDate = $date->format('M d, Y H:i a');
                 ?>
                 <tr>
                     <th scope="row"><?php echo $id; ?></th>
