@@ -188,9 +188,15 @@ if (!isLoggedIN()) {
                                        <p class="float-start fw-bold">Company</p> 
                                        <p class="float-end"><?php echo $cap['company']; ?></p>
                                     </div>
+                                    <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Location</p> 
                                        <p class="float-end"><?php echo $cap['location']; ?></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Application Link</p> 
+                                       <a href="<?php echo $cap['location']; ?>" class="float-end">Link Here</p>
                                     </div>
                                     
                                     <!-- ...and so on for the other fields -->
