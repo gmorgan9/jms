@@ -53,9 +53,42 @@ if (!isLoggedIN()) {
 
 <br><br>
 
+<form action="" method="POST">
+            <div class="form-group">
+                <label for="job_title">Job Title:</label>
+                <input type="text" class="form-control" id="job_title" name="job_title">
+            </div>
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" class="form-control" id="location" name="location">
+            </div>
+            <div class="form-group">
+                <label for="app_link">Application Link:</label>
+                <input type="text" class="form-control" id="app_link" name="app_link">
+            </div>
+            <br>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="modal-footer">
+            <button type="submit" name="add-full-job-app" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+        </form>
+
  
 
-    <form method="POST" action="">
+    <!-- <form method="POST" action="">
 
         <div class="row mb-3">
             <div class="col">
@@ -176,7 +209,7 @@ if (!isLoggedIN()) {
     
         <button type="submit" name="add-full-job-app" class="btn btn-primary">Submit</button>
         <div class="pb-4"></div>
-    </form>
+    </form> -->
 
 
 
