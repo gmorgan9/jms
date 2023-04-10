@@ -109,10 +109,11 @@ if (!isLoggedIN()) {
             <div class="col">
                 <label class="form-label" for="job_type">Job Type</label>
                 <select class="form-control" name="job_type">
-                    <option value="applied">Applied</option>
-                    <option value="interviewed">Interviewed</option>
-                    <option value="offered">Offered</option>
-                    <option value="rejected">Rejected</option>
+                    <option value="applied">Full Time</option>
+                    <option value="interviewed">Part Time</option>
+                    <option value="offered">Contract</option>
+                    <option value="rejected">Internship</option>
+                    <option value="rejected">Temporary</option>
                 </select>
             </div>
         </div>
