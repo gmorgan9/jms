@@ -213,7 +213,7 @@ if (!isLoggedIN()) {
                                        <p class="float-start fw-bold">Job Type</p> 
                                        <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
                                     </div>
-                                    <br>
+                                    <br><br>
                                     <div class="ms-3 me-3">
                                        <p class="fw-bold">Notes</p> 
                                        <p><span><?php echo $cap['notes']; ?></span></p>
