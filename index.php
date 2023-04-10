@@ -63,7 +63,7 @@ if (!isLoggedIN()) {
                     <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                 </div>
 
-                <div class="right float-end mt-3" style="margin-right: 35px !important;">
+                <div class="right float-end mt-3" style="margin-right: 30px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">04</h5>
                     <p class="card-title text-center">Open/Awaiting</p>
@@ -77,7 +77,7 @@ if (!isLoggedIN()) {
                     <i class="bi bi-clipboard-check d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                 </div>
 
-                <div class="right float-end mt-3" style="margin-right: 35px !important;">
+                <div class="right float-end mt-3" style="margin-right: 30px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">10</h5>
                     <p class="card-title text-center">Recevied Offer</p>
@@ -91,7 +91,7 @@ if (!isLoggedIN()) {
                     <i class="bi bi-clipboard-x d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                 </div>
 
-                <div class="right float-end mt-3" style="margin-right: 35px !important;">
+                <div class="right float-end mt-3" style="margin-right: 40px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">12</h5>
                     <p class="card-title text-center">Declined</p>
@@ -105,7 +105,7 @@ if (!isLoggedIN()) {
                     <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
                 </div>
 
-                <div class="right float-end mt-3" style="margin-right: 20px !important;">
+                <div class="right float-end mt-3" style="margin-right: 18px !important;">
                     <div class="pt-3"></div>
                     <h5 class="card-text text-center">22</h5>
                     <p class="card-title text-center">Total Applications</p>
