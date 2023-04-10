@@ -139,7 +139,7 @@ if (!isLoggedIN()) {
                     </div>
                     <div class="card-body">
                         <ul class="list-group">
-                          <li class="list-group-item"><span class="float-start">beginning</span><span class="float-end">backend</span></li>
+                          <li class="list-group-item"><span class="float-start">beginning <br><span class="fs-6 text-muted">American Airlines</span></span><span class="float-end">backend</span></li>
                         </ul>
                     </div>
                 </div>
