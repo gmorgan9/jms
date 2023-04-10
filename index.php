@@ -34,7 +34,7 @@ if (!isLoggedIN()) {
 <body>
 
     <div class="header">
-        <div class="logo float-start ms-2">
+        <div class="logo float-start ms-2 my-auto">
             <h2>JMS</h2>
         <!-- end logo -->
         </div>
