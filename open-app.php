@@ -180,7 +180,6 @@ if (!isLoggedIN()) {
                                     <div>
                                         <h5 class="float-start">Job Details</h5>
                                         <div class="float-end">
-                                            <p><span><?php echo $cap['status']; ?></span></p>
                                             <?php if($cap['watchlist'] == 1){ ?>
                                                 <i class="bi bi-eye text-muted"></i>
                                             <?php } else {} ?>
@@ -193,6 +192,15 @@ if (!isLoggedIN()) {
                                     <br>
                                     
                                     <hr>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Status</p> 
+                                       <?php if($cap['status'] == 'Applied'){ ?>
+                                            <p><span class="float-end"><i class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                        <?php } else { ?>
+                                            <p><span class="float-end"><?php echo $cap['status']; ?></span></p>
+                                        <?php } ?>
+                                    </div>
+                                    <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Job Title</p> 
                                        <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
