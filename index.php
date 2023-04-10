@@ -63,13 +63,12 @@ if (!isLoggedIN()) {
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-4">
                         <i class="bi bi-clipboard-check mt-5" style="font-size: 48px"></i>
                     </div>
-                    <div class="col-10">
-                        <h5 class="card-title">Made Offer</h5>
-                        <p class="card-text">Number of offers made: 10</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="col-8">
+                        <h5 class="card-text">10</h5>
+                        <p class="card-title">Made Offer</p>
                     </div>
                 </div>
             </div>
