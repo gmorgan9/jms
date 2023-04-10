@@ -65,7 +65,7 @@ $resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $
 if(isset($_POST['notes'])) {
     $notes = mysqli_real_escape_string($conn, $_POST['notes']);
 } else {
-    $notes = NULL;
+    $notes = "NULL";
 }
     
 
