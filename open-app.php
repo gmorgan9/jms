@@ -190,7 +190,7 @@ if (!isLoggedIN()) {
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
-                                       <p class="float-start fw-bold">Location</p> 
+                                       <p class="float-start fw-bold">Location</p> <br>
                                        <p class="float-end"><?php echo $cap['location']; ?></p>
                                     </div>
                                     <br>
@@ -199,7 +199,6 @@ if (!isLoggedIN()) {
                                        <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
                                     </div>
                                     
-                                    <!-- ...and so on for the other fields -->
 
                                     <?php } } ?>
                                 </div>
