@@ -138,20 +138,12 @@ if (!isLoggedIN()) {
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
                     </div>
                     <div class="card-body">
+                        <!-- only allow three -->
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
                                 <p class="float-end">backend</p>
                             </li>
-                            <li class="list-group-item">
-                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
-                                <p class="float-end">backend</p>
-                            </li>
-                            <li class="list-group-item">
-                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
-                                <p class="float-end">backend</p>
-                            </li>
-                            
                         </ul>
                     </div>
                 </div>
@@ -163,7 +155,13 @@ if (!isLoggedIN()) {
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                     </div>
                     <div class="card-body">
-                        table 2
+                        <!-- only allow three -->
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
+                                <p class="float-end">backend</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             <!-- end second table -->
@@ -174,7 +172,13 @@ if (!isLoggedIN()) {
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
                     </div>
                     <div class="card-body">
-                        table 3
+                        <!-- only allow three -->
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <p class="float-start">beginning <br> <span class="text-muted" style="font-size: 11px;">American Airlines</span> </p>
+                                <p class="float-end">backend</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             <!-- end third table -->
