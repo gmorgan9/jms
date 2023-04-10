@@ -55,65 +55,88 @@ if (!isLoggedIN()) {
 
  <!-- main-container -->
  <div class="container-fluid main">
-    <div class="row">
 
-        <div class="card" style="width: 18rem;">
-            <div class="card-body p-0">
-                <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px;">
-                    <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                </div>
+    <!-- Top Row -->
+        <div class="row">
+        <!-- Open/Awaiting -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body p-0">
+                    <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px;">
+                        <i class="bi bi-clipboard d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                    </div>
 
-                <div class="right float-end mt-2" style="margin-right: 30px !important;">
-                    <div class="pt-3"></div>
-                    <h5 class="card-text text-center">04</h5>
-                    <p class="card-title text-center">Open/Awaiting</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body p-0">
-                <div class="left float-start" style="background-color: lightblue; height: 100%; width: 110px; margin-left: -12px;">
-                    <i class="bi bi-clipboard-check d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                </div>
-
-                <div class="right float-end mt-2" style="margin-right: 30px !important;">
-                    <div class="pt-3"></div>
-                    <h5 class="card-text text-center">10</h5>
-                    <p class="card-title text-center">Recevied Offer</p>
+                    <div class="right float-end mt-2" style="margin-right: 30px !important;">
+                        <div class="pt-3"></div>
+                        <h5 class="card-text text-center">04</h5>
+                        <p class="card-title text-center">Open/Awaiting</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        <!-- end Open/Awaiting -->
 
-        <div class="card" style="width: 18rem;">
-            <div class="card-body p-0">
-                <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;">
-                    <i class="bi bi-clipboard-x d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                </div>
+        <!-- Recieved Offer -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body p-0">
+                    <div class="left float-start" style="background-color: lightblue; height: 100%; width: 110px; margin-left: -12px;">
+                        <i class="bi bi-clipboard-check d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                    </div>
 
-                <div class="right float-end mt-2" style="margin-right: 40px !important;">
-                    <div class="pt-3"></div>
-                    <h5 class="card-text text-center">12</h5>
-                    <p class="card-title text-center">Declined</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <div class="card-body p-0">
-                <div class="left float-start" style="background-color: lightsalmon; height: 100%; width: 110px; margin-left: -12px;">
-                    <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
-                </div>
-
-                <div class="right float-end mt-2" style="margin-right: 18px !important;">
-                    <div class="pt-3"></div>
-                    <h5 class="card-text text-center">22</h5>
-                    <p class="card-title text-center">Total Applications</p>
+                    <div class="right float-end mt-2" style="margin-right: 30px !important;">
+                        <div class="pt-3"></div>
+                        <h5 class="card-text text-center">10</h5>
+                        <p class="card-title text-center">Recevied Offer</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        <!-- end Received Offer -->
 
-    </div>
+        <!-- Declined -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body p-0">
+                    <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;">
+                        <i class="bi bi-clipboard-x d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                    </div>
+
+                    <div class="right float-end mt-2" style="margin-right: 40px !important;">
+                        <div class="pt-3"></div>
+                        <h5 class="card-text text-center">12</h5>
+                        <p class="card-title text-center">Declined</p>
+                    </div>
+                </div>
+            </div>
+        <!-- end Declined -->
+
+        <!-- Total -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body p-0">
+                    <div class="left float-start" style="background-color: lightsalmon; height: 100%; width: 110px; margin-left: -12px;">
+                        <i class="bi bi-clipboard-data d-block mx-auto my-3" style="margin-left: 30px !important; margin-top: 20px !important; font-size: 48px;"></i>
+                    </div>
+
+                    <div class="right float-end mt-2" style="margin-right: 18px !important;">
+                        <div class="pt-3"></div>
+                        <h5 class="card-text text-center">22</h5>
+                        <p class="card-title text-center">Total Applications</p>
+                    </div>
+                </div>
+            </div>
+        <!-- end Total -->
+        </div>
+    <!-- end Top Row -->
+
+    <!-- Bottom Row -->
+        <div class="row">
+            <!-- first graph -->
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        graph 1
+                    </div>
+                </div>
+            <!-- end first graph -->
+
+        </div>
+    <!-- end Bottom Row -->
+
 </div>
 <!-- END main-container -->
 
