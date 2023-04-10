@@ -25,13 +25,20 @@ if (!isLoggedIN()) {
     <title>Job Management System</title>
 
     <style>
-        .bg-lightblue {
-    background-color: lightblue;
-    height: 100%;
+        .card-body .row .col-4 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.card-body .row .col-4 i {
+    color: white;
+}
+
+.card-body .row .col-8 {
+    padding-left: 20px;
+}
+
     </style>
     
 </head>
@@ -71,19 +78,20 @@ if (!isLoggedIN()) {
         </div>
 
         <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-4 bg-lightblue">
-                        <i class="bi bi-clipboard-check mt-5" style="font-size: 48px"></i>
-                    </div>
-                    <div class="col-8">
-                        <div class="pt-3"></div>
-                        <h5 class="card-text text-center">10</h5>
-                        <p class="card-title text-center">Made Offer</p>
-                    </div>
-                </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-4 p-0" style="background-color: lightblue">
+                <i class="bi bi-clipboard-check mt-5 mx-auto" style="font-size: 48px; color: white;"></i>
+            </div>
+            <div class="col-8">
+                <div class="pt-3"></div>
+                <h5 class="card-text text-center">10</h5>
+                <p class="card-title text-center">Made Offer</p>
             </div>
         </div>
+    </div>
+</div>
+
 
 
 
