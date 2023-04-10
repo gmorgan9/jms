@@ -161,35 +161,37 @@ if (!isLoggedIN()) {
 
 
                 <!-- VIEW Modal -->
-<?php
-            $sql = "SELECT * FROM applications WHERE appid=$id";
-            $result = mysqli_query($conn, $sql);
-            if($result) {
-                $num_rows = mysqli_num_rows($result);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $appid          = $row['appid'];
-                    $job_title      = $row['job_title'];
-                    $comapny        = $row['company'];
-                    $location       = $row['location'];
-                    $job_desc       = $row['job_desc'];
-                    $pay            = $row['pay'];
-                    $bonus_pay      = $row['bonus_pay'];
-                    $status         = $row['status'];
-                    $job_type       = $row['job_type'];
-                    $app_link       = $row['app_link'];
-                    $contact_name   = $row['contact_name'];
-                    $contact_phone  = $row['contact_phone'];
-                    $contact_email  = $row['contact_email'];
-                    $start_date     = $row['start_date'];
-                    $resume_used    = $row['resume_used'];
-                    $notes          = $row['notes'];
-                    $watchlist      = $row['watchlist'];
-                    $interview_set  = $row['interview_set'];
-    ?>
+                    <?php
+                        $sql = "SELECT * FROM applications WHERE appid=$id";
+                        $result = mysqli_query($conn, $sql);
+                        if($result) {
+                            $num_rows = mysqli_num_rows($result);
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                $newid              = $row['appid'];
+                                $njob_title      = $row['job_title'];
+                                $ncomapny        = $row['company'];
+                                $nlocation       = $row['location'];
+                                $njob_desc       = $row['job_desc'];
+                                $npay            = $row['pay'];
+                                $nbonus_pay      = $row['bonus_pay'];
+                                $nstatus         = $row['status'];
+                                $njob_type       = $row['job_type'];
+                                $napp_link       = $row['app_link'];
+                                $ncontact_name   = $row['contact_name'];
+                                $ncontact_phone  = $row['contact_phone'];
+                                $ncontact_email  = $row['contact_email'];
+                                $nstart_date     = $row['start_date'];
+                                $nresume_used    = $row['resume_used'];
+                                $nnotes          = $row['notes'];
+                                $nwatchlist      = $row['watchlist'];
+                                $ninterview_set  = $row['interview_set'];
+
+                            } }
+                    ?>
 
 
 
-<div class="modal fade" id="viewModal<?php echo $appid; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+<div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -198,10 +200,10 @@ if (!isLoggedIN()) {
             </div>
             <div class="modal-body">
                 <!-- Display the content of the selected entry -->
-                <p>Job Title: <?php echo $job_title; ?></p>
-                <p>Company: <?php echo $company; ?></p>
-                <p>Location: <?php echo $location; ?></p>
-                <p>Job Description: <?php echo $job_desc; ?></p>
+                <p>Job Title: <?php echo $njob_title; ?></p>
+                <p>Company: <?php echo $ncompany; ?></p>
+                <p>Location: <?php echo $nlocation; ?></p>
+                <p>Job Description: <?php echo $njob_desc; ?></p>
                 <!-- ...and so on for the other fields -->
             </div>
             <div class="modal-footer">
@@ -210,9 +212,6 @@ if (!isLoggedIN()) {
         </div>
     </div>
 </div>
-
-
-    <?php } } ?>
 <!-- end VIEW Modal -->
 
 
