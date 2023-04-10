@@ -172,7 +172,7 @@ if (!isLoggedIN()) {
 
 
     
-        <input type="submit" value="Submit">
+        <input type="submit" class="btn btn-secondary" name="add-full-job-app" value="Submit">
         <div class="pb-4"></div>
     </form>
 
