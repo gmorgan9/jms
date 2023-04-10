@@ -43,23 +43,23 @@ if(isset($_POST['add-quick-job-app'])){
 // ADD JOB
 if(isset($_POST['add-full-job-app'])){
     $idno  = rand(1000000, 9999999);
-    $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
-    $company = mysqli_real_escape_string($conn, $_POST['company']);
-    $location = mysqli_real_escape_string($conn, $_POST['location']);
-    $job_desc = mysqli_real_escape_string($conn, $_POST['job_desc']);
-	$pay = mysqli_real_escape_string($conn, $_POST['pay']);
-    $bonus_pay = mysqli_real_escape_string($conn, $_POST['bonus_pay']);
-    $status = mysqli_real_escape_string($conn, $_POST['status']);
+    $job_title = isset($_POST['job_title']) ? mysqli_real_escape_string($conn, $_POST['job_title']) : "NULL";
+    $company = isset($_POST['company']) ? mysqli_real_escape_string($conn, $_POST['company']) : "NULL";
+    $location = isset($_POST['location']) ? mysqli_real_escape_string($conn, $_POST['location']) : "NULL";
+    $job_desc = isset($_POST['job_desc']) ? mysqli_real_escape_string($conn, $_POST['job_desc']) : "NULL";
+	$pay = isset($_POST['pay']) ? mysqli_real_escape_string($conn, $_POST['pay']) : "NULL";
+    $bonus_pay = isset($_POST['bonus_pay']) ? mysqli_real_escape_string($conn, $_POST['bonus_pay']) : "NULL";
+    $status = isset($_POST['status']) ? mysqli_real_escape_string($conn, $_POST['status']) : "NULL";
     $watchlist = isset($_POST['watchlist']) ? 1 : 0;
-	$app_link = mysqli_real_escape_string($conn, $_POST['app_link']);
-	$job_type = mysqli_real_escape_string($conn, $_POST['job_type']);
-	$contact_name = mysqli_real_escape_string($conn, $_POST['contact_name']);
-	$contact_email = mysqli_real_escape_string($conn, $_POST['contact_email']);
-	$contact_phone = mysqli_real_escape_string($conn, $_POST['contact_phone']);
+	$app_link = isset($_POST['app_link']) ? mysqli_real_escape_string($conn, $_POST['app_link']) : "NULL";
+	$job_type = isset($_POST['job_type']) ? mysqli_real_escape_string($conn, $_POST['job_type']) : "NULL";
+	$contact_name = isset($_POST['contact_name']) ? mysqli_real_escape_string($conn, $_POST['contact_name']) : "NULL";
+	$contact_email = isset($_POST['contact_email']) ? mysqli_real_escape_string($conn, $_POST['contact_email']) : "NULL";
+	$contact_phone = isset($_POST['contact_phone']) ? mysqli_real_escape_string($conn, $_POST['contact_phone']) : "NULL";
 	$interview_set = isset($_POST['interview_set']) ? 1 : 0;
-	$start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
-	$resume_used = mysqli_real_escape_string($conn, $_POST['resume_used']);
-	$notes = mysqli_real_escape_string($conn, $_POST['notes']);
+	$start_date = isset($_POST['start_date']) ? mysqli_real_escape_string($conn, $_POST['start_date']) : "NULL";
+	$resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : "NULL";
+	$notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : "NULL";
 
     $select = " SELECT * FROM applications WHERE idno = '$idno' ";
     $result = mysqli_query($conn, $select);
