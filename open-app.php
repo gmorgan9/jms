@@ -161,7 +161,20 @@ if (!isLoggedIN()) {
 
 
                 <!-- VIEW Modal -->
-                    <?php
+                    
+
+
+
+<div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewModalLabel">View Application</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+            <?php
                         $sql = "SELECT * FROM applications WHERE appid=$id";
                         $result = mysqli_query($conn, $sql);
                         if($result) {
@@ -169,7 +182,7 @@ if (!isLoggedIN()) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $newid              = $row['appid'];
                                 $njob_title      = $row['job_title'];
-                                $ncomapny        = $row['company'];
+                                $ncompany        = $row['company'];
                                 $nlocation       = $row['location'];
                                 $njob_desc       = $row['job_desc'];
                                 $npay            = $row['pay'];
@@ -186,25 +199,17 @@ if (!isLoggedIN()) {
                                 $nwatchlist      = $row['watchlist'];
                                 $ninterview_set  = $row['interview_set'];
 
-                            } }
+                            
                     ?>
 
 
-
-<div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="viewModalLabel">View Application</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
                 <!-- Display the content of the selected entry -->
-                <p>Job Title: <?php echo $njob_title; ?></p>
-                <p>Company: <?php echo $ncompany; ?></p>
-                <p>Location: <?php echo $nlocation; ?></p>
-                <p>Job Description: <?php echo $njob_desc; ?></p>
+                <p>Job Title: <?php echo $row['job_title']; ?></p>
+                <p>Company: <?php echo $row['company']; ?></p>
+                <p>Location: <?php echo $row['location']; ?></p>
                 <!-- ...and so on for the other fields -->
+
+                <?php } } ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
