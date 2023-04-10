@@ -133,21 +133,21 @@ if (!isLoggedIN()) {
                 <label class="form-label" for="status">Status</label>
                 <select class="form-control" name="status">
                     <option value="<?php echo $status; ?>"><?php echo $status; ?></option>
-                    <option value="applied">Applied</option>
-                    <option value="interviewed">Interviewed</option>
-                    <option value="offered">Offered</option>
-                    <option value="rejected">Rejected</option>
+                    <option value="Applied">Applied</option>
+                    <option value="Interviewed">Interviewed</option>
+                    <option value="Offered">Offered</option>
+                    <option value="Rejected">Rejected</option>
                 </select>
             </div>
             <div class="col">
                 <label class="form-label" for="job_type">Job Type</label>
                 <select class="form-control" name="job_type">
                     <option value="<?php echo $job_type; ?>"><?php echo $job_type; ?></option>
-                    <option value="applied">Full Time</option>
-                    <option value="interviewed">Part Time</option>
-                    <option value="offered">Contract</option>
-                    <option value="rejected">Internship</option>
-                    <option value="rejected">Temporary</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Contract">Contract</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Temporary">Temporary</option>
                 </select>
             </div>
         </div>
