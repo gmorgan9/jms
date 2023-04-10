@@ -127,8 +127,11 @@ if (!isLoggedIN()) {
             </thead>
             <tbody>
                 <?php
+                    $limit = 10; // Number of entries per page
+                    $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                    $offset = ($page - 1) * $limit;
                     
-                    $sql = "SELECT * FROM applications WHERE status = 'Offered' ORDER BY created_at ASC";
+                    $sql = "SELECT * FROM applications WHERE status = 'Offered' ORDER BY created_at ASC LIMIT $limit OFFSET $offset";
                     $result = mysqli_query($conn, $sql);
                     if($result) {
                         $num_rows = mysqli_num_rows($result);
@@ -165,6 +168,22 @@ if (!isLoggedIN()) {
                 ?>
             </tbody>
         </table>
+
+        <br>
+        <?php
+            // Pagination links
+            $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+            $total_pages = ceil($row["total"] / $limit);
+
+                echo '<ul class="pagination justify-content-center">';
+                for ($i = 1; $i <= $total_pages; $i++) {
+                    $active = ($page == $i) ? "active" : "";
+                    echo "<li class='page-item {$active}'><a class='page-link' href='?page={$i}'>{$i}</a></li>";
+                }
+                echo '</ul>';
+        ?>
 
     </div>
 <!-- END main-container -->
