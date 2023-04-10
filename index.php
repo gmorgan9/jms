@@ -124,6 +124,12 @@ if (!isLoggedIN()) {
         </div>
     <!-- end Top Row -->
 
+    <br><br>
+
+    <hr>
+
+    <br><br>
+
     <!-- Bottom Row -->
         <div class="row">
             <!-- first graph -->
