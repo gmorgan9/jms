@@ -27,34 +27,36 @@ if (!isLoggedIN()) {
 
     <style>
         .card {
-    position: relative;
-}
+            position: relative;
+        }
 
-.card:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 0.325rem;
-}
+        .card:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(107, 107, 107, 0.75);
+            border-radius: 0.325rem;
+        }
 
-.card:hover .overlay-text {
-    visibility: visible;
-    opacity: 1;
-}
+        .card:hover .overlay-text {
+            visibility: visible;
+            opacity: 1;
+        }
 
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
+        .overlay-text {
+            color: white;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
 
     </style>
     
