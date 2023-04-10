@@ -60,7 +60,13 @@ $contact_phone = isset($_POST['contact_phone']) ? mysqli_real_escape_string($con
 $interview_set = isset($_POST['interview_set']) ? 1 : 0;
 $start_date = isset($_POST['start_date']) ? mysqli_real_escape_string($conn, $_POST['start_date']) : NULL;
 $resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : NULL;
-$notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : NULL;
+// $notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : NULL;
+
+if(isset($_POST['notes'])) {
+    $notes = mysqli_real_escape_string($conn, $_POST['notes']);
+} else {
+    $notes = NULL;
+}
     
 
     $select1 = "SELECT * FROM applications WHERE idno = '$idno'";
