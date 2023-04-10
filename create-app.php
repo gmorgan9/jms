@@ -60,33 +60,24 @@ if (!isLoggedIN()) {
                 <label for="job_title" class="form-label">Job Title</label>
                 <input type="text" class="form-control" id="job_title" name="job_title">
             </div>
+            
+        </div>
+
+        <div class="row mb-3">
             <div class="col">
                 <label for="company" class="form-label">Company</label>
                 <input type="text" class="form-control" id="company" name="company">
             </div>
-        </div>
-
-        <div class="row mb-3">
-            <label for="company" class="col-sm-2 col-form-label">Company</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="company" name="company">
+            <div class="col">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location">
             </div>
         </div>
-
-
-
-
-    <label for="job_title">Job Title:</label>
-    <input type="text" name="job_title" required><br><br>
     
-    <label for="company">Company:</label>
-    <input type="text" name="company" required><br><br>
-    
-    <label for="location">Location:</label>
-    <input type="text" name="location" required><br><br>
-    
-    <label for="job_desc">Job Description:</label>
-    <textarea name="job_desc" rows="5"></textarea><br><br>
+        <div class="row mb-3">
+            <label for="job_desc">Job Description:</label>
+            <textarea name="job_desc" rows="5"></textarea><br><br>
+        </div>
     
     <label for="pay">Pay:</label>
     <input type="text" name="pay"><br><br>
