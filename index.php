@@ -132,7 +132,7 @@ if (!isLoggedIN()) {
                             $sql="select count('1') from applications where status='Applied'";
                             $result=mysqli_query($con,$sql);
                             $rowtotal=mysqli_fetch_array($result); 
-                            if($rowtotal[0] < 10) {
+                            if($rowtotal < 10) {
                                 echo "0$rowtotal[0]";
                             } else {
                                 echo "$rowtotal[0]";
