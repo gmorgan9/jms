@@ -19,12 +19,12 @@ if (isset($_GET['logout'])) {
 }
 
 // ADD JOB
-if(isset($_POST['add-quick'])){
+if(isset($_POST['add-quick-job-app'])){
     $idno  = rand(1000000, 9999999);
-    if(isset($_POST['job_title'])) { $job_title = mysqli_real_escape_string($conn, $_POST['job_title']); } else { $job_title = ""; }
-	if(isset($_POST['company'])) { $company = mysqli_real_escape_string($conn, $_POST['company']); } else { $company = ""; }
-	if(isset($_POST['location'])) { $location = mysqli_real_escape_string($conn, $_POST['location']); } else { $location = ""; }
-    if(isset($_POST['app_link'])) { $app_link = mysqli_real_escape_string($conn, $_POST['app_link']); } else { $app_link = ""; }
+    $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
+    $company = mysqli_real_escape_string($conn, $_POST['company']);
+    $location = mysqli_real_escape_string($conn, $_POST['location']);
+    $app_link = mysqli_real_escape_string($conn, $_POST['app_link']);
     $watchlist = isset($_POST['watchlist']) ? 1 : 0;
 
     $select = " SELECT * FROM applications WHERE idno = '$idno' ";
@@ -33,12 +33,11 @@ if(isset($_POST['add-quick'])){
     if(mysqli_num_rows($result) > 0){
       $error[] = 'Application already exist!';
     }else{
-		$insert1 = "INSERT INTO applications (idno, job_title, company, location, watchlist, app_link) 
-        VALUES ('$idno',NULLIF('$job_title',''), NULLIF('$company',''), NULLIF('$location',''), '$watchlist', NULLIF('$app_link',''))";
+      $insert = "INSERT INTO applications (idno, job_title, company, location, app_link, watchlist) VALUES('$idno', '$job_title', '$company', '$location', '$app_link', '$watchlist')";
       mysqli_query($conn, $insert);
       header('location: /');
     }
-}
+};
 // END ADD JOB
 
 
@@ -64,15 +63,15 @@ if (isset($_POST['add-full'])) {
 	if(isset($_POST['notes'])) { $notes = mysqli_real_escape_string($conn, $_POST['notes']); } else { $notes = ""; }
     
 
-    $select1 = "SELECT * FROM applications WHERE idno = '$idno'";
-    $result1 = mysqli_query($conn, $select1);
+    $select = "SELECT * FROM applications WHERE idno = '$idno'";
+    $result = mysqli_query($conn, $select);
 
-    if (mysqli_num_rows($result1) > 0) {
+    if (mysqli_num_rows($result) > 0) {
         $error[] = 'Application already exists!';
     } else {
-        $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) 
+        $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) 
         VALUES ('$idno',NULLIF('$job_title',''),NULLIF('$company',''),NULLIF('$location',''),NULLIF('$job_desc',''),NULLIF('$pay',''),NULLIF('$bonus_pay',''),NULLIF('$status',''),'$watchlist',NULLIF('$app_link',''),NULLIF('$job_type',''),NULLIF('$contact_name',''),NULLIF('$contact_email',''),NULLIF('$contact_phone',''),'$interview_set',NULLIF('$start_date',''),NULLIF('$resume_used',''),NULLIF('$notes',''))";
-        mysqli_query($conn, $insert1);
+        mysqli_query($conn, $insert);
         header('location: /');
     }
 }
