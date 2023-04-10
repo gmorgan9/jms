@@ -49,7 +49,7 @@ if (!isLoggedIN()) {
 
 
  <!-- main-container -->
- <div class="container-fluid main">
+ <div class="container-fluid main" style="background-color: lightgray;">
 
 <br><br>
 
