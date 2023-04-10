@@ -157,7 +157,7 @@ if (!isLoggedIN()) {
                     <td><?php echo $job_title; ?></td>
                     <td><?php echo $company; ?></td>
                     <td><?php echo $location; ?></td>
-                    <td><?php echo $formatted_date; ?></td>
+                    <td><?php echo $formattedDate; ?></td>
                     <td><?php echo $status; ?></td>
                 </tr>
                 <?php
