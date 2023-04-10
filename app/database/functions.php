@@ -68,8 +68,8 @@ if(isset($_POST['add-full-job-app'])){
       $error[] = 'Application already exist!';
     }else{
     //   $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contant_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES('$idno', '$job_title', '$company', '$location', '$job_desc', '$pay', '$bonus_pay', '$status', '$watchlist', '$app_link', '$job_type', '$contact_name', '$contant_email', '$contact_phone', '$interview_set', '$start_date', '$resume_used', '$notes')";
-	  $insert = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
-      mysqli_query($conn, $insert);
+	  $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
+      mysqli_query($conn, $insert1);
       header('location: /');
     }
 };
