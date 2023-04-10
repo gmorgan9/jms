@@ -67,6 +67,7 @@ if (!isLoggedIN()) {
                         <i class="bi bi-clipboard-check mt-5" style="font-size: 48px"></i>
                     </div>
                     <div class="col-8">
+                        <br>
                         <h5 class="card-text">10</h5>
                         <p class="card-title">Made Offer</p>
                     </div>
