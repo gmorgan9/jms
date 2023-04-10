@@ -74,7 +74,7 @@ if (!isLoggedIN()) {
     <div class="d-flex justify-content-center">
         <div class="form-group input-group w-75">
             <div class="input-group-prepend">
-	            <span class="input-group-text"> <i class="bi bi-hash"></i> </span>
+	            <span class="input-group-text"><i class="bi bi-hash"></i></span>
 	        </div>
             <input name="inc_num" class="form-control" placeholder="Incident Number" type="text">
         </div>
