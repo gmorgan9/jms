@@ -75,8 +75,10 @@ if (!isLoggedIN()) {
         </div>
     
         <div class="row mb-3">
-            <label class="form-label" for="job_desc">Job Description:</label>
-            <textarea class="form-control" name="job_desc" rows="5"></textarea><br><br>
+            <div class="col">
+                <label class="form-label" for="job_desc">Job Description:</label>
+                <textarea class="form-control" name="job_desc" rows="5"></textarea><br><br>
+            </div>
         </div>
     
     <label for="pay">Pay:</label>
