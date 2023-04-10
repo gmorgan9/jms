@@ -45,16 +45,91 @@ if (!isLoggedIN()) {
 
     <div class="container">
     
+    <div class="col d-flex justify-content-center">
+<div class="row row_one">
+<div class="card" style="width: 18rem;">
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <i class="fa-solid fa-envelope-open fa-8x"></i> <br>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="/open-incidents.php" class="btn stretched-link">Open Incidents</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <i class="fa-solid fa-envelope-circle-check fa-8x"></i> <br>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="/closed-incidents.php" class="btn stretched-link">Closed Incidents</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <i class="fa-solid fa-envelopes-bulk fa-8x"></i> <br>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="/all-incidents.php" class="btn stretched-link">All Incidents</a>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+  </div>
+  <br>
+<!-- Row 2 -->
+<div class="col d-flex justify-content-center">
+<div class="row">
+<div class="card" style="width: 18rem;">
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <i class="fa-solid fa-file-invoice fa-8x"></i> <br>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="priority-report.php" class="btn stretched-link" style="width: 200px;">Incident Priority Report</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <i class="fa-solid fa-file-lines fa-8x"></i> <br>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="other-reports.php" class="btn stretched-link">Other Reports</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="card-body d-flex flex-column align-items-center">
+        <div class="card-body">
+            <div class="d-flex justify-content-center">
+                <i class="fa-solid fa-note-sticky fa-8x"></i> <br>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="incident-notes.php" class="btn stretched-link">Incident Notes</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 
         <!-- end container -->
     </div>
-
-
-
-    Logged in
-
-    <a href="index.php?logout='1'"><button style="cursor:pointer;color: #ff3860;border: 1px solid #ff3860;padding:2px;border-radius: 5px;">Logout</button></a>
-
 
 </body>
 </html>
