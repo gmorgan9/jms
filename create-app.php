@@ -148,10 +148,10 @@ if (!isLoggedIN()) {
                 <label for="start_date" class="form-label">Start Date</label>
                 <input type="date" class="form-control" id="start_date" name="start_date">
             </div> -->
-            <div class="col">
+            <!-- <div class="col">
                 <label for="resume_used" class="form-label">Resume Used</label>
                 <input type="text" class="form-control" id="resume_used" name="resume_used">
-            </div>
+            </div> -->
         </div>
 
         <!-- <div class="row mb-3">
