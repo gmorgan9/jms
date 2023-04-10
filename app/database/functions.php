@@ -62,15 +62,15 @@ if(isset($_POST['add-full'])){
 	$resume_used = isset($_POST['resume_used']) ? mysqli_real_escape_string($conn, $_POST['resume_used']) : "NULL";
 	$notes = isset($_POST['notes']) ? mysqli_real_escape_string($conn, $_POST['notes']) : "NULL";
 
-    $select1 = " SELECT * FROM applications WHERE idno = '$idno' ";
-    $result1 = mysqli_query($conn, $select1);
+    // $select1 = " SELECT * FROM applications WHERE idno = '$idno' ";
+    // $result1 = mysqli_query($conn, $select1);
 
-    if(mysqli_num_rows($result1) > 0){
-      $error[] = 'Application already exist!';
-    }else{
+    // if(mysqli_num_rows($result1) > 0){
+    //   $error[] = 'Application already exist!';
+    // }else{
 	  $insert1 = "INSERT INTO `applications` (`idno`, `job_title`, `company`, `location`, `job_desc`, `pay`, `bonus_pay`, `status`, `watchlist`, `app_link`, `job_type`, `contact_name`, `contact_email`, `contact_phone`, `interview_set`, `start_date`, `resume_used`, `notes`) VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
       mysqli_query($conn, $insert1);
       header('location: /');
-    }
+    // }
 };
 // END ADD JOB
