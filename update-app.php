@@ -109,13 +109,14 @@ if (!isLoggedIN()) {
                 <input type="text" class="form-control" id="location" name="location" value="<?php echo $location; ?>">
             </div>
         </div>
-    
+
         <div class="row mb-3">
             <div class="col">
-                <label class="form-label" for="job_desc">Job Description</label>
-                <textarea class="form-control" name="job_desc" rows="5"><?php echo $job_desc; ?></textarea>
+                <label for="app_link" class="form-label">Application Link</label>
+                <input type="text" class="form-control" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
             </div>
         </div>
+
 
         <div class="row mb-3">
             <div class="col">
@@ -152,45 +153,6 @@ if (!isLoggedIN()) {
             </div>
         </div>
 
-        <div class="row mb-3">
-            <div class="col">
-                <label for="app_link" class="form-label">Application Link</label>
-                <input type="text" class="form-control" id="app_link" name="app_link" value="<?php echo $app_link; ?>">
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row mb-3">
-            <div class="col">
-                <label for="contact_name" class="form-label">Contact Name</label>
-                <input type="text" class="form-control" id="contact_name" name="contact_name" value="<?php echo $contact_name; ?>">
-            </div>
-            <div class="col">
-                <label for="contact_phone" class="form-label">Contact Phone</label>
-                <input type="text" class="form-control" id="contact_phone" name="contact_phone" value="<?php echo $contact_phone; ?>">
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col">
-                <label for="contact_email" class="form-label">Contact Email</label>
-                <input type="text" class="form-control" id="contact_email" name="contact_email" value="<?php echo $contact_email; ?>">
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="row mb-3">
-            <div class="col">
-                <label for="start_date" class="form-label">Start Date</label>
-                <input type="date" class="form-control" id="start_date" name="start_date" value="<?php echo $start_date; ?>">
-            </div>
-            <div class="col">
-                <label for="resume_used" class="form-label">Resume Used</label>
-                <input type="text" class="form-control" id="resume_used" name="resume_used" value="<?php echo $resume_used; ?>">
-            </div>
-        </div>
 
         <div class="row mb-3">
             <div class="col">
