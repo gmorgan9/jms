@@ -198,6 +198,26 @@ if (!isLoggedIN()) {
                                        <p class="float-start fw-bold">Application Link</p> 
                                        <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
                                     </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Base Pay</p> 
+                                       <p><span class="float-end"><?php echo $cap['pay']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Bonus Pay</p> 
+                                       <p><span class="float-end"><?php echo $cap['bonus_pay']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Job Type</p> 
+                                       <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="fw-bold">Notes</p> 
+                                       <p><span><?php echo $cap['notes']; ?></span></p>
+                                    </div>
                                     
 
                                     <?php } } ?>
