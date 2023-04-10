@@ -76,7 +76,7 @@ if (!isLoggedIN()) {
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label" for="job_desc">Job Description:</label>
-                <textarea class="form-control" name="job_desc" rows="5"></textarea><br><br>
+                <textarea class="form-control" name="job_desc" rows="5"></textarea>
             </div>
         </div>
 
@@ -147,8 +147,19 @@ if (!isLoggedIN()) {
                 <input type="text" class="form-control" id="start_date" name="start_date">
             </div>
             <div class="col">
-                <label for="contact_phone" class="form-label">Contact Phone</label>
-                <input type="text" class="form-control" id="contact_phone" name="contact_phone">
+                <label for="resume_used" class="form-label">Resume Used</label>
+                <input type="text" class="form-control" id="resume_used" name="resume_used">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="interview_set" class="form-label">Start Date</label>
+                <input type="checkbox" class="form-control" id="interview_set" name="interview_set" value="1">
+            </div>
+            <div class="col">
+                <label for="resume_used" class="form-label">Resume Used</label>
+                <input type="text" class="form-control" id="resume_used" name="resume_used">
             </div>
         </div>
 
