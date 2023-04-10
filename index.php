@@ -40,6 +40,7 @@ if (!isLoggedIN()) {
 <br>
 <div class="record_incident float-end me-5">
     <a href="create-app.php"><button class="btn btn-secondary rec">Record Job</button></a>
+    <a href="create-app.php"><button class="btn btn-secondary rec">Quick Add</button></a>
 </div>
 
 <?php if (isset($_SESSION['fname'])) : ?>
