@@ -26,6 +26,7 @@ if(isset($_POST['add-quick'])){
     $location = mysqli_real_escape_string($conn, $_POST['location']);
     $app_link = mysqli_real_escape_string($conn, $_POST['app_link']);
     $watchlist = isset($_POST['watchlist']) ? 1 : 0;
+	$interview_set = isset($_POST['interview_set']) ? 1 : 0;
 
     $select = " SELECT * FROM applications WHERE idno = '$idno' ";
     $result = mysqli_query($conn, $select);
@@ -33,7 +34,7 @@ if(isset($_POST['add-quick'])){
     if(mysqli_num_rows($result) > 0){
       $error[] = 'Application already exist!';
     }else{
-      $insert = "INSERT INTO applications (idno, job_title, company, location, app_link, watchlist) VALUES('$idno', NULLIF('$job_title',''), NULLIF('$company',''), NULLIF('$location',''), NULLIF('$app_link',''), '$watchlist')";
+      $insert = "INSERT INTO applications (idno, job_title, company, location, app_link, watchlist,interview_set) VALUES('$idno', NULLIF('$job_title',''), NULLIF('$company',''), NULLIF('$location',''), NULLIF('$app_link',''), '$watchlist', '$interview_set')";
       mysqli_query($conn, $insert);
       header('location: /');
     }
