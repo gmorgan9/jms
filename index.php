@@ -157,7 +157,7 @@ if (!isLoggedIN()) {
             <!-- third table -->
             <div class="card p-0" style="width: 25rem;">
                     <div class="card-header">
-                        <i class="bi bi-grid-3x3-gap-fill"></i>  
+                        <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest updated</span>
                     </div>
                     <div class="card-body">
                         table 3
