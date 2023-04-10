@@ -48,9 +48,19 @@ if (!isLoggedIN()) {
 
 
 
+
  <!-- main-container -->
  <div class="container-fluid main">
+    <div class="row">
 
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Open Applications</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+    </div>
 </div>
 <!-- END main-container -->
 
