@@ -34,11 +34,11 @@ if (!isLoggedIN()) {
 <body>
 
     <div class="header">
-        <div class="logo float-start ms-2 mt-2">
-            <h2>JMS</h2>
+        <div class="logo float-start ms-3">
+            <p>JMS</p>
         <!-- end logo -->
         </div>
-        <div class="links float-end me-2 mt-3">
+        <div class="links float-end me-3">
             <a href="" class="text-decoration-none text-black"><?php echo $_SESSION['fname']; ?></a>
         </div>
 
