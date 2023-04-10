@@ -41,7 +41,7 @@ if(isset($_POST['add-quick-job-app'])){
 // END ADD JOB
 
 // ADD JOB
-if(isset($_POST['add-full-job-app'])){
+if(isset($_POST['add-full'])){
     $idno  = rand(1000000, 9999999);
     $job_title = isset($_POST['job_title']) ? mysqli_real_escape_string($conn, $_POST['job_title']) : "NULL";
     $company = isset($_POST['company']) ? mysqli_real_escape_string($conn, $_POST['company']) : "NULL";
