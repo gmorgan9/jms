@@ -135,10 +135,10 @@ if (!isLoggedIN()) {
         </div> -->
 
         <div class="row mb-3">
-            <div class="col">
+            <!-- <div class="col">
                 <label for="contact_email" class="form-label">Contact Email</label>
                 <input type="text" class="form-control" id="contact_email" name="contact_email">
-            </div>
+            </div> -->
         </div>
 
         <!-- <hr> -->
