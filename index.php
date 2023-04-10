@@ -33,10 +33,10 @@ if (!isLoggedIN()) {
 <body>
 
 <div class="header">
-        <h2 class="logo">
+        <p class="logo">
             Incident Record Management System
-            <a href="/logout.php"><i class="bi bi-box-arrow-left"></i></a>
-        </h2>
+            <a class="float-end" href="/logout.php"><i class="bi bi-box-arrow-left"></i></a>
+        </p>
     </div>
 <br>
 <div class="record_incident">
