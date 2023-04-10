@@ -115,10 +115,10 @@ if (!isLoggedIN()) {
         </div> -->
 
         <div class="row mb-3">
-            <div class="col">
+            <!-- <div class="col">
                 <label for="app_link" class="form-label">Application Link</label>
                 <input type="text" class="form-control" id="app_link" name="app_link">
-            </div>
+            </div> -->
         </div>
 
         <!-- <hr> -->
