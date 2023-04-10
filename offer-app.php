@@ -175,8 +175,34 @@ if (!isLoggedIN()) {
                                                 while ($cap = mysqli_fetch_assoc($new1)) {       
                                         ?> 
                                     <!-- Display the content of the selected entry -->
-                                    <h5>Job Details</h5>
+                                    <div>
+                                        <h5 class="float-start">Job Details</h5>
+                                        <div class="float-end">
+                                            <?php if($cap['watchlist'] == 1){ ?>
+                                                <i class="bi bi-eye text-muted"></i>
+                                            <?php } else {} ?>
+                                            <?php if($cap['interview_set'] == 1){ ?>
+                                                <i class="bi bi-people"></i>
+                                            <?php } else {} ?>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    
                                     <hr>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Status</p> 
+                                       <?php if($cap['status'] == 'Applied'){ ?>
+                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                        <?php } else if($cap['status'] == 'Interviewed') { ?>
+                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                        <?php } else if($cap['status'] == 'Offered') { ?>
+                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                        <?php } else if($cap['status'] == 'Rejected') { ?>
+                                            <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $cap['status']; ?></span></p>
+                                        <?php } ?>
+                                    </div>
+                                    <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Job Title</p> 
                                        <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
@@ -195,6 +221,26 @@ if (!isLoggedIN()) {
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Application Link</p> 
                                        <p><a href="<?php echo $cap['app_link']; ?>" class="float-end">Link Here</a></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Job Type</p> 
+                                       <p><span class="float-end"><?php echo $cap['job_type']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Base Pay</p> 
+                                       <p><span class="float-end"><?php echo $cap['pay']; ?></span></p>
+                                    </div>
+                                    <br>
+                                    <div class="ms-3 me-3">
+                                       <p class="float-start fw-bold">Bonus Pay</p> 
+                                       <p><span class="float-end"><?php echo $cap['bonus_pay']; ?></span></p>
+                                    </div>
+                                    <br><br>
+                                    <div class="ms-3 me-3">
+                                       <p class="fw-bold">Notes</p> 
+                                       <p><span><?php echo $cap['notes']; ?></span></p>
                                     </div>
                                     
 
