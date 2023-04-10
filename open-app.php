@@ -131,7 +131,7 @@ if (!isLoggedIN()) {
                     $limit = 10; // Number of entries per page
                     $page = isset($_GET['page']) ? $_GET['page'] : 1;
                     $offset = ($page - 1) * $limit;
-
+                    
                     $sql = "SELECT * FROM applications WHERE status = 'Applied' ORDER BY created_at ASC";
                     $result = mysqli_query($conn, $sql);
                     if($result) {
@@ -172,7 +172,7 @@ if (!isLoggedIN()) {
 
         <?php
     // Pagination links
-    $sql = "SELECT COUNT(1) FROM applications WHERE status = 'Applied'";
+    $sql = "SELECT COUNT(*) as total FROM applications WHERE status = 'Applied'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $total_pages = ceil($row["total"] / $limit);
