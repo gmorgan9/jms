@@ -75,8 +75,10 @@ if(isset($_POST['notes'])) {
     if (mysqli_num_rows($result1) > 0) {
         $error[] = 'Application already exists!';
     } else {
-        $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) 
-        VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
+		$insert1 = "INSERT INTO applications (idno, job_title, notes) 
+        VALUES ('$idno','$job_title','$notes')";
+        // $insert1 = "INSERT INTO applications (idno, job_title, company, location, job_desc, pay, bonus_pay, status, watchlist, app_link, job_type, contact_name, contact_email, contact_phone, interview_set, start_date, resume_used, notes) 
+        // VALUES ('$idno','$job_title','$company','$location','$job_desc','$pay','$bonus_pay','$status','$watchlist','$app_link','$job_type','$contact_name','$contact_email','$contact_phone','$interview_set','$start_date','$resume_used','$notes')";
         mysqli_query($conn, $insert1);
         header('location: /');
     }
