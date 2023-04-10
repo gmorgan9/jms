@@ -181,7 +181,7 @@ if (!isLoggedIN()) {
                                     <hr>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Job Title</p> 
-                                       <p class="float-end"><?php echo $cap['job_title']; ?></p>
+                                       <p><span class="float-end"><?php echo $cap['job_title']; ?></span></p>
                                     </div>
                                     <br>
                                     <div class="ms-3 me-3">
