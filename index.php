@@ -55,7 +55,37 @@ if (!isLoggedIN()) {
 
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Open Applications</h5>
+                <h5 class="card-title">Open</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-2">
+                <i class="fas fa-check-circle fa-2x"></i>
+            </div>
+            <div class="col-10">
+                <h5 class="card-title">Made Offer</h5>
+                <p class="card-text">Number of offers made: 10</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Declined</h5>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Total</h5>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
