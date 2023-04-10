@@ -180,7 +180,7 @@ if (!isLoggedIN()) {
                                         <div class="float-end">
                                             <?php if($cap['watchlist'] == 1){ ?>
                                                 <i class="bi bi-eye text-muted"></i>
-                                            <?php } else {} ?>
+                                            <?php } else { ?>
                                             <?php if($cap['interview_set'] == 1){ ?>
                                                 <i class="bi bi-people"></i>
                                             <?php } else {} ?>
