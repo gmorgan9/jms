@@ -57,7 +57,7 @@ if (!isLoggedIN()) {
  <div class="container-fluid main">
 
     <!-- Top Row -->
-        <div class="row">
+        <div class="row d-flex justify-content-center">
         <!-- Open/Awaiting -->
             <div class="card" style="width: 18rem;">
                 <div class="card-body p-0">
