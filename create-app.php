@@ -53,87 +53,65 @@ if (!isLoggedIN()) {
 
 
 
-
- <div class="d-flex justify-content-center">
-    <!-- form start -->
-<form action="record-incident.php" class="reg-form" method="post">
-<?php include('errors.php'); ?>
-    <!-- <div class="form-header d-flex justify-content-center">
-        <div class="bg-circle">
-            <div class="sm-circle">
-                <div class="d-flex justify-content-center">
-                    <i class="user-header fa-solid fa-user fa-3x"></i>
-                </div>
-            </div>
-        </div>
-    </div> -->
-<br>
-<h2 class="text-center">Record Incident</h2>
-<br>
-
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-            <div class="input-group-prepend">
-	            <span class="input-group-text"><i class="bi bi-hash"></i></span>
-	        </div>
-            <input name="inc_num" class="form-control" placeholder="Incident Number" type="text">
-        </div>
-    </div> 
-    <!-- form-group// -->
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-    	    <div class="input-group-prepend">
-		        <span class="input-group-text"> <i class="fa-solid fa-arrow-up-wide-short"></i> </span>
-		    </div>
-            <input name="priority" class="form-control" placeholder="Priority" type="text">
-        </div>
-    </div> <!-- form-group// -->
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-    	    <div class="input-group-prepend">
-		        <span class="input-group-text"> <i class="fa-solid fa-pen-to-square"></i> </span>
-		    </div>
-            <input name="description" class="form-control" placeholder="Description" type="text">
-        </div>
-    </div> <!-- form-group// -->
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-    	    <div class="input-group-prepend">
-		        <span class="input-group-text"> <i class="fa fa-users fa-xs"></i> </span>
-		    </div>
-            <input name="assign_group" class="form-control" placeholder="Assignment Group" type="text">
-        </div>
-    </div> <!-- form-group// -->
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-    	    <div class="input-group-prepend">
-		        <span class="input-group-text"> <i class="fa fa-book"></i> </span>
-		    </div>
-            <input name="kb_article" class="form-control" placeholder="KB Artcile" type="text">
-        </div>
-    </div> <!-- form-group// -->    
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-    	    <div class="input-group-prepend">
-		        <span class="input-group-text"> <i class="fa fa-calendar-days"></i> </span>
-		    </div>
-            <input name="date" class="form-control" placeholder="Date" type="date">
-        </div>
-    </div> <!-- form-group// -->    
-    <div class="d-flex justify-content-center">
-        <div class="form-group input-group w-75">
-    	    <div class="input-group-prepend">
-		        <span class="input-group-text"> <i class="fa fa-clock"></i> </span>
-		    </div>
-            <input name="time" class="form-control" placeholder="Time" type="time">
-        </div>
-    </div> <!-- form-group// -->   
-    <div class="d-flex justify-content-center">                                
-        <button id="button" type="submit" name="rec_inc" class="btn btn-primary text-center reg-log">Submit Incident</button>  
-    </div>                                                               
+ <form method="POST" action="process_form.php">
+    <label for="job_title">Job Title:</label>
+    <input type="text" name="job_title" required><br><br>
+    
+    <label for="company">Company:</label>
+    <input type="text" name="company" required><br><br>
+    
+    <label for="location">Location:</label>
+    <input type="text" name="location" required><br><br>
+    
+    <label for="job_desc">Job Description:</label>
+    <textarea name="job_desc" rows="5"></textarea><br><br>
+    
+    <label for="pay">Pay:</label>
+    <input type="text" name="pay"><br><br>
+    
+    <label for="bonus_pay">Bonus Pay:</label>
+    <input type="text" name="bonus_pay"><br><br>
+    
+    <label for="status">Status:</label>
+    <select name="status">
+        <option value="applied">Applied</option>
+        <option value="interviewed">Interviewed</option>
+        <option value="offered">Offered</option>
+        <option value="rejected">Rejected</option>
+    </select><br><br>
+    
+    <label for="watchlist">Add to Watchlist:</label>
+    <input type="checkbox" name="watchlist" value="1"><br><br>
+    
+    <label for="app_link">Application Link:</label>
+    <input type="text" name="app_link"><br><br>
+    
+    <label for="job_type">Job Type:</label>
+    <input type="text" name="job_type"><br><br>
+    
+    <label for="contact_name">Contact Name:</label>
+    <input type="text" name="contact_name"><br><br>
+    
+    <label for="contact_email">Contact Email:</label>
+    <input type="email" name="contact_email"><br><br>
+    
+    <label for="contact_phone">Contact Phone:</label>
+    <input type="text" name="contact_phone"><br><br>
+    
+    <label for="interview_set">Interview Scheduled:</label>
+    <input type="checkbox" name="interview_set" value="1"><br><br>
+    
+    <label for="start_date">Start Date:</label>
+    <input type="date" name="start_date"><br><br>
+    
+    <label for="resume_used">Resume Used:</label>
+    <input type="text" name="resume_used"><br><br>
+    
+    <label for="notes">Notes:</label>
+    <textarea name="notes" rows="5"></textarea><br><br>
+    
+    <input type="submit" value="Submit">
 </form>
-</div>
-
 
 
 
