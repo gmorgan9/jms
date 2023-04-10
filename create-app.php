@@ -1,0 +1,66 @@
+<?php
+
+require_once "app/database/connection.php";
+require_once "app/database/functions.php";
+require_once "path.php";
+session_start();
+
+if (!isLoggedIN()) {
+	header('location: login.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=1.75">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <title>Job Management System</title>
+
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+
+<div class="header">
+        <h3 class="logo ms-3 me-3 pt-1">
+            Job Management System
+            <a class="float-end" href="index.php?logout='1'"><button style="cursor:pointer;" class="btn btn-link text-white"><i class="bi bi-box-arrow-left fs-5"></i></button></a>
+        </h3>
+    </div>
+<br>
+<div class="record_incident float-end me-5">
+    <a href="record-incident.php"><button class="btn btn-secondary rec">Record Job</button></a>
+</div>
+
+
+
+
+
+
+
+ <!-- main-container -->
+ <div class="container-fluid main">
+create job
+
+</div>
+<!-- END main-container -->
+
+
+
+
+
+
+
+
+</body>
+</html>
