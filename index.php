@@ -35,12 +35,12 @@ if (!isLoggedIN()) {
 <div class="header">
         <h3 class="logo ms-3 me-3">
             Job Management System
-            <a class="float-end" href="/logout.php"><i class="bi bi-box-arrow-left fs-5"></i></a>
+            <a class="float-end text-black" href="/logout.php"><i class="bi bi-box-arrow-left fs-5"></i></a>
         </h3>
     </div>
 <br>
 <div class="record_incident">
-    <a href="record-incident.php"><button class="btn btn-primary rec">Record Incident</button></a>
+    <a href="record-incident.php"><button class="btn btn-primary rec">Record Job</button></a>
 </div>
 
     <div class="container">
