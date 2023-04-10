@@ -81,8 +81,8 @@ if (!isLoggedIN()) {
             <br>
             <div class="form-group">
                 <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
-                <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
                 </div>
             </div>
             

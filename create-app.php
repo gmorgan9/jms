@@ -75,7 +75,7 @@ if (!isLoggedIN()) {
     
         <div class="row mb-3">
             <div class="col">
-                <label class="form-label" for="job_desc">Job Description:</label>
+                <label class="form-label" for="job_desc">Job Description</label>
                 <textarea class="form-control" name="job_desc" rows="5"></textarea>
             </div>
         </div>
@@ -154,36 +154,28 @@ if (!isLoggedIN()) {
 
         <div class="row mb-3">
             <div class="col">
-                <label for="interview_set" class="form-label">Start Date</label>
-                <input type="checkbox" class="form-control" id="interview_set" name="interview_set" value="1">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="watchlist" name="watchlist" value="1">
+                    <label class="form-check-label" for="watchlist">Add to Watchlist</label>
+                </div>
             </div>
             <div class="col">
-                <label for="resume_used" class="form-label">Resume Used</label>
-                <input type="text" class="form-control" id="resume_used" name="resume_used">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="interview_set" name="interview_set" value="1">
+                    <label class="form-check-label" for="interview_set">Interview Set</label>
+                </div>
             </div>
         </div>
 
-
+        <div class="row mb-3">
+            <div class="col">
+                <label class="form-label" for="notes">Notes</label>
+                <textarea class="form-control" name="notes" rows="5"></textarea>
+            </div>
+        </div>
     
-    
-    <label for="watchlist">Add to Watchlist:</label>
-    <input type="checkbox" name="watchlist" value="1"><br><br>
-    
-    
-    <label for="interview_set">Interview Scheduled:</label>
-    <input type="checkbox" name="interview_set" value="1"><br><br>
-    
-    <label for="start_date">Start Date:</label>
-    <input type="date" name="start_date"><br><br>
-    
-    <label for="resume_used">Resume Used:</label>
-    <input type="text" name="resume_used"><br><br>
-    
-    <label for="notes">Notes:</label>
-    <textarea name="notes" rows="5"></textarea><br><br>
-    
-    <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Submit">
+    </form>
 
 
 
