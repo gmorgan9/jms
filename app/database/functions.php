@@ -133,11 +133,10 @@ function isLoggedIn()
 		die('Connection failed: ' . mysqli_connect_error());
 	}
 
-	$query = "INSERT INTO applications (job_title) VALUES ('".$data['title']."')";
+	$query = "INSERT INTO applications (job_title) VALUES ('".$data['job_title']."')";
 	$result = mysqli_query($conn, $query);
 	if ($result) {
-		echo "$data";
-		// echo "Data inserted successfully";
+		echo "Data inserted successfully";
 	} else {
 		echo "Error inserting data: " . mysqli_error($conn);
 	}
