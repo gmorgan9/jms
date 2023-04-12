@@ -132,8 +132,9 @@ function isLoggedIn()
 	if (!$conn) {
 		die('Connection failed: ' . mysqli_connect_error());
 	}
+	$idno  = rand(1000000, 9999999);
 
-	$query = "INSERT INTO applications (job_title) VALUES ('".$data['job_title']."')";
+	$query = "INSERT INTO applications (idno, job_title, company, location, job_type, watchlist, interview_set) VALUES ($idno','".$data['job_title']."', '".$data['company']."', '".$data['location']."', '".$data['job_type']."', 0,0)";
 	$result = mysqli_query($conn, $query);
 	if ($result) {
 		echo "Data inserted successfully";
