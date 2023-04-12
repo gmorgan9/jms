@@ -129,19 +129,10 @@ function isLoggedIn()
 	$data = json_decode(file_get_contents('php://input'), true);
 	$idno  = rand(1000000, 9999999);
 
-	$conn = mysqli_connect('localhost', 'dbuser', 'DBuser123!', 'jms');
-	if (!$conn) {
-		die('Connection failed: ' . mysqli_connect_error());
-	}
 	$setZero = 0;
 	
-
+	if(isset($data)) {
 	$query = "INSERT INTO applications (idno, job_title, company, location, job_type, watchlist, interview_set, app_link, status) VALUES ('$idno','".$data['job_title']."', '".$data['company']."', '".$data['location']."', '".$data['job_type']."', '$setZero', '$setZero', '".$data['app_link']."', 'Applied')";
 	$result = mysqli_query($conn, $query);
-	if ($result) {
-		echo "Data inserted successfully";
-	} else {
-		echo "Error inserting data: " . mysqli_error($conn);
 	}
-	mysqli_close($conn);
 // END JSON entry from PS Script
