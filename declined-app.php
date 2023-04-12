@@ -75,6 +75,10 @@ if (!isLoggedIN()) {
                 <input type="text" class="form-control" id="location" name="location">
             </div>
             <div class="form-group">
+                <label for="job_type">Job Type:</label>
+                <input type="text" class="form-control" id="job_type" name="job_type">
+            </div>
+            <div class="form-group">
                 <label for="app_link">Application Link:</label>
                 <input type="text" class="form-control" id="app_link" name="app_link">
             </div>
