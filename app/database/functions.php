@@ -136,7 +136,7 @@ function isLoggedIn()
 	$query = "INSERT INTO applications (job_title) VALUES ('".$data['job_title']."')";
 	$result = mysqli_query($conn, $query);
 	if ($result) {
-		echo "Data inserted successfully" + $data;
+		echo "Data inserted successfully";
 	} else {
 		echo "Error inserting data: " . mysqli_error($conn);
 	}
