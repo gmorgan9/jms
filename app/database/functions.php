@@ -136,7 +136,7 @@ function isLoggedIn()
 	$setZero = 0
 	
 
-	$query = "INSERT INTO applications (idno, job_title, company, location, job_type, watchlist, interview_set) VALUES ('$idno','".$data['job_title']."', '".$data['company']."', '".$data['location']."', '".$data['job_type']."', '$setZero', '$setZero')";
+	$query = "INSERT INTO applications (idno, job_title, company, location, job_type, watchlist, interview_set, app_link) VALUES ('$idno','".$data['job_title']."', '".$data['company']."', '".$data['location']."', '".$data['job_type']."', '$setZero', '$setZero', '".$data['app_link']."')";
 	$result = mysqli_query($conn, $query);
 	if ($result) {
 		echo "Data inserted successfully";
