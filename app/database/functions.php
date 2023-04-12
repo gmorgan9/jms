@@ -123,3 +123,20 @@ function isLoggedIn()
 		}
 	}
 // END UPDATE FULL APPLICATION
+
+
+$data = json_decode(file_get_contents('php://input'), true);
+
+$conn = mysqli_connect('localhost', 'dbuser', 'DBuser123!', 'jms');
+if (!$conn) {
+    die('Connection failed: ' . mysqli_connect_error());
+}
+
+$query = "INSERT INTO applications (job_title) VALUES ('".$data['job_title']."')";
+$result = mysqli_query($conn, $query);
+if ($result) {
+    echo "Data inserted successfully";
+} else {
+    echo "Error inserting data: " . mysqli_error($conn);
+}
+mysqli_close($conn);
