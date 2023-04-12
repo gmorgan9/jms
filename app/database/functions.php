@@ -133,7 +133,7 @@ function isLoggedIn()
 	if (!$conn) {
 		die('Connection failed: ' . mysqli_connect_error());
 	}
-	$setZero = 0
+	$setZero = 0;
 	
 
 	$query = "INSERT INTO applications (idno, job_title, company, location, job_type, watchlist, interview_set, app_link) VALUES ('$idno','".$data['job_title']."', '".$data['company']."', '".$data['location']."', '".$data['job_type']."', '$setZero', '$setZero', '".$data['app_link']."')";
