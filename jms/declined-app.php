@@ -44,7 +44,7 @@ foreach ($files as $file) {
     </div>
 <br>
 
-<div class="record_incident float-end me-5">
+<!-- <div class="record_incident float-end me-5">
     <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="recordJobDropdown" data-bs-toggle="dropdown" data-bs-target="#recordJobDropdown" aria-haspopup="true" aria-expanded="false">
         Add Application
@@ -54,7 +54,14 @@ foreach ($files as $file) {
         <a class="dropdown-item" href="create-app.php">In-depth</a>
     </div>
     </div>
-</div>
+</div> -->
+
+    <div class="record_incident float-end me-5">
+        <a href="<?php echo BASE_URL ?>/" class="btn btn-secondary">
+            Home
+        </button>
+    </div>
+
 
 <!-- Quick Modal -->
     <div class="modal fade" id="quickModal" tabindex="-1" aria-labelledby="quickModalLabel" aria-hidden="true">
