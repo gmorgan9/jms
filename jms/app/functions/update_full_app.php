@@ -2,7 +2,7 @@
 
 // UPDATE FULL APPLICATION
 if (isset($_POST['update-full'])) {
-    $id = $_POST['appid'];
+    $id = $_POST['app_id'];
     $watchlist = isset($_POST['watchlist']) ? 1 : 0;
     $interview_set = isset($_POST['interview_set']) ? 1 : 0;
     if(isset($_POST['job_title'])) { $job_title = mysqli_real_escape_string($conn, $_POST['job_title']); } else { $job_title = ""; }
@@ -28,7 +28,7 @@ if (isset($_POST['update-full'])) {
     if (mysqli_num_rows($result) > 0) {
         $error[] = 'Application already exists!';
     } else {
-        $update = "UPDATE applications SET job_title = NULLIF('$job_title',''), company = NULLIF('$company',''), location = NULLIF('$location',''), pay = NULLIF('$pay',''), bonus_pay = NULLIF('$bonus_pay',''), status = NULLIF('$status',''), watchlist = '$watchlist', app_link = NULLIF('$app_link',''), job_type = NULLIF('$job_type',''), interview_set = '$interview_set', notes = NULLIF('$notes','') WHERE appid = '$id';";
+        $update = "UPDATE applications SET job_title = NULLIF('$job_title',''), company = NULLIF('$company',''), location = NULLIF('$location',''), pay = NULLIF('$pay',''), bonus_pay = NULLIF('$bonus_pay',''), status = NULLIF('$status',''), watchlist = '$watchlist', app_link = NULLIF('$app_link',''), job_type = NULLIF('$job_type',''), interview_set = '$interview_set', notes = NULLIF('$notes','') WHERE app_id = '$id';";
         mysqli_query($conn, $update);
         header('location: /');
     }
