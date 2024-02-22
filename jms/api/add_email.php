@@ -13,6 +13,12 @@ if(isset($data)) {
         $sender = mysqli_real_escape_string($conn, $item['sender']);
         $link = mysqli_real_escape_string($conn, $item['link']);
 
+        // Debugging: Print out values
+        echo "Phrase: $phrase<br>";
+        echo "Subject: $subject<br>";
+        echo "Sender: $sender<br>";
+        echo "Link: $link<br>";
+
         $query1 = "SELECT app_id FROM applications WHERE company = '$phrase'";
         $result1 = mysqli_query($conn, $query1);
 
@@ -23,6 +29,9 @@ if(isset($data)) {
                 $row = mysqli_fetch_assoc($result1);
                 $app_id = $row['app_id'];
             }
+
+            // Debugging: Print out app_id
+            echo "App ID: $app_id<br>";
 
             // Generate idno
             $idno = rand(1000000, 9999999);
