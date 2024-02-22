@@ -19,14 +19,14 @@ if(isset($data)) {
             $app_id = $row['app_id'];
         } else {
             // No matching company, set app_id to null
-            $app_id = 0;
+            $app_id = null;
         }
         
         // Generate idno
         $idno = rand(1000000, 9999999);
         
         // Insert data into email_application table
-        $query2 = "INSERT INTO email_application (idno, app_id, subject, sender) VALUES ('$idno', '$app_id', '" . mysqli_real_escape_string($conn, $data['subject']) . "', '" . mysqli_real_escape_string($conn, $data['sender']) . "')";
+        $query2 = "INSERT INTO email_application (idno, app_id, subject, sender) VALUES ('$idno', NULLIF('$job_title',''), '" . mysqli_real_escape_string($conn, $data['subject']) . "', '" . mysqli_real_escape_string($conn, $data['sender']) . "')";
         $result2 = mysqli_query($conn, $query2);
         
         if ($result2) {
