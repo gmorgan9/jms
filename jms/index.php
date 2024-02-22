@@ -156,7 +156,7 @@ session_start();
         <div class="row d-flex justify-content-center">
         <!-- Open/Awaiting -->
             
-            <div class="card top-card" style="width: 18rem;">
+            <div class="card top-card me-2" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="open-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightgreen; height: 100%; width: 110px; margin-left: -12px; border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -189,7 +189,7 @@ session_start();
         <!-- end Open/Awaiting -->
 
         <!-- Recieved Offer -->
-            <div class="card top-card" style="width: 18rem;">
+            <div class="card top-card me-2" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="offer-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightblue; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -221,7 +221,7 @@ session_start();
         <!-- end Received Offer -->
 
         <!-- Declined -->
-            <div class="card top-card" style="width: 18rem;">
+            <div class="card top-card me-2" style="width: 18rem;">
                 <a class="text-decoration-none text-black stretched-link" href="declined-app.php">
                     <div class="card-body p-0">
                         <div class="left float-start" style="background-color: lightpink; height: 100%; width: 110px; margin-left: -12px;border-top-left-radius: 0.325rem; border-bottom-left-radius: 0.325rem;">
@@ -293,7 +293,7 @@ session_start();
     <!-- Bottom Row -->
         <div class="row d-flex justify-content-center">
             <!-- first table -->
-                <div class="card p-0" style="width: 25rem;">
+                <div class="card p-0" style="width: 25rem; me-2">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
                     </div>
@@ -338,7 +338,7 @@ session_start();
             <!-- end first table -->
 
             <!-- second table -->
-                <div class="card p-0" style="width: 25rem;">
+                <div class="card p-0" style="width: 25rem; me-2">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                     </div>
