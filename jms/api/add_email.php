@@ -23,7 +23,7 @@ if(isset($data)) {
 
             $idno = rand(100000, 999999); // Generate unique ID
 
-            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '$subject', '$sender', '$link')";
+            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), NULLIF('$subject',''), NULLIF('$sender',''), NULLIF('$link',''))";
             $result2 = mysqli_query($conn, $query2);
 
             if ($result2) {
