@@ -158,6 +158,7 @@ foreach ($files as $file) {
                 <textarea class="form-control" name="notes" rows="5"><?php echo $notes; ?></textarea>
             </div>
         </div>
+        <textarea id="default">Hello, World!</textarea>
 
         <script>
             tinymce.init({
