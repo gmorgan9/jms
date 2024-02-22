@@ -11,8 +11,7 @@ if (mysqli_num_rows($result) > 0) {
     // Fetch data and store in array
     $companies = array();
     while ($row = mysqli_fetch_assoc($result)) {
-        $companyName = '*' . $row['company'] . '*'; // Add "*" to the beginning and end
-        $companies[] = $companyName;
+        $companies[] = $row['company'];
     }
 
     // Set HTTP headers to indicate JSON content
