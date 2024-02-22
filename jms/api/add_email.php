@@ -22,7 +22,7 @@ if(isset($data)) {
                 $app_id = $row['app_id'];
             }
 
-            $idno = uniqid(); // Generate unique ID
+            $idno = rand(100000, 999999); // Generate unique ID
 
             // Check if data already exists
             // $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
