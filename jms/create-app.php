@@ -5,9 +5,9 @@ require_once "app/database/functions/add_app.php";
 require_once "path.php";
 session_start();
 
-if (!isLoggedIN()) {
-	header('location: login.php');
-}
+// if (!isLoggedIN()) {
+// 	header('location: login.php');
+// }
 
 
 
