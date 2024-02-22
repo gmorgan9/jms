@@ -223,13 +223,13 @@ foreach ($files as $file) {
                                         <p class="float-start fw-bold">Connected Emails</p>
                                         <p><span class="float-end">
                                         <?php
-                                            $sql="select count('1') from email_application where app_id='$id'";
-                                            $result=mysqli_query($conn,$sql);
-                                            $rowtotal=mysqli_fetch_array($result); 
-                                            if($rowtotal[0] < 10) {
-                                                echo "0$rowtotal[0]";
+                                            $count="select count('1') from email_application where app_id='$id'";
+                                            $count_result=mysqli_query($conn,$count);
+                                            $rtotal=mysqli_fetch_array($count_result); 
+                                            if($rtotal[0] < 10) {
+                                                echo "0$rtotal[0]";
                                             } else {
-                                                echo "$rowtotal[0]";
+                                                echo "$rtotal[0]";
                                             }
                                         ?>
                                         </span></p>
