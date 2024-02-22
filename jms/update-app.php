@@ -27,6 +27,9 @@ foreach ($files as $file) {
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/7kainuaawjddfzf3pj7t2fm3qdjgq5smjfjtsw3l4kqfd1h4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     <title>Job Management System</title>
 
     <style>
@@ -162,8 +165,10 @@ foreach ($files as $file) {
 
         <script>
             tinymce.init({
-  selector: 'textarea#default'
-});
+    selector: 'textarea',
+    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+  });
         </script>
 
         <div class="row mb-3 ps-3">
