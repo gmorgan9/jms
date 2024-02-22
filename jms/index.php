@@ -139,7 +139,7 @@ session_start();
 
 
     <?php if (isset($_SESSION['fname'])) : ?>
-    	<h1 style="margin-left: 175px;" class="text-center">Welcome <strong><?php //echo $_SESSION['fname']; ?></strong></h1>
+    	<h1 style="margin-left: 175px;" class="text-center">Welcome <strong><?php echo $_SESSION['fname']; ?></strong></h1>
     <?php endif ?>
     <br>
 
