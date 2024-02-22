@@ -28,7 +28,7 @@ if(isset($data)) {
 
             // Check if data already exists
             $link = mysqli_real_escape_string($conn, $item['link']);
-            $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
+            $query_check = "SELECT * FROM email_application WHERE link = '$link' LIMIT 1";
             $result_check = mysqli_query($conn, $query_check);
             if ($result_check) {
                 if (mysqli_num_rows($result_check) == 0) {
