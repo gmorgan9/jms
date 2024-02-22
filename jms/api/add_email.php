@@ -29,7 +29,7 @@ if(isset($data)) {
             $result_check = mysqli_query($conn, $query_check);
             if (mysqli_num_rows($result_check) == 0) {
         // Insert data into email_application table
-        $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$job_title',''), '" . mysqli_real_escape_string($conn, $data['subject']) . "', '" . mysqli_real_escape_string($conn, $data['sender']) . "', '" . mysqli_real_escape_string($conn, $data['link']) . "')";
+        $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '" . mysqli_real_escape_string($conn, $data['subject']) . "', '" . mysqli_real_escape_string($conn, $data['sender']) . "', '" . mysqli_real_escape_string($conn, $data['link']) . "')";
         $result2 = mysqli_query($conn, $query2);
         
         if ($result2) {
