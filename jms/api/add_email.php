@@ -27,7 +27,7 @@ if(isset($data)) {
         
         // Generate idno
         $idno = rand(1000000, 9999999);
-        
+        $link = mysqli_real_escape_string($conn, $data['link']);
         $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
             $result_check = mysqli_query($conn, $query_check);
             if (mysqli_num_rows($result_check) == 0) {
