@@ -293,7 +293,7 @@ session_start();
     <!-- Bottom Row -->
         <div class="row d-flex justify-content-center">
             <!-- first table -->
-                <div class="card p-0" style="width: 25rem; me-2">
+                <div class="card p-0 me-2" style="width: 25rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">latest applications</span> 
                     </div>
@@ -338,7 +338,7 @@ session_start();
             <!-- end first table -->
 
             <!-- second table -->
-                <div class="card p-0" style="width: 25rem; me-2">
+                <div class="card p-0 me-2" style="width: 25rem;">
                     <div class="card-header">
                         <i class="bi bi-grid-3x3-gap-fill"></i> &nbsp; <span style="text-transform: uppercase; font-weight: bold;">watch list</span>
                     </div>
