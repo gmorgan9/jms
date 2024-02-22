@@ -1,5 +1,7 @@
 <?php
 
+require('../app/database/connection.php');
+
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 $idno  = rand(1000000, 9999999);
