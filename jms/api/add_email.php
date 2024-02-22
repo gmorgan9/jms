@@ -25,7 +25,7 @@ if(isset($data)) {
             $idno = rand(100000, 999999); // Generate unique ID
 
             // Check if data already exists
-            // $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
+            $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
             $result_check = mysqli_query($conn, $query_check);
             if (!$result_check) {
                 // Error occurred while checking for existing data
