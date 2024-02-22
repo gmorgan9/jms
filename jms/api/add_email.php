@@ -39,12 +39,13 @@ if(isset($data)) {
             // Error inserting data
             echo "Error inserting data: " . mysqli_error($conn);
         }
+    }
     } else {
         // Error retrieving app_id
         echo "Error retrieving app_id: " . mysqli_error($conn);
     }
 }
-}
+
 
 // END JSON entry from PS Script
 
