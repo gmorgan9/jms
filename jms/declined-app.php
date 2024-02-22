@@ -59,7 +59,7 @@ foreach ($files as $file) {
     <div class="record_incident float-end me-5">
         <a href="<?php echo BASE_URL ?>/" class="btn btn-secondary">
             Home
-        </button>
+        </a>
     </div>
 
 
