@@ -166,14 +166,14 @@ session_start();
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                // $sql="select count('1') from applications where status='Applied'";
-                                // $result=mysqli_query($conn,$sql);
-                                // $rowtotal=mysqli_fetch_array($result); 
-                                // if($rowtotal[0] < 10) {
-                                //     echo "0$rowtotal[0]";
-                                // } else {
-                                //     echo "$rowtotal[0]";
-                                // }
+                                $sql="select count('1') from applications where status='Applied'";
+                                $result=mysqli_query($conn,$sql);
+                                $rowtotal=mysqli_fetch_array($result); 
+                                if($rowtotal[0] < 10) {
+                                    echo "0$rowtotal[0]";
+                                } else {
+                                    echo "$rowtotal[0]";
+                                }
                                 ?>
                             </h5>
                             <p class="card-title text-center">Open/Awaiting</p>
@@ -200,14 +200,14 @@ session_start();
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                    // $sql="select count('1') from applications where status='Offered'";
-                                    // $result=mysqli_query($conn,$sql);
-                                    // $rowtotal=mysqli_fetch_array($result); 
-                                    // if($rowtotal[0] < 10) {
-                                    //     echo "0$rowtotal[0]";
-                                    // } else {
-                                    //     echo "$rowtotal[0]";
-                                    // }
+                                    $sql="select count('1') from applications where status='Offered'";
+                                    $result=mysqli_query($conn,$sql);
+                                    $rowtotal=mysqli_fetch_array($result); 
+                                    if($rowtotal[0] < 10) {
+                                        echo "0$rowtotal[0]";
+                                    } else {
+                                        echo "$rowtotal[0]";
+                                    }
                                 ?>
                             </h5>
                             <p class="card-title text-center">Recevied Offer</p>
@@ -232,14 +232,14 @@ session_start();
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                    // $sql="select count('1') from applications where status='Rejected'";
-                                    // $result=mysqli_query($conn,$sql);
-                                    // $rowtotal=mysqli_fetch_array($result); 
-                                    // if($rowtotal[0] < 10) {
-                                    //     echo "0$rowtotal[0]";
-                                    // } else {
-                                    //     echo "$rowtotal[0]";
-                                    // }
+                                    $sql="select count('1') from applications where status='Rejected'";
+                                    $result=mysqli_query($conn,$sql);
+                                    $rowtotal=mysqli_fetch_array($result); 
+                                    if($rowtotal[0] < 10) {
+                                        echo "0$rowtotal[0]";
+                                    } else {
+                                        echo "$rowtotal[0]";
+                                    }
                                 ?>
                             </h5>
                             <p class="card-title text-center">Rejected</p>
@@ -264,14 +264,14 @@ session_start();
                             <div class="pt-3"></div>
                             <h5 class="card-text text-center">
                                 <?php
-                                    // $sql="select count('1') from applications";
-                                    // $result=mysqli_query($conn,$sql);
-                                    // $rowtotal=mysqli_fetch_array($result); 
-                                    // if($rowtotal[0] < 10) {
-                                    //     echo "0$rowtotal[0]";
-                                    // } else {
-                                    //     echo "$rowtotal[0]";
-                                    // }
+                                    $sql="select count('1') from applications";
+                                    $result=mysqli_query($conn,$sql);
+                                    $rowtotal=mysqli_fetch_array($result); 
+                                    if($rowtotal[0] < 10) {
+                                        echo "0$rowtotal[0]";
+                                    } else {
+                                        echo "$rowtotal[0]";
+                                    }
                                 ?>
                             </h5>
                             <p class="card-title text-center">Total Applications</p>
@@ -301,36 +301,36 @@ session_start();
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                            // $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
-                            // $result = mysqli_query($conn, $sql);
-                            // if($result) {
-                            //     $num_rows = mysqli_num_rows($result);
-                            //     if($num_rows > 0) {
-                            //         while ($row = mysqli_fetch_assoc($result)) {
-                            //             $status         = $row['status'];
-                            //             $job_title      = $row['job_title'];
-                            //             $company        = $row['company'];
+                            $sql = "SELECT * FROM applications ORDER BY created_at DESC LIMIT 3";
+                            $result = mysqli_query($conn, $sql);
+                            if($result) {
+                                $num_rows = mysqli_num_rows($result);
+                                if($num_rows > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $status         = $row['status'];
+                                        $job_title      = $row['job_title'];
+                                        $company        = $row['company'];
                                         ?>
                                         <li class="list-group-item">
-                                            <p class="float-start"><?php //echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php //echo $company; ?></span> </p>
-                                            <?php //if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} ?>
+                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                            <?php if($row['status'] == 'Applied'){ ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Offered') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Rejected') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } ?>
                                         </li>
                                     <?php 
-                                    //}
-                                //} else { ?>
+                                    }
+                                } else { ?>
                                     <h3 class="mt-2 text-center text-muted">
                                         No Entries
                                     </h3>
-                                <?php //}
-                            //}
+                                <?php }
+                            }
                             ?>
                         </ul>
                     </div>
@@ -346,36 +346,36 @@ session_start();
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                            // $sql = "SELECT * FROM applications WHERE watchlist = 1 LIMIT 3";
-                            // $result = mysqli_query($conn, $sql);
-                            // if($result) {
-                            //     $num_rows = mysqli_num_rows($result);
-                            //     if($num_rows > 0) {
-                            //         while ($row = mysqli_fetch_assoc($result)) {
-                            //             $status         = $row['status'];
-                            //             $job_title      = $row['job_title'];
-                            //             $company        = $row['company'];
+                            $sql = "SELECT * FROM applications WHERE watchlist = 1 LIMIT 3";
+                            $result = mysqli_query($conn, $sql);
+                            if($result) {
+                                $num_rows = mysqli_num_rows($result);
+                                if($num_rows > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $status         = $row['status'];
+                                        $job_title      = $row['job_title'];
+                                        $company        = $row['company'];
                                         ?>
                                         <li class="list-group-item">
-                                            <p class="float-start"><?php //echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php //echo $company; ?></span> </p>
-                                            <?php //if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} ?>
+                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                            <?php if($row['status'] == 'Applied'){ ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Offered') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Rejected') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } ?>
                                         </li>
                                     <?php 
-                                    //}
-                                //} else { ?>
+                                    }
+                                } else { ?>
                                     <h3 class="mt-2 text-center text-muted">
                                         No Entries
                                     </h3>
-                                <?php //}
-                            //}
+                                <?php }
+                            }
                             ?>
                         </ul>
                     </div>
@@ -391,36 +391,36 @@ session_start();
                         <!-- only allow three -->
                         <ul class="list-group">
                             <?php
-                            // $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
-                            // $result = mysqli_query($conn, $sql);
-                            // if($result) {
-                            //     $num_rows = mysqli_num_rows($result);
-                            //     if($num_rows > 0) {
-                            //         while ($row = mysqli_fetch_assoc($result)) {
-                            //             $status         = $row['status'];
-                            //             $job_title      = $row['job_title'];
-                            //             $company        = $row['company'];
+                            $sql = "SELECT * FROM applications ORDER BY updated_at DESC LIMIT 3";
+                            $result = mysqli_query($conn, $sql);
+                            if($result) {
+                                $num_rows = mysqli_num_rows($result);
+                                if($num_rows > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        $status         = $row['status'];
+                                        $job_title      = $row['job_title'];
+                                        $company        = $row['company'];
                                         ?>
                                         <li class="list-group-item">
-                                            <p class="float-start"><?php //echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php //echo $company; ?></span> </p>
-                                            <?php //if($row['status'] == 'Applied'){ ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Interviewed') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Offered') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} else if($row['status'] == 'Rejected') { ?>
-                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php //echo $row['status']; ?></span></p>
-                                                <?php //} ?>
+                                            <p class="float-start"><?php echo $job_title; ?> <br> <span class="text-muted" style="font-size: 11px;"><?php echo $company; ?></span> </p>
+                                            <?php if($row['status'] == 'Applied'){ ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-primary"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Interviewed') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-info"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Offered') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-success"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } else if($row['status'] == 'Rejected') { ?>
+                                                    <p><span class="float-end"><i style="font-size: 12px; margin-top: -5px;" class="bi bi-circle-fill text-danger"></i> &nbsp; <?php echo $row['status']; ?></span></p>
+                                                <?php } ?>
                                         </li>
                                     <?php 
-                                    //}
-                                //} else { ?>
+                                    }
+                                } else { ?>
                                     <h3 class="mt-2 text-center text-muted">
                                         No Entries
                                     </h3>
-                                <?php //}
-                            //}
+                                <?php }
+                            }
                             ?>
                         </ul>
                     </div>

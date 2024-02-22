@@ -31,7 +31,7 @@
 			$insert = "INSERT INTO applications (idno, job_title, company, location, pay, bonus_pay, status, watchlist, app_link, job_type, interview_set, notes) 
 			VALUES ('$idno',NULLIF('$job_title',''),NULLIF('$company',''),NULLIF('$location',''),NULLIF('$pay',''),NULLIF('$bonus_pay',''),NULLIF('$status',''),'$watchlist',NULLIF('$app_link',''),NULLIF('$job_type',''),'$interview_set',NULLIF('$notes',''))";
 			mysqli_query($conn, $insert);
-			header('location: /');
+			header('location:' . BASE_URL . '/');
 		}
 	}
 // END ADD FULL APPLICATION
