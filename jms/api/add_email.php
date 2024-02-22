@@ -19,7 +19,7 @@ if(isset($data)) {
             $app_id = $row['app_id'];
         } else {
             // No matching company, set app_id to null
-            $app_id = null;
+            $app_id = 0;
         }
         
         // Generate idno
