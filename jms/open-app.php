@@ -176,7 +176,7 @@ foreach ($files as $file) {
 
                 <!-- VIEW Modal -->
                     <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="viewModalLabel">View Application</h5>
