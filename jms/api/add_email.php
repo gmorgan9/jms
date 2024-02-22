@@ -27,7 +27,7 @@ if(isset($data)) {
             $idno = rand(1000000, 9999999);
 
             // Insert data into email_application table
-            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender) VALUES ('$idno', '$app_id', '" . mysqli_real_escape_string($conn, $item['subject']) . "', '" . mysqli_real_escape_string($conn, $item['sender']) . "')";
+            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender) VALUES ('$idno', NULLIF('$app_id',''), '" . mysqli_real_escape_string($conn, $item['subject']) . "', '" . mysqli_real_escape_string($conn, $item['sender']) . "')";
             $result2 = mysqli_query($conn, $query2);
 
             if ($result2) {
