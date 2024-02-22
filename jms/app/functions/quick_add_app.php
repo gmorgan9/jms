@@ -19,7 +19,9 @@ if(isset($_POST['add-quick'])){
     }else{
     $insert = "INSERT INTO applications (idno, job_title, company, location, app_link, job_type, watchlist,interview_set, status) VALUES('$idno', NULLIF('$job_title',''), NULLIF('$company',''), NULLIF('$location',''), NULLIF('$app_link',''), NULLIF('$job_type',''), '$watchlist', '$interview_set', 'Applied')";
     mysqli_query($conn, $insert);
+    header('location:' . BASE_URL . '/');
     }
+    
 }
 // END ADD QUICK JOB
 

@@ -30,7 +30,7 @@ if (isset($_POST['update-full'])) {
     } else {
         $update = "UPDATE applications SET job_title = NULLIF('$job_title',''), company = NULLIF('$company',''), location = NULLIF('$location',''), pay = NULLIF('$pay',''), bonus_pay = NULLIF('$bonus_pay',''), status = NULLIF('$status',''), watchlist = '$watchlist', app_link = NULLIF('$app_link',''), job_type = NULLIF('$job_type',''), interview_set = '$interview_set', notes = NULLIF('$notes','') WHERE app_id = '$id';";
         mysqli_query($conn, $update);
-        header('location: /');
+        header('location:' . BASE_URL . '/');
     }
 }
 // END UPDATE FULL APPLICATION
