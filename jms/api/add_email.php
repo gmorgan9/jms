@@ -13,10 +13,10 @@ $setZero = 0;
 
 
 if(isset($data)) {
-    $query1 = "SELECT app_id FROM applications WHERE company = '" . $data['phrase'] . "'";
-    $app_id = mysqli_query($conn, $query1);
+    // $query1 = "SELECT app_id FROM applications WHERE company = '" . $data['phrase'] . "'";
+    // $app_id = mysqli_query($conn, $query1);
 
-$query = "INSERT INTO email_application (idno, app_id, subject, sender, status) VALUES ('$idno','$app_id', '".$data['subject']."', '".$data['sender']."', 'Unread')";
+$query = "INSERT INTO email_application (idno, subject, sender) VALUES ('$idno', '".$data['subject']."', '".$data['sender']."')";
 $result = mysqli_query($conn, $query);
 }
 // END JSON entry from PS Script
