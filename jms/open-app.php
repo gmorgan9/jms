@@ -219,28 +219,21 @@ foreach ($files as $file) {
                                         <?php } ?>
                                     </div>
                                     <br>
-
-                                    <?php
-                                    // $email = "SELECT * FROM email_application WHERE app_id=$id";
-                                    // $email_results = mysqli_query($conn, $email);
-                                    // if($email_results) {
-                                    //     while ($em = mysqli_fetch_assoc($email_results)) {
-                                            ?>
-
-                                            <?php
-                                                $sql="select count('1') from email_application where app_id='$id'";
-                                                $result=mysqli_query($conn,$sql);
-                                                $rowtotal=mysqli_fetch_array($result); 
-                                                if($rowtotal[0] < 10) {
-                                                    echo "0$rowtotal[0]";
-                                                } else {
-                                                    echo "$rowtotal[0]";
-                                                }
-                                            ?>
-
-
-                                            <?php //}}?>
-
+                                    <div class="ms-3 me-3">
+                                        <p class="float-start fw-bold">Connected Emails</p>
+                                        <p><span class="float-end">
+                                        <?php
+                                            $sql="select count('1') from email_application where app_id='$id'";
+                                            $result=mysqli_query($conn,$sql);
+                                            $rowtotal=mysqli_fetch_array($result); 
+                                            if($rowtotal[0] < 10) {
+                                                echo "0$rowtotal[0]";
+                                            } else {
+                                                echo "$rowtotal[0]";
+                                            }
+                                        ?>
+                                        </span></p>
+                                    </div>
                                     <br>
                                     <div class="ms-3 me-3">
                                        <p class="float-start fw-bold">Job Title</p> 
