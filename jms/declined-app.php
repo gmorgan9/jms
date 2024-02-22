@@ -145,7 +145,7 @@ foreach ($files as $file) {
                         $num_rows = mysqli_num_rows($result);
                         if($num_rows > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
-                                $id             = $row['appid'];
+                                $id             = $row['app_id'];
                                 $status         = $row['status'];
                                 $job_title      = $row['job_title'];
                                 $company        = $row['company'];
@@ -163,7 +163,7 @@ foreach ($files as $file) {
                     <td><?php echo $location ? $location : '-'; ?></td>
                     <td><?php echo $formatted_date ? $formatted_date : '-'; ?></td>
                     <td><?php echo $status ? $status : '-'; ?></td>
-                    <td style="font-size: 20px;"><a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?appid=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
+                    <td style="font-size: 20px;"><a href="#" data-bs-toggle="modal" data-bs-target="#viewModal<?php echo $id; ?>" class="view"><i class="bi bi-eye text-success"></i></a> &nbsp; <a href="update-app.php?updateid=<?php echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i> &nbsp; <a href="open-app.php?app_id=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a></td>
                 </tr>
                 <!-- VIEW Modal -->
                 <div class="modal fade" id="viewModal<?php echo $id; ?>" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
@@ -176,7 +176,7 @@ foreach ($files as $file) {
                                 <div class="modal-body">
 
                                 <?php
-                                            $new = "SELECT * FROM applications WHERE appid=$id";
+                                            $new = "SELECT * FROM applications WHERE app_id=$id";
                                             $new1 = mysqli_query($conn, $new);
                                             if($new1) {
                                                 while ($cap = mysqli_fetch_assoc($new1)) {       

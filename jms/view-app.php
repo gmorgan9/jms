@@ -60,12 +60,12 @@ foreach ($files as $file) {
 
     <?php
             $id = $_GET['viewid'];
-            $sql = "SELECT * FROM applications WHERE appid=$id";
+            $sql = "SELECT * FROM applications WHERE app_id=$id";
             $result = mysqli_query($conn, $sql);
             if($result) {
                 $num_rows = mysqli_num_rows($result);
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $appid          = $row['appid'];
+                    $app_id          = $row['app_id'];
                     $job_title      = $row['job_title'];
                     $comapny        = $row['company'];
                     $location       = $row['location'];
