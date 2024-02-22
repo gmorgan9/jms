@@ -4,11 +4,11 @@ require('../app/database/connection.php');
 
 // Receive application ID and new status from the client
 $data = json_decode(file_get_contents('php://input'), true);
-$applicationId = $data['app_id']; // Assuming client sends the application ID
+$idno = $data['idno']; // Assuming client sends the application ID
 $newStatus = $data['status']; // Assuming client sends the new status
 
 // Update the status of the application in the database
-$query = "UPDATE applications SET status = '$newStatus' WHERE app_id = $applicationId";
+$query = "UPDATE applications SET status = '$newStatus' WHERE idno = $idno";
 $result = mysqli_query($conn, $query);
 
 // Check if the update was successful
