@@ -161,15 +161,8 @@ foreach ($files as $file) {
                 <textarea class="form-control" name="notes" rows="5"><?php echo $notes; ?></textarea>
             </div>
         </div>
-        <textarea id="default">Hello, World!</textarea>
 
-        <script>
-            tinymce.init({
-    selector: 'textarea',
-    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-  });
-        </script>
+        
 
         <div class="row mb-3 ps-3">
             <div class="form-check">
@@ -219,7 +212,13 @@ foreach ($files as $file) {
 
 
 
-
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+    </script>
 
 </body>
 </html>
