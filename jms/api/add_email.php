@@ -4,13 +4,8 @@ require('../app/database/connection.php');
 
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
-$idno  = rand(1000000, 9999999);
 
 $setZero = 0;
-
-
-
-
 
 if(isset($data)) {
     // Retrieve app_id from applications table
@@ -18,9 +13,14 @@ if(isset($data)) {
     $result1 = mysqli_query($conn, $query1);
     
     if ($result1) {
-        // Fetch the app_id from the result set
-        $row = mysqli_fetch_assoc($result1);
-        $app_id = $row['app_id'];
+        if (mysqli_num_rows($result1) > 0) {
+            // Fetch the app_id from the result set
+            $row = mysqli_fetch_assoc($result1);
+            $app_id = $row['app_id'];
+        } else {
+            // No matching company, set app_id to null
+            $app_id = null;
+        }
         
         // Generate idno
         $idno = rand(1000000, 9999999);
@@ -43,6 +43,5 @@ if(isset($data)) {
 }
 
 // END JSON entry from PS Script
-
 
 ?>
