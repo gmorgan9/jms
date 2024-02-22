@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+
 require('../app/database/connection.php');
 
 // JSON entry from PS Script
