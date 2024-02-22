@@ -20,8 +20,8 @@ $lname = mysqli_real_escape_string($conn, $_POST['lname']);
 $uname = mysqli_real_escape_string($conn, $_POST['uname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $password = md5($_POST['password']);
-$isadmin = $_POST['isadmin'];
-$loggedin = $_POST['loggedin'];
+// $isadmin = $_POST['isadmin'];
+$loggedin = $_POST['logged_in'];
 
 $select = " SELECT * FROM users WHERE uname = '$uname' && password = '$password' ";
 
@@ -30,7 +30,7 @@ $result = mysqli_query($conn, $select);
 if(mysqli_num_rows($result) > 0){
 
    $row = mysqli_fetch_array($result);
-   $sql = "UPDATE users SET loggedin='1' WHERE uname='$uname'";
+   $sql = "UPDATE users SET logged_in='1' WHERE uname='$uname'";
    if (mysqli_query($conn, $sql)) {
       echo "Record updated successfully";
     } else {
