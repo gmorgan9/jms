@@ -16,6 +16,12 @@ if(isset($data)) {
 
     // Process each set of data independently
     foreach ($data as $item) {
+        // Check if $item is an array
+        if (!is_array($item)) {
+            echo "Invalid data format. Expected an array.";
+            continue;
+        }
+
         // Ensure that $item contains exactly four keys
         if(count($item) !== 4) {
             echo "Invalid data structure. Each set of data must contain companyName, subject, sender, and link.";
