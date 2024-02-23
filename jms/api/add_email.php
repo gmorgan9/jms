@@ -37,7 +37,7 @@ if(isset($data['companyName'], $data['link'], $data['subject'], $data['sender'])
         
         if (mysqli_num_rows($result_check) == 0) {
             // Insert data into email_application table
-            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '$subject', '$sender', '$link')";
+            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), NULLIF('$subject',''), NULLIF('$sender',''), NULLIF('$link',''))";
             $result2 = mysqli_query($conn, $query2);
             
             if ($result2) {
