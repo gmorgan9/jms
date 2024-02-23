@@ -10,7 +10,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 if(!empty($data)) {
     foreach ($data as $entry) {
-        if(isset($entry['companyName'], $entry['link'], $entry['subject'], $entry['sender'])) {
+        if(!empty($entry['companyName']) && !empty($entry['link']) && !empty($entry['subject']) && !empty($entry['sender'])) {
             $companyName = mysqli_real_escape_string($conn, $entry['companyName']);
             $link = mysqli_real_escape_string($conn, $entry['link']);
             $subject = mysqli_real_escape_string($conn, $entry['subject']);
