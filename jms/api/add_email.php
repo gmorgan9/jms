@@ -48,7 +48,7 @@ if(isset($data['companyName'], $data['link'], $data['subject'], $data['sender'])
                 echo "Error inserting data: " . mysqli_error($conn);
             }
         } else {
-            echo "Link already exists.";
+            echo "Email already exists.";
         }
     } else {
         // Error retrieving app_id
