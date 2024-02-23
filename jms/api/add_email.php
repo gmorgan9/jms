@@ -12,7 +12,7 @@ $setZero = 0;
 
 if(isset($data)) {
     // Retrieve app_id from applications table
-    $query1 = "SELECT app_id FROM applications WHERE company = '" . mysqli_real_escape_string($conn, $data['phrase']) . "'";
+    $query1 = "SELECT app_id FROM applications WHERE company = '" . mysqli_real_escape_string($conn, $data['companyName']) . "'";
     $result1 = mysqli_query($conn, $query1);
     
     if ($result1) {
