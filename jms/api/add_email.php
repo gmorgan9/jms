@@ -8,6 +8,8 @@ require('../app/database/connection.php');
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 
+var_dump($data); // Debugging statement to inspect JSON data
+
 if(!empty($data)) {
     foreach ($data as $entry) {
         if(!empty($entry['companyName']) && !empty($entry['link']) && !empty($entry['subject']) && !empty($entry['sender'])) {
