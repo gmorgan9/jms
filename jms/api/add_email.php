@@ -44,13 +44,13 @@ if(is_array($data)) {
 
                     if ($result2) {
                         // Insertion successful
-                        echo "Data inserted successfully.";
+                        // echo "Data inserted successfully.";
                     } else {
                         // Error inserting data
                         echo "Error inserting data: " . mysqli_error($conn);
                     }
                 } else {
-                    echo "Link already exists.";
+                    echo "Emails already recorded.";
                 }
             } else {
                 // Error retrieving app_id
