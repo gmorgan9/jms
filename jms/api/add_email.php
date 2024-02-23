@@ -6,14 +6,16 @@ error_reporting(E_ALL);
 require('../app/database/connection.php');
 
 // JSON entry from PS Script
-$new = json_decode(file_get_contents('php://input'), true);
-
-// Print the decoded JSON data
-$data = json_encode($new);
+$data = json_decode(file_get_contents('php://input'), true);
 
 $setZero = 0;
 
-if(isset($data) && is_array($data)) {
+if(isset($data)) {
+    // If $data is not an array, wrap it in an array to handle single item case
+    if (!is_array($data)) {
+        $data = array($data);
+    }
+
     // Process each set of data independently
     foreach ($data as $item) {
         // Check if all required fields are present
