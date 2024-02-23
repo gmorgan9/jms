@@ -8,8 +8,6 @@ require('../app/database/connection.php');
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 
-$setZero = 0;
-
 if(isset($data)) {
     // If $data is not an array, wrap it in an array to handle single item case
     if (!is_array($data)) {
@@ -18,6 +16,12 @@ if(isset($data)) {
 
     // Process each set of data independently
     foreach ($data as $item) {
+        // Ensure that $item contains exactly four keys
+        if(count($item) !== 4) {
+            echo "Invalid data structure. Each set of data must contain companyName, subject, sender, and link.";
+            continue;
+        }
+
         // Check if all required fields are present
         if(isset($item['companyName'], $item['subject'], $item['sender'], $item['link'])) {
             // Escape and retrieve data
