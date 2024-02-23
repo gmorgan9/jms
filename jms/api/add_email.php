@@ -8,7 +8,7 @@ require('../app/database/connection.php');
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 
-if(isset($data)) {
+if(isset($data['companyName'], $data['link'], $data['subject'], $data['sender'])) {
     $companyName = mysqli_real_escape_string($conn, $data['companyName']);
     $link = mysqli_real_escape_string($conn, $data['link']);
     $subject = mysqli_real_escape_string($conn, $data['subject']);
@@ -37,7 +37,7 @@ if(isset($data)) {
         
         if (mysqli_num_rows($result_check) == 0) {
             // Insert data into email_application table
-            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), NULLIF('$subject',''), NULLIF('$sender',''), NULLIF('$link',''))";
+            $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '$subject', '$sender', '$link')";
             $result2 = mysqli_query($conn, $query2);
             
             if ($result2) {
@@ -48,7 +48,7 @@ if(isset($data)) {
                 echo "Error inserting data: " . mysqli_error($conn);
             }
         } else {
-            echo "Email already exists.";
+            echo "Link already exists.";
         }
     } else {
         // Error retrieving app_id
