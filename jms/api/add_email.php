@@ -8,13 +8,13 @@ require('../app/database/connection.php');
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 
-if(is_array($data)) {
-    foreach ($data as $email) {
-        if(isset($email['companyName'], $email['link'], $email['subject'], $email['sender'])) {
-            $companyName = mysqli_real_escape_string($conn, $email['companyName']);
-            $link = mysqli_real_escape_string($conn, $email['link']);
-            $subject = mysqli_real_escape_string($conn, $email['subject']);
-            $sender = mysqli_real_escape_string($conn, $email['sender']);
+if(!empty($data)) {
+    foreach ($data as $entry) {
+        if(isset($entry['companyName'], $entry['link'], $entry['subject'], $entry['sender'])) {
+            $companyName = mysqli_real_escape_string($conn, $entry['companyName']);
+            $link = mysqli_real_escape_string($conn, $entry['link']);
+            $subject = mysqli_real_escape_string($conn, $entry['subject']);
+            $sender = mysqli_real_escape_string($conn, $entry['sender']);
 
             // Retrieve app_id from applications table
             $query1 = "SELECT app_id FROM applications WHERE company = '$companyName'";
@@ -50,18 +50,18 @@ if(is_array($data)) {
                         echo "Error inserting data: " . mysqli_error($conn);
                     }
                 } else {
-                    echo "Emails already recorded.";
+                    echo "Link already exists.";
                 }
             } else {
                 // Error retrieving app_id
                 echo "Error retrieving app_id: " . mysqli_error($conn);
             }
         } else {
-            echo "Missing required data for one or more emails.";
+            echo "Missing required data for one or more entries.";
         }
     }
 } else {
-    echo "Invalid JSON format.";
+    echo "No data received.";
 }
 
 // END JSON entry from PS Script
