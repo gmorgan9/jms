@@ -8,7 +8,7 @@ require('../app/database/connection.php');
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 
-if(isset($data['companyName'], $data['link'], $data['subject'], $data['sender'])) {
+if(isset($data)) {
     $companyName = mysqli_real_escape_string($conn, $data['companyName']);
     $link = mysqli_real_escape_string($conn, $data['link']);
     $subject = mysqli_real_escape_string($conn, $data['subject']);
