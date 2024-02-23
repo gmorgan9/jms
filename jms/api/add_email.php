@@ -12,9 +12,7 @@ var_dump($data); // Debugging statement to inspect JSON data
 
 if(!empty($data)) {
     foreach ($data as $entry) {
-        if(isset($entry['companyName'], $entry['link'], $entry['subject'], $entry['sender']) &&
-            !empty($entry['companyName']) && !empty($entry['link']) && 
-            !empty($entry['subject']) && !empty($entry['sender'])) {
+        if(!empty($entry['companyName']) && !empty($entry['link']) && !empty($entry['subject']) && !empty($entry['sender'])) {
             
             echo "All required fields are present and not empty for entry:" . PHP_EOL;
             var_dump($entry);
