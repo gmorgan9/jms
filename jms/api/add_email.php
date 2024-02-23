@@ -8,7 +8,8 @@ require('../app/database/connection.php');
 // JSON entry from PS Script
 $data = json_decode(file_get_contents('php://input'), true);
 
-echo $data;
+// Print the decoded JSON data
+echo json_encode($data);
 
 $setZero = 0;
 
