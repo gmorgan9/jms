@@ -6,10 +6,10 @@ error_reporting(E_ALL);
 require('../app/database/connection.php');
 
 // JSON entry from PS Script
-$data = json_decode(file_get_contents('php://input'), true);
+$new = json_decode(file_get_contents('php://input'), true);
 
 // Print the decoded JSON data
-echo json_encode($data);
+$data = json_encode($new);
 
 $setZero = 0;
 
