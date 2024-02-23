@@ -44,20 +44,21 @@ if(!empty($data)) {
 
                     if ($result2) {
                         // Insertion successful
-                        echo "Data inserted successfully.";
+                        echo "Data inserted successfully for $companyName.";
                     } else {
                         // Error inserting data
-                        echo "Error inserting data: " . mysqli_error($conn);
+                        echo "Error inserting data for $companyName: " . mysqli_error($conn);
                     }
                 } else {
-                    echo "Link already exists.";
+                    echo "Link already exists for $companyName.";
                 }
             } else {
                 // Error retrieving app_id
-                echo "Error retrieving app_id: " . mysqli_error($conn);
+                echo "Error retrieving app_id for $companyName: " . mysqli_error($conn);
             }
         } else {
             echo "Missing required data for one or more entries.";
+            var_dump($entry);
         }
     }
 } else {
