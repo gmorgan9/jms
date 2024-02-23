@@ -11,10 +11,17 @@ $data = json_decode(file_get_contents('php://input'), true);
 $setZero = 0;
 
 if(isset($data) && is_array($data)) {
+    // Process each set of data independently
     foreach ($data as $item) {
-        // Retrieve app_id from applications table
-        if(isset($item['companyName'])) {
+        // Check if all required fields are present
+        if(isset($item['companyName'], $item['subject'], $item['sender'], $item['link'])) {
+            // Escape and retrieve data
             $companyName = mysqli_real_escape_string($conn, $item['companyName']);
+            $subject = mysqli_real_escape_string($conn, $item['subject']);
+            $sender = mysqli_real_escape_string($conn, $item['sender']);
+            $link = mysqli_real_escape_string($conn, $item['link']);
+
+            // Retrieve app_id from applications table
             $query1 = "SELECT app_id FROM applications WHERE company = '$companyName'";
             $result1 = mysqli_query($conn, $query1);
             
@@ -30,43 +37,36 @@ if(isset($data) && is_array($data)) {
                 
                 // Generate idno
                 $idno = rand(1000000, 9999999);
-                if(isset($item['link']) && isset($item['subject']) && isset($item['sender'])) {
-                    $link = mysqli_real_escape_string($conn, $item['link']);
-                    $subject = mysqli_real_escape_string($conn, $item['subject']);
-                    $sender = mysqli_real_escape_string($conn, $item['sender']);
+
+                // Check if the link already exists
+                $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
+                $result_check = mysqli_query($conn, $query_check);
+                if (mysqli_num_rows($result_check) == 0) {
+                    // Insert data into email_application table
+                    $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '$subject', '$sender', '$link')";
+                    $result2 = mysqli_query($conn, $query2);
                     
-                    $query_check = "SELECT idno FROM email_application WHERE link = '$link' LIMIT 1";
-                    $result_check = mysqli_query($conn, $query_check);
-                    if (mysqli_num_rows($result_check) == 0) {
-                        // Insert data into email_application table
-                        $query2 = "INSERT INTO email_application (idno, app_id, subject, sender, link) VALUES ('$idno', NULLIF('$app_id',''), '$subject', '$sender', '$link')";
-                        $result2 = mysqli_query($conn, $query2);
-                        
-                        if ($result2) {
-                            // Insertion successful
-                            echo "Data inserted successfully.";
-                        } else {
-                            // Error inserting data
-                            echo "Error inserting data: " . mysqli_error($conn);
-                        }
+                    if ($result2) {
+                        // Insertion successful
+                        echo "Data inserted successfully.";
                     } else {
-                        echo "Link already exists in the database.";
+                        // Error inserting data
+                        echo "Error inserting data: " . mysqli_error($conn);
                     }
                 } else {
-                    // Missing required fields
-                    echo "Missing required fields.";
+                    echo "Link already exists in the database.";
                 }
             } else {
                 // Error retrieving app_id
                 echo "Error retrieving app_id: " . mysqli_error($conn);
             }
         } else {
-            // Missing companyName
-            echo "Missing companyName.";
+            // Missing required fields
+            echo "Missing required fields for one of the sets.";
         }
     }
 } else {
-    // No data or data not in array format
+    // No valid data provided
     echo "No valid data provided.";
 }
 ?>
